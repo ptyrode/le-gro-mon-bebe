@@ -1,0 +1,224 @@
+{
+    "key": "animals",
+    "label": "Animaux",
+    "emoji": "🐾",
+    "description": "De la coccinelle au gros toutou, suivez bébé dans la jungle.",
+    "items": [
+        {
+            "week": 5,
+            "name": "une coccinelle",
+            "emoji": "🐞",
+            "funText": "Petite bête à bon Dieu, ça porte chance."
+        },
+        {
+            "week": 6,
+            "name": "une abeille",
+            "emoji": "🐝",
+            "funText": "Bzzz. Tout petit mais déjà actif."
+        },
+        {
+            "week": 7,
+            "name": "un escargot",
+            "emoji": "🐌",
+            "funText": "Pas pressé, mais il avance."
+        },
+        {
+            "week": 8,
+            "name": "une souris",
+            "emoji": "🐭",
+            "funText": "Petit museau, grandes oreilles imaginaires."
+        },
+        {
+            "week": 9,
+            "name": "un poussin",
+            "emoji": "🐤",
+            "funText": "Tout jaune, tout duveteux (dans nos têtes)."
+        },
+        {
+            "week": 10,
+            "name": "un hamster",
+            "emoji": "🐹",
+            "funText": "Les joues pleines de projets."
+        },
+        {
+            "week": 11,
+            "name": "un rouge-gorge",
+            "emoji": "🐦",
+            "funText": "Bébé tiendrait dans le creux de la main."
+        },
+        {
+            "week": 12,
+            "name": "une grenouille",
+            "emoji": "🐸",
+            "funText": "Prête à bondir... dans 6 mois."
+        },
+        {
+            "week": 13,
+            "name": "un lézard",
+            "emoji": "🦎",
+            "funText": "Vif et curieux, ça grandit vite."
+        },
+        {
+            "week": 14,
+            "name": "un hérisson",
+            "emoji": "🦔",
+            "funText": "Mignon, un peu piquant sur les bords."
+        },
+        {
+            "week": 15,
+            "name": "un rat",
+            "emoji": "🐀",
+            "funText": "Malin comme tout (c'est un compliment)."
+        },
+        {
+            "week": 16,
+            "name": "un écureuil",
+            "emoji": "🐿️",
+            "funText": "Toujours en train de gigoter."
+        },
+        {
+            "week": 17,
+            "name": "un caneton",
+            "emoji": "🐤",
+            "funText": "Bientôt il fera coin-coin."
+        },
+        {
+            "week": 18,
+            "name": "un chaton",
+            "emoji": "🐱",
+            "funText": "On craque, c'est obligatoire."
+        },
+        {
+            "week": 19,
+            "name": "un lapereau",
+            "emoji": "🐰",
+            "funText": "Petites oreilles, gros câlins."
+        },
+        {
+            "week": 20,
+            "name": "un lapin",
+            "emoji": "🐰",
+            "funText": "Mi-parcours ! Bébé fait la taille d'un lapin."
+        },
+        {
+            "week": 21,
+            "name": "un chiot",
+            "emoji": "🐶",
+            "funText": "Maladroit et adorable."
+        },
+        {
+            "week": 22,
+            "name": "un canard",
+            "emoji": "🦆",
+            "funText": "Ça commence à avoir de la prestance."
+        },
+        {
+            "week": 23,
+            "name": "une poule",
+            "emoji": "🐔",
+            "funText": "Bien dodue, comme il faut."
+        },
+        {
+            "week": 24,
+            "name": "un chat adulte",
+            "emoji": "🐱",
+            "funText": "Indépendant et royal."
+        },
+        {
+            "week": 25,
+            "name": "un petit chien",
+            "emoji": "🐕",
+            "funText": "Du genre à tenir sur les genoux."
+        },
+        {
+            "week": 26,
+            "name": "un renardeau",
+            "emoji": "🦊",
+            "funText": "Rusé dès le plus jeune âge."
+        },
+        {
+            "week": 27,
+            "name": "un koala",
+            "emoji": "🐨",
+            "funText": "Accroché, tout doux, un peu paresseux."
+        },
+        {
+            "week": 28,
+            "name": "un raton laveur",
+            "emoji": "🦝",
+            "funText": "Petit masque, grand appétit."
+        },
+        {
+            "week": 29,
+            "name": "un blaireau",
+            "emoji": "🦡",
+            "funText": "Trapu et déterminé."
+        },
+        {
+            "week": 30,
+            "name": "un chien moyen",
+            "emoji": "🐕",
+            "funText": "Genre un beau cocker."
+        },
+        {
+            "week": 31,
+            "name": "un renard",
+            "emoji": "🦊",
+            "funText": "Adulte cette fois, et toujours malin."
+        },
+        {
+            "week": 32,
+            "name": "un petit singe",
+            "emoji": "🐒",
+            "funText": "Agile et farceur."
+        },
+        {
+            "week": 33,
+            "name": "un castor",
+            "emoji": "🦫",
+            "funText": "Bâtisseur dans l'âme, déjà costaud."
+        },
+        {
+            "week": 34,
+            "name": "un gros matou",
+            "emoji": "🐈",
+            "funText": "Le genre de chat qu'on soulève à deux mains."
+        },
+        {
+            "week": 35,
+            "name": "un beagle",
+            "emoji": "🐕",
+            "funText": "Tout en oreilles et en énergie."
+        },
+        {
+            "week": 36,
+            "name": "un lapin géant",
+            "emoji": "🐰",
+            "funText": "Le géant des Flandres, un vrai nounours."
+        },
+        {
+            "week": 37,
+            "name": "un bouledogue",
+            "emoji": "🐶",
+            "funText": "Trapu et tout en plis. À terme bientôt !"
+        },
+        {
+            "week": 38,
+            "name": "un labrador (chiot)",
+            "emoji": "🐕",
+            "funText": "Déjà bien lourd dans les bras."
+        },
+        {
+            "week": 39,
+            "name": "un petit mouton",
+            "emoji": "🐑",
+            "funText": "Tout doux, tout laineux."
+        },
+        {
+            "week": 40,
+            "name": "un gros toutou",
+            "emoji": "🐕",
+            "funText": "C'est l'heure ! Bébé pèse son poids de bon gros chien."
+        }
+    ]
+}

@@ -1,19 +1,21 @@
 # Lé gro mon bébé 🍼
 
+**➜ [le-gro-mon-bebe.vercel.app](https://le-gro-mon-bebe.vercel.app/)**
+
 Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après semaine, avec des comparaisons fun et personnalisables — 🐟 poissons, 🧀 fromages, 🐾 animaux — au lieu des classiques fruits et légumes.
 
 > Projet perso, privé (pour les proches), ton décalé assumé. Pas de compte, pas de backend : tout vit dans le navigateur.
 
 ## Stack
 
-| Élément | Choix |
-|---|---|
-| Framework | Next.js 16 (App Router, Turbopack) |
-| Langage | TypeScript |
-| UI | React 19 + Tailwind CSS 4 |
-| Stockage | `localStorage` (clé `lgmb:v1`) |
-| PWA | `app/manifest.ts` + service worker maison (`public/sw.js`) |
-| Hébergement | Vercel |
+| Élément     | Choix                                                      |
+| ----------- | ---------------------------------------------------------- |
+| Framework   | Next.js 16 (App Router, Turbopack)                         |
+| Langage     | TypeScript                                                 |
+| UI          | React 19 + Tailwind CSS 4                                  |
+| Stockage    | `localStorage` (clé `lgmb:v1`)                             |
+| PWA         | `app/manifest.ts` + service worker maison (`public/sw.js`) |
+| Hébergement | Vercel                                                     |
 
 ## Démarrer
 
@@ -22,9 +24,29 @@ npm install
 npm run dev      # http://localhost:3000
 ```
 
-Autres scripts : `npm run build` (build de prod), `npm run lint`.
-
 > Pour tester sur un mobile du réseau local, l'IP doit figurer dans `allowedDevOrigins` (`next.config.ts`) — sinon Next bloque les requêtes `/_next/*` cross-origin et l'appli reste sur le splash.
+
+## Scripts
+
+| Script                 | Effet                                                   |
+| ---------------------- | ------------------------------------------------------- |
+| `npm run dev`          | serveur de dev                                          |
+| `npm run build`        | build de production                                     |
+| `npm run lint:fix`     | **le combo avant commit** : `format` + `lint` + `style` |
+| `npm run lint:ci`      | vérification sans écriture : ESLint + Stylelint         |
+| `npm run lint`         | ESLint avec correction automatique                      |
+| `npm run lint:check`   | ESLint en lecture seule                                 |
+| `npm run format`       | Prettier en écriture                                    |
+| `npm run format:check` | Prettier en vérification                                |
+| `npm run style`        | Stylelint avec correction automatique                   |
+| `npm run style:check`  | Stylelint en lecture seule                              |
+| `npm run typecheck`    | `tsc --noEmit`                                          |
+
+La configuration ESLint, Prettier et Stylelint est reprise du projet Aubade : 4 espaces, quotes simples, une prop JSX par ligne, imports triés (`simple-import-sort`), imports inutilisés en erreur, classes Tailwind ordonnées via `prettier-plugin-tailwindcss`.
+
+`stylelint.config.mjs` étend `stylelint-config-standard` en neutralisant `at-rule-no-unknown` pour les at-rules Tailwind 4 (`@theme`, `@apply`, `@utility`, `@variant`…), qu'il signalerait sinon comme inconnues.
+
+⚠️ Lancer `npm run lint` seul peut recasser la mise en forme Prettier (il réordonne les imports). D'où `lint:fix`, qui enchaîne les trois outils dans le bon ordre.
 
 ## Structure
 
@@ -32,19 +54,31 @@ Autres scripts : `npm run build` (build de prod), `npm run lint`.
 src/
 ├── app/          # App Router : layout, page unique, manifest, icônes
 ├── components/   # Onboarding, Dashboard, Timeline, Settings, BottomNav
-├── data/         # fetalGrowth.json (SA 4→40) + categories/*.json
+├── data/         # fetalGrowth.json (SA 4→41) + categories/*.json
 ├── hooks/        # usePregnancy (useSyncExternalStore sur le localStorage)
 └── lib/          # types, chargement des données, calcul SA, storage
+
+scripts/          # outils hors build : audit des données, fichiers de référence
 ```
 
 ## Fonctionnement
 
-L'utilisateur saisit sa **date des dernières règles (DDR)**. La semaine de grossesse en **semaines d'aménorrhée (SA)** s'en déduit directement — c'est l'unité des données médicales, donc aucune conversion. Chaque semaine de 4 à 40 est associée à une taille, un poids et, dans la catégorie choisie, un objet de comparaison avec son texte rigolo.
+L'utilisateur saisit sa **date des dernières règles (DDR)**. La semaine de grossesse en **semaines d'aménorrhée (SA)** s'en déduit directement — c'est l'unité des données médicales, donc aucune conversion. Chaque semaine est associée à une taille, un poids et, dans la catégorie choisie, un objet de comparaison avec son texte rigolo.
 
 ⚠️ Les valeurs de croissance sont des **ordres de grandeur à visée ludique**, pas un outil de suivi médical.
+
+⚠️ La taille change de méthode de mesure en cours de route : **longueur cranio-caudale** jusqu'à S13, **tête-talons** à partir de S14. D'où le saut de 7 à 12,5 cm entre les deux — ce n'est pas une erreur. Le champ `measure` de chaque semaine porte l'information, et le Dashboard l'affiche.
+
+## Déploiement
+
+Hébergé sur **Vercel**, branché sur ce repo GitHub : chaque push sur `main` redéploie automatiquement. Aucune variable d'environnement n'est nécessaire aujourd'hui (tout est côté client) — ça changera quand le formulaire de feedback passera par une serverless function.
+
+Sur mobile, « Ajouter à l'écran d'accueil » installe la PWA.
 
 ## Documentation
 
 - [`SPECS.md`](SPECS.md) — spécifications détaillées et décisions
 - [`TODO.md`](TODO.md) — ce qu'il reste à faire
+- [`DATA-AUDIT.md`](DATA-AUDIT.md) — cohérence des données de comparaison
+- [`src/data/README.md`](src/data/README.md) — format des fichiers de données
 - [`AGENTS.md`](AGENTS.md) — consignes pour les agents de code

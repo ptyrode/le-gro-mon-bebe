@@ -1,0 +1,290 @@
+[
+    {
+        "sa": 6,
+        "mesure": "LCC",
+        "cm": 0.4,
+        "g": 1,
+        "fruit": "un grain de riz",
+        "fait": "Le cœur de bébé commence à battre, on peut parfois déjà l'apercevoir à l'échographie."
+    },
+    {
+        "sa": 7,
+        "mesure": "LCC",
+        "cm": 1,
+        "g": 1,
+        "fruit": "une myrtille",
+        "fait": "Les petits bourgeons qui deviendront ses bras et ses jambes commencent tout juste à apparaître."
+    },
+    {
+        "sa": 8,
+        "mesure": "LCC",
+        "cm": 1.6,
+        "g": 1,
+        "fruit": "une framboise",
+        "fait": "Ses mains et ses pieds se dessinent, et son visage prend peu à peu forme avec le nez et les lèvres."
+    },
+    {
+        "sa": 9,
+        "mesure": "LCC",
+        "cm": 2.3,
+        "g": 2,
+        "fruit": "un grain de raisin",
+        "fait": "Ses paupières se forment pour recouvrir ses yeux, et il esquisse déjà de tout petits mouvements."
+    },
+    {
+        "sa": 10,
+        "mesure": "LCC",
+        "cm": 3.1,
+        "g": 4,
+        "fruit": "une fraise",
+        "fait": "Tous ses organes vitaux sont désormais en place, et ses ongles commencent tout doucement à pousser."
+    },
+    {
+        "sa": 11,
+        "mesure": "LCC",
+        "cm": 4.1,
+        "g": 7,
+        "fruit": "une figue fraîche",
+        "fait": "Il peut déjà avaler un peu de liquide amniotique et son diaphragme se met en place."
+    },
+    {
+        "sa": 12,
+        "mesure": "LCC",
+        "cm": 5.4,
+        "g": 14,
+        "fruit": "un citron vert",
+        "fait": "Ses réflexes apparaissent, il peut ouvrir et fermer les doigts et même esquisser un sourire."
+    },
+    {
+        "sa": 13,
+        "mesure": "LCC",
+        "cm": 7,
+        "g": 23,
+        "fruit": "un abricot",
+        "fait": "Ses empreintes digitales se dessinent et ses cordes vocales commencent à se former."
+    },
+    {
+        "sa": 14,
+        "mesure": "taille",
+        "cm": 12.5,
+        "g": 43,
+        "fruit": "un citron",
+        "fait": "Bébé peut froncer les sourcils et faire de petites grimaces, ses expressions se multiplient."
+    },
+    {
+        "sa": 15,
+        "mesure": "taille",
+        "cm": 14.3,
+        "g": 70,
+        "fruit": "une pomme",
+        "fait": "Il perçoit la lumière à travers ses paupières encore closes, même s'il ne peut pas encore les ouvrir."
+    },
+    {
+        "sa": 16,
+        "mesure": "taille",
+        "cm": 16.2,
+        "g": 100,
+        "fruit": "un avocat",
+        "fait": "Son squelette continue de se solidifier et ses premiers mouvements deviennent un peu plus coordonnés."
+    },
+    {
+        "sa": 17,
+        "mesure": "taille",
+        "cm": 18.2,
+        "g": 140,
+        "fruit": "un oignon",
+        "fait": "Le cartilage de son squelette commence à se transformer en os, il devient plus robuste."
+    },
+    {
+        "sa": 18,
+        "mesure": "taille",
+        "cm": 20.3,
+        "g": 190,
+        "fruit": "une courgette",
+        "fait": "Ses oreilles sont maintenant en place et il commence à percevoir les sons étouffés qui l'entourent."
+    },
+    {
+        "sa": 19,
+        "mesure": "taille",
+        "cm": 22.5,
+        "g": 240,
+        "fruit": "un poivron",
+        "fait": "Une fine couche protectrice, le vernix, recouvre désormais sa peau délicate."
+    },
+    {
+        "sa": 20,
+        "mesure": "taille",
+        "cm": 25,
+        "g": 300,
+        "fruit": "une banane",
+        "fait": "C'est la moitié du chemin, un fin duvet appelé lanugo recouvre maintenant tout son corps."
+    },
+    {
+        "sa": 21,
+        "mesure": "taille",
+        "cm": 26.3,
+        "g": 360,
+        "fruit": "une carotte",
+        "fait": "Ses mouvements deviennent de plus en plus francs et sont maintenant bien perceptibles par la maman."
+    },
+    {
+        "sa": 22,
+        "mesure": "taille",
+        "cm": 27.6,
+        "g": 430,
+        "fruit": "une papaye",
+        "fait": "Ses sourcils et ses cils sont désormais bien visibles sur son petit visage."
+    },
+    {
+        "sa": 23,
+        "mesure": "taille",
+        "cm": 28.8,
+        "g": 500,
+        "fruit": "une mangue",
+        "fait": "Son ouïe s'affine et il commence à réagir aux bruits forts ainsi qu'à la musique."
+    },
+    {
+        "sa": 24,
+        "mesure": "taille",
+        "cm": 30,
+        "g": 600,
+        "fruit": "un épi de maïs",
+        "fait": "Ses poumons commencent à produire le surfactant qui l'aidera un jour à respirer par lui même."
+    },
+    {
+        "sa": 25,
+        "mesure": "taille",
+        "cm": 31.9,
+        "g": 700,
+        "fruit": "un petit melon charentais",
+        "fait": "Ses narines commencent à s'ouvrir et il esquisse déjà de petits mouvements respiratoires."
+    },
+    {
+        "sa": 26,
+        "mesure": "taille",
+        "cm": 33.8,
+        "g": 800,
+        "fruit": "un chou fleur",
+        "fait": "Ses yeux s'ouvrent pour la toute première fois."
+    },
+    {
+        "sa": 27,
+        "mesure": "taille",
+        "cm": 35.6,
+        "g": 900,
+        "fruit": "un concombre",
+        "fait": "Il alterne désormais des cycles de sommeil et d'éveil de plus en plus réguliers."
+    },
+    {
+        "sa": 28,
+        "mesure": "taille",
+        "cm": 37.5,
+        "g": 1050,
+        "fruit": "une aubergine",
+        "fait": "Il commence à cligner des yeux et connaît probablement déjà ses premières phases de sommeil paradoxal."
+    },
+    {
+        "sa": 29,
+        "mesure": "taille",
+        "cm": 38.8,
+        "g": 1200,
+        "fruit": "une courge butternut",
+        "fait": "Ses os se renforcent chaque jour en puisant dans les réserves de calcium, de fer et de phosphore de la maman."
+    },
+    {
+        "sa": 30,
+        "mesure": "taille",
+        "cm": 40,
+        "g": 1350,
+        "fruit": "un poireau",
+        "fait": "Sa vision progresse et il pourrait déjà réagir en tournant la tête vers une lumière vive."
+    },
+    {
+        "sa": 31,
+        "mesure": "taille",
+        "cm": 41.3,
+        "g": 1500,
+        "fruit": "une noix de coco",
+        "fait": "Son cerveau se développe très vite et traite de plus en plus d'informations sensorielles."
+    },
+    {
+        "sa": 32,
+        "mesure": "taille",
+        "cm": 42.5,
+        "g": 1700,
+        "fruit": "un ananas",
+        "fait": "Ses ongles atteignent presque le bout de ses petits doigts."
+    },
+    {
+        "sa": 33,
+        "mesure": "taille",
+        "cm": 43.8,
+        "g": 1900,
+        "fruit": "un melon cantaloup",
+        "fait": "Les os de son crâne restent volontairement souples pour faciliter son passage le jour de l'accouchement."
+    },
+    {
+        "sa": 34,
+        "mesure": "taille",
+        "cm": 45,
+        "g": 2150,
+        "fruit": "un chou vert",
+        "fait": "Le fin duvet qui recouvrait sa peau commence à disparaître, laissant place à une peau plus lisse."
+    },
+    {
+        "sa": 35,
+        "mesure": "taille",
+        "cm": 46.3,
+        "g": 2380,
+        "fruit": "un petit melon d'hiver",
+        "fait": "Ses reins sont désormais pleinement formés et son foie fonctionne déjà tout seul."
+    },
+    {
+        "sa": 36,
+        "mesure": "taille",
+        "cm": 47.5,
+        "g": 2600,
+        "fruit": "une laitue romaine",
+        "fait": "Il prend en moyenne près de 200 grammes par semaine et commence à se positionner tête en bas."
+    },
+    {
+        "sa": 37,
+        "mesure": "taille",
+        "cm": 48.3,
+        "g": 2800,
+        "fruit": "un chou frisé",
+        "fait": "Il est considéré né à terme précoce si l'accouchement survient maintenant, ses poumons finalisent leur maturation."
+    },
+    {
+        "sa": 38,
+        "mesure": "taille",
+        "cm": 49,
+        "g": 2980,
+        "fruit": "une mini pastèque",
+        "fait": "Son cerveau et ses poumons continuent de mûrir jusqu'au tout dernier jour avant la naissance."
+    },
+    {
+        "sa": 39,
+        "mesure": "taille",
+        "cm": 49.8,
+        "g": 3150,
+        "fruit": "un chou chinois",
+        "fait": "La fine couche de vernix qui protégeait sa peau commence à disparaître petit à petit."
+    },
+    {
+        "sa": 40,
+        "mesure": "taille",
+        "cm": 50.5,
+        "g": 3300,
+        "fruit": "un petit potiron",
+        "fait": "Bébé est fin prêt à naître, c'est le terme théorique de la grossesse."
+    },
+    {
+        "sa": 41,
+        "mesure": "taille",
+        "cm": 51,
+        "g": 3500,
+        "fruit": "une grosse citrouille",
+        "fait": "La grossesse est dite prolongée, bébé continue tranquillement de grandir en attendant que le travail se déclenche."
+    }
+]
