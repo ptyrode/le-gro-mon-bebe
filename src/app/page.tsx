@@ -11,6 +11,7 @@ import {
     equivalenceForWeek,
     rawGestationalWeek,
 } from '@/lib/pregnancy';
+import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         reset,
     } = usePregnancy();
     const [view, setView] = useState<View>('dashboard');
+    const t = useTranslations();
 
     useEffect(() => {
         if (!state || !state.notifications.enabled) return;
@@ -38,11 +40,15 @@ export default function Home() {
         if (week <= state.notifications.lastSeenWeek) return;
 
         const item = equivalenceForWeek(state.pregnancy.category, week);
-        new Notification('Bébé a grandi ! 🎉', {
-            body: `Semaine ${week} : bébé fait maintenant la taille d'${item.name} ${item.emoji}`,
+        new Notification(t('notification.title'), {
+            body: t('notification.body', {
+                week,
+                name: item.name,
+                emoji: item.emoji,
+            }),
         });
         setLastSeenWeek(week);
-    }, [state, setLastSeenWeek]);
+    }, [state, setLastSeenWeek, t]);
 
     if (loading) {
         return (

@@ -13,6 +13,7 @@ import {
     weightJokeForWeek,
 } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 
 interface Props {
     state: AppState;
@@ -26,9 +27,13 @@ function CategoryPicker({
     category: CategoryKey;
     onSetCategory: (category: CategoryKey) => void;
 }) {
+    const t = useTranslations();
+
     return (
         <section className="mt-6">
-            <p className="text-ink mb-3 text-sm font-semibold">Comparer en…</p>
+            <p className="text-ink mb-3 text-sm font-semibold">
+                {t('dashboard.compareIn')}
+            </p>
             <div className="flex flex-wrap gap-2">
                 {categoryList.map((cat) => {
                     const active = cat.key === category;
@@ -53,6 +58,7 @@ function CategoryPicker({
 }
 
 export default function Dashboard({ state, onSetCategory }: Props) {
+    const t = useTranslations();
     const { lastPeriodDate, category } = state.pregnancy;
     const status = pregnancyStatus(lastPeriodDate);
     const age = gestationalAge(lastPeriodDate);
@@ -60,7 +66,7 @@ export default function Dashboard({ state, onSetCategory }: Props) {
     const header = (
         <header className="mb-6 flex items-baseline justify-between">
             <h1 className="text-ink text-xl font-extrabold tracking-tight">
-                Lé gro mon bébé
+                {t('app.name')}
             </h1>
             <span className="text-accent-deep rounded-full bg-white px-3 py-1 text-sm font-bold shadow-sm">
                 {age.weeks} SA{age.days > 0 ? ` + ${age.days}j` : ''}
@@ -75,16 +81,15 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 <section className="rounded-3xl bg-white p-6 text-center shadow-lg">
                     <div className="my-3 text-7xl leading-none">👶</div>
                     <p className="text-ink text-2xl font-extrabold">
-                        Bébé devrait être né&nbsp;!
+                        {t('dashboard.born.title')}
                     </p>
                     <p className="text-ink-soft mt-3">
-                        Le terme est dépassé de {status.daysSinceDue} jours.
-                        Soit il est déjà là et personne ne me tient au courant,
-                        soit il est très bien où il est.
+                        {t('dashboard.born.body', {
+                            days: status.daysSinceDue,
+                        })}
                     </p>
                     <p className="text-ink-soft mt-4 text-sm">
-                        Tu peux corriger la date dans les réglages si elle
-                        n&apos;est pas la bonne.
+                        {t('dashboard.born.hint')}
                     </p>
                 </section>
             </div>
@@ -98,12 +103,12 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 <section className="rounded-3xl bg-white p-6 text-center shadow-lg">
                     <div className="my-3 text-7xl leading-none">🤨</div>
                     <p className="text-ink text-2xl font-extrabold">
-                        Cette date est bizarre
+                        {t('dashboard.oddDate.title')}
                     </p>
                     <p className="text-ink-soft mt-3">
                         {status.kind === 'future'
-                            ? 'Elle est dans le futur, et ça, même moi je ne sais pas faire.'
-                            : 'Elle remonte à plus de deux ans. Un petit tour dans les réglages ?'}
+                            ? t('dashboard.oddDate.future')
+                            : t('dashboard.oddDate.implausible')}
                     </p>
                 </section>
             </div>
@@ -117,12 +122,10 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 <section className="rounded-3xl bg-white p-6 text-center shadow-lg">
                     <div className="my-3 text-7xl leading-none">🌱</div>
                     <p className="text-ink text-2xl font-extrabold">
-                        C&apos;est encore tout frais
+                        {t('dashboard.tooEarly.title')}
                     </p>
                     <p className="text-ink-soft mt-3">
-                        À ce stade, bébé est trop petit pour qu&apos;on lui
-                        trouve un équivalent. Rendez-vous à la semaine{' '}
-                        {MIN_WEEK}&nbsp;!
+                        {t('dashboard.tooEarly.body', { week: MIN_WEEK })}
                     </p>
                 </section>
                 <CategoryPicker
@@ -150,11 +153,13 @@ export default function Dashboard({ state, onSetCategory }: Props) {
 
                 {g && (
                     <p className="text-ink text-xl font-extrabold">
-                        Bébé mesure {g.size.toLocaleString('fr-FR')} cm
+                        {t('dashboard.size', {
+                            size: g.size.toLocaleString('fr-FR'),
+                        })}
                     </p>
                 )}
                 <p className="text-ink-soft mt-1">
-                    Soit la taille d&apos;
+                    {t('dashboard.sizeEquivalent')}
                     {item.wikipedia ? (
                         <a
                             href={item.wikipedia}
@@ -164,7 +169,7 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                         >
                             {item.name}
                             <span className="sr-only">
-                                (article Wikipédia, nouvel onglet)
+                                {t('dashboard.wikipediaHint')}
                             </span>
                         </a>
                     ) : (
@@ -179,10 +184,12 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 {g && (
                     <div className="border-cream-deep mt-6 border-t pt-5">
                         <p className="text-ink text-xl font-extrabold">
-                            Bébé pèse{' '}
-                            {g.weight >= 1000
-                                ? `${(g.weight / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 2 })} kg`
-                                : `${g.weight.toLocaleString('fr-FR')} g`}
+                            {t('dashboard.weight', {
+                                weight:
+                                    g.weight >= 1000
+                                        ? `${(g.weight / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 2 })} kg`
+                                        : `${g.weight.toLocaleString('fr-FR')} g`,
+                            })}
                         </p>
                         {joke && <p className="text-ink-soft mt-1">{joke}</p>}
                     </div>
@@ -192,14 +199,14 @@ export default function Dashboard({ state, onSetCategory }: Props) {
             <section className="mt-6 rounded-3xl bg-white p-5 shadow-sm">
                 <div className="mb-2 flex items-center justify-between text-sm">
                     <span className="text-ink font-semibold">
-                        Semaine {week} / {MAX_WEEK}
+                        {t('dashboard.week', { week, max: MAX_WEEK })}
                     </span>
                     <span className="text-ink-soft">
                         {daysLeft > 0
-                            ? `J−${daysLeft} avant le terme`
+                            ? t('dashboard.daysLeft', { days: daysLeft })
                             : daysLeft === 0
-                              ? "C'est le grand jour ! 🎉"
-                              : `Terme dépassé de ${-daysLeft} j 🍼`}
+                              ? t('dashboard.dueToday')
+                              : t('dashboard.overdue', { days: -daysLeft })}
                     </span>
                 </div>
                 <div className="bg-cream-deep h-3 w-full overflow-hidden rounded-full">

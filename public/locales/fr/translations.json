@@ -1,0 +1,77 @@
+{
+    "app": {
+        "name": "Lé gro mon bébé",
+        "description": "Suis la croissance de bébé semaine après semaine, en fromages, poissons, animaux… ou fruits, pour les puristes.",
+        "shortName": "Lé gro bébé"
+    },
+    "onboarding": {
+        "tagline": "Suis la croissance de bébé semaine après semaine, en trucs rigolos.",
+        "dateLabel": "Date de tes dernières règles",
+        "dateHint": "On calcule la semaine de grossesse (SA) à partir de cette date.",
+        "categoryLabel": "Bébé, tu le compares en quoi ?",
+        "submit": "C'est parti ! 🚀",
+        "errorCategory": "Choisis une catégorie de comparaison !"
+    },
+    "dashboard": {
+        "size": "Bébé mesure {size} cm",
+        "sizeEquivalent": "Soit la taille d'",
+        "weight": "Bébé pèse {weight}",
+        "week": "Semaine {week} / {max}",
+        "daysLeft": "J−{days} avant le terme",
+        "dueToday": "C'est le grand jour ! 🎉",
+        "overdue": "Terme dépassé de {days} j 🍼",
+        "compareIn": "Comparer en…",
+        "wikipediaHint": "(article Wikipédia, nouvel onglet)",
+        "born": {
+            "title": "Bébé devrait être né !",
+            "body": "Le terme est dépassé de {days} jours. Soit il est déjà là et personne ne me tient au courant, soit il est très bien où il est.",
+            "hint": "Tu peux corriger la date dans les réglages si elle n'est pas la bonne."
+        },
+        "oddDate": {
+            "title": "Cette date est bizarre",
+            "future": "Elle est dans le futur, et ça, même moi je ne sais pas faire.",
+            "implausible": "Elle remonte à plus de deux ans. Un petit tour dans les réglages ?"
+        },
+        "tooEarly": {
+            "title": "C'est encore tout frais",
+            "body": "À ce stade, bébé est trop petit pour qu'on lui trouve un équivalent. Rendez-vous à la semaine {week} !"
+        }
+    },
+    "timeline": {
+        "title": "Toute la grossesse",
+        "subtitle": "{emoji} {label} — semaine après semaine"
+    },
+    "settings": {
+        "title": "Réglages",
+        "dateLabel": "Date des dernières règles",
+        "categoryLabel": "Catégorie de comparaison",
+        "notificationsLabel": "Notifications",
+        "notificationsHint": "Un petit rappel quand bébé a grandi.",
+        "notificationsUnsupported": "Ton navigateur ne gère pas les notifications 🤷",
+        "notificationsDenied": "Autorisation refusée. Active-les dans les réglages du navigateur.",
+        "feedbackTitle": "Une idée de comparaison ?",
+        "feedbackBody": "Poissons rares, fromages qui puent, animaux improbables… propose !",
+        "feedbackCta": "Proposer une idée ✉️",
+        "feedbackSubject": "Idée pour Lé gro mon bébé",
+        "feedbackMailBody": "Mon idée de comparaison :",
+        "resetCta": "Tout effacer et recommencer",
+        "resetConfirm": "Sûr ? Toutes les données locales seront effacées.",
+        "resetConfirmCta": "Oui, effacer",
+        "resetCancel": "Annuler"
+    },
+    "nav": {
+        "dashboard": "Accueil",
+        "timeline": "Timeline",
+        "settings": "Réglages"
+    },
+    "notification": {
+        "title": "Bébé a grandi ! 🎉",
+        "body": "Semaine {week} : bébé fait maintenant la taille d'{name} {emoji}"
+    },
+    "dateErrors": {
+        "missing": "Il me faut la date de tes dernières règles 🗓️",
+        "invalid": "Cette date n'est pas valide 🤔",
+        "future": "Cette date est dans le futur, ça coince un peu 😅",
+        "implausible": "Ça fait plus de deux ans… tu es sûre de la date ? 🤨"
+    }
+}

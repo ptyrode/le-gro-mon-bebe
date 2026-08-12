@@ -1,5 +1,7 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 export type View = 'dashboard' | 'timeline' | 'settings';
 
 interface Props {
@@ -7,13 +9,15 @@ interface Props {
     onChange: (view: View) => void;
 }
 
-const TABS: { key: View; label: string; icon: string }[] = [
-    { key: 'dashboard', label: 'Accueil', icon: '🍼' },
-    { key: 'timeline', label: 'Timeline', icon: '📅' },
-    { key: 'settings', label: 'Réglages', icon: '⚙️' },
+const TABS: { key: View; icon: string }[] = [
+    { key: 'dashboard', icon: '🍼' },
+    { key: 'timeline', icon: '📅' },
+    { key: 'settings', icon: '⚙️' },
 ];
 
 export default function BottomNav({ view, onChange }: Props) {
+    const t = useTranslations();
+
     return (
         <nav className="border-cream-deep bg-cream/90 fixed inset-x-0 bottom-0 z-10 border-t backdrop-blur">
             <div className="mx-auto flex max-w-md items-stretch justify-around px-2 pb-[env(safe-area-inset-bottom)]">
@@ -29,7 +33,7 @@ export default function BottomNav({ view, onChange }: Props) {
                             }`}
                         >
                             <span className="text-xl">{tab.icon}</span>
-                            {tab.label}
+                            {t(tab.key)}
                         </button>
                     );
                 })}

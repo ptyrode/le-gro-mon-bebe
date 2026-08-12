@@ -79,20 +79,20 @@ export function pregnancyStatus(
     return { kind: 'ongoing', week };
 }
 
+export type DateError = 'missing' | 'invalid' | 'future' | 'implausible';
+
 export function validateLastPeriodDate(
     lastPeriodDate: string,
     now: Date = new Date()
-): string | null {
-    if (!lastPeriodDate) return 'Il me faut la date de tes dernières règles 🗓️';
+): DateError | null {
+    if (!lastPeriodDate) return 'missing';
 
     const parsed = parseISODate(lastPeriodDate);
-    if (Number.isNaN(parsed.getTime())) return "Cette date n'est pas valide 🤔";
+    if (Number.isNaN(parsed.getTime())) return 'invalid';
 
     const days = daysSince(lastPeriodDate, now);
-    if (days < 0) return 'Cette date est dans le futur, ça coince un peu 😅';
-    if (days > IMPLAUSIBLE_DAYS) {
-        return 'Ça fait plus de deux ans… tu es sûre de la date ? 🤨';
-    }
+    if (days < 0) return 'future';
+    if (days > IMPLAUSIBLE_DAYS) return 'implausible';
     return null;
 }
 

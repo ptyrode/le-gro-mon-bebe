@@ -14,6 +14,7 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 | Langage     | TypeScript                                                 |
 | UI          | React 19 + Tailwind CSS 4                                  |
 | Stockage    | `localStorage` (clé `lgmb:v1`)                             |
+| Textes      | next-intl, sans routing i18n (`public/locales/fr/`)        |
 | PWA         | `app/manifest.ts` + service worker maison (`public/sw.js`) |
 | Hébergement | Vercel                                                     |
 
@@ -55,10 +56,11 @@ src/
 ├── app/          # App Router : layout, page unique, manifest, icônes
 ├── components/   # Onboarding, Dashboard, Timeline, Settings, BottomNav
 ├── data/         # fetalGrowth.json, weightJokes.json, categories/*.json
+├── i18n/         # configuration next-intl (locale unique)
 ├── hooks/        # usePregnancy (useSyncExternalStore sur le localStorage)
 └── lib/          # types, chargement des données, calcul SA, storage
 
-public/           # servi tel quel : icônes, service worker, illustrations/
+public/           # servi tel quel : icônes, service worker, locales/, illustrations/
 scripts/          # outils hors build : audit des données, illustrations, références
 docs/             # prompts de génération des illustrations, un par catégorie
 ```

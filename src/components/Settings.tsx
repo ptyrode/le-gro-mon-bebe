@@ -3,6 +3,7 @@
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 // TODO(v1.1): remplacer le mailto par l'envoi via Serverless Function + Resend.
@@ -27,6 +28,7 @@ export default function Settings({
     onSetNotificationsEnabled,
     onReset,
 }: Props) {
+    const t = useTranslations();
     const { lastPeriodDate, category } = state.pregnancy;
     const notifsEnabled = state.notifications.enabled;
     const [notifMsg, setNotifMsg] = useState<string | null>(null);
@@ -39,7 +41,7 @@ export default function Settings({
             return;
         }
         if (typeof window === 'undefined' || !('Notification' in window)) {
-            setNotifMsg('Ton navigateur ne gère pas les notifications 🤷');
+            setNotifMsg(t('settings.notificationsUnsupported'));
             return;
         }
         const perm = await Notification.requestPermission();
@@ -48,20 +50,18 @@ export default function Settings({
             setNotifMsg(null);
         } else {
             onSetNotificationsEnabled(false);
-            setNotifMsg(
-                'Autorisation refusée. Active-les dans les réglages du navigateur.'
-            );
+            setNotifMsg(t('settings.notificationsDenied'));
         }
     };
 
     const feedbackHref = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
-        'Idée pour Lé gro mon bébé'
-    )}&body=${encodeURIComponent('Mon idée de comparaison :\n\n')}`;
+        t('settings.feedbackSubject')
+    )}&body=${encodeURIComponent(`${t('settings.feedbackMailBody')}\n\n`)}`;
 
     return (
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
             <h1 className="text-ink mb-6 text-xl font-extrabold tracking-tight">
-                Réglages
+                {t('settings.title')}
             </h1>
 
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
@@ -69,7 +69,7 @@ export default function Settings({
                     htmlFor="ddr"
                     className="text-ink mb-2 block text-sm font-semibold"
                 >
-                    Date des dernières règles
+                    {t('settings.dateLabel')}
                 </label>
                 <input
                     id="ddr"
@@ -79,7 +79,7 @@ export default function Settings({
                     onChange={(e) => {
                         const next = e.target.value;
                         const error = validateLastPeriodDate(next);
-                        setDateError(error);
+                        setDateError(error ? t(`dateErrors.${error}`) : null);
                         if (!error) onSetLastPeriodDate(next);
                     }}
                     className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 outline-none"
@@ -93,7 +93,7 @@ export default function Settings({
 
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <p className="text-ink mb-3 text-sm font-semibold">
-                    Catégorie de comparaison
+                    {t('settings.categoryLabel')}
                 </p>
                 <div className="flex flex-wrap gap-2">
                     {categoryList.map((cat) => {
@@ -120,10 +120,10 @@ export default function Settings({
                 <div className="flex items-center justify-between">
                     <div>
                         <p className="text-ink text-sm font-semibold">
-                            Notifications
+                            {t('settings.notificationsLabel')}
                         </p>
                         <p className="text-ink-soft text-xs">
-                            Un petit rappel quand bébé a grandi.
+                            {t('settings.notificationsHint')}
                         </p>
                     </div>
                     <button
@@ -149,17 +149,16 @@ export default function Settings({
 
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <p className="text-ink text-sm font-semibold">
-                    Une idée de comparaison ?
+                    {t('settings.feedbackTitle')}
                 </p>
                 <p className="text-ink-soft mb-3 text-xs">
-                    Poissons rares, fromages qui puent, animaux improbables…
-                    propose !
+                    {t('settings.feedbackBody')}
                 </p>
                 <a
                     href={feedbackHref}
                     className="bg-accent hover:bg-accent-deep inline-block rounded-2xl px-5 py-2.5 text-sm font-bold text-white transition"
                 >
-                    Proposer une idée ✉️
+                    {t('settings.feedbackCta')}
                 </a>
             </section>
 
@@ -170,12 +169,12 @@ export default function Settings({
                         onClick={() => setConfirmReset(true)}
                         className="text-berry text-sm font-semibold"
                     >
-                        Tout effacer et recommencer
+                        {t('settings.resetCta')}
                     </button>
                 ) : (
                     <div>
                         <p className="text-ink mb-3 text-sm">
-                            Sûr ? Toutes les données locales seront effacées.
+                            {t('settings.resetConfirm')}
                         </p>
                         <div className="flex gap-2">
                             <button
@@ -183,14 +182,14 @@ export default function Settings({
                                 onClick={onReset}
                                 className="bg-berry rounded-xl px-4 py-2 text-sm font-bold text-white"
                             >
-                                Oui, effacer
+                                {t('settings.resetConfirmCta')}
                             </button>
                             <button
                                 type="button"
                                 onClick={() => setConfirmReset(false)}
                                 className="bg-cream-deep text-ink rounded-xl px-4 py-2 text-sm font-semibold"
                             >
-                                Annuler
+                                {t('settings.resetCancel')}
                             </button>
                         </div>
                     </div>

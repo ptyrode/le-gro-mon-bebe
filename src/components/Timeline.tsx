@@ -3,12 +3,14 @@
 import { categories } from '@/lib/data';
 import { clampWeek, growthForWeek, rawGestationalWeek } from '@/lib/pregnancy';
 import type { AppState } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 
 interface Props {
     state: AppState;
 }
 
 export default function Timeline({ state }: Props) {
+    const t = useTranslations();
     const { lastPeriodDate, category } = state.pregnancy;
     const currentWeek = clampWeek(rawGestationalWeek(lastPeriodDate));
     const cat = categories[category];
@@ -17,10 +19,13 @@ export default function Timeline({ state }: Props) {
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
             <header className="mb-6">
                 <h1 className="text-ink text-xl font-extrabold tracking-tight">
-                    Toute la grossesse
+                    {t('timeline.title')}
                 </h1>
                 <p className="text-ink-soft text-sm">
-                    {cat.emoji} {cat.label} — semaine après semaine
+                    {t('timeline.subtitle', {
+                        emoji: cat.emoji,
+                        label: cat.label,
+                    })}
                 </p>
             </header>
 

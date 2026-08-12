@@ -19,6 +19,7 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 | PWA                 | Service Worker + manifest (`next-pwa` ou config manuelle)                                  |
 | Formulaire feedback | **Vercel Serverless Function** + **Resend** (mail vers Pierrick)                           |
 | Qualité de code     | **ESLint + Prettier + Stylelint**, conf reprise du projet Aubade (`npm run lint:fix`)      |
+| Textes              | **next-intl** sans routing i18n — clés dans `public/locales/fr/translations.json`          |
 
 > Le repo vit sur le **compte GitHub perso**, à part de tout ce qui touche au travail. Vercel s'y branche nativement : déploiement automatique à chaque push sur `main`.
 

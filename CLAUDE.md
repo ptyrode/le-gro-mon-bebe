@@ -19,6 +19,22 @@ Avant de conclure une session : `npm run lint:fix`, `npm run typecheck`, `npm ru
 
 Dans les JSON, toute phrase **commence par une majuscule et se termine par un point**. Ne pas écrire de fragments destinés à être recollés en milieu de phrase par un composant : ça produit des fautes de contraction (« le poids de le débat ») et rend le texte illisible hors contexte.
 
+## Textes de l'interface
+
+Aucune chaîne visible ne doit être écrite en dur dans un composant : tout passe par **`public/locales/fr/translations.json`** via `useTranslations` (client) ou `getTranslations` (serveur, pour `layout.tsx` et `manifest.ts`).
+
+**Une seule déclaration par composant, sans namespace**, et la clé complète à l'appel :
+
+```tsx
+const t = useTranslations();
+t('onboarding.dateLabel');
+t('app.name');
+```
+
+next-intl tourne **sans routing i18n** : une seule locale, définie dans `src/i18n/request.ts`. Ne pas introduire de préfixe d'URL (`/fr/…`) — ça casserait le `start_url` du manifest PWA et le cache du service worker.
+
+Les **données** (`src/data/`) ne sont pas concernées : les noms d'items, `funText` et comparaisons de poids sont du contenu, pas de l'interface.
+
 ## Documentation
 
 - [`README.md`](README.md) — installation, scripts, structure

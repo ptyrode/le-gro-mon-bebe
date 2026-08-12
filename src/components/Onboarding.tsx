@@ -3,6 +3,7 @@
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { CategoryKey } from '@/lib/types';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 interface Props {
@@ -14,6 +15,7 @@ function todayISO(): string {
 }
 
 export default function Onboarding({ onStart }: Props) {
+    const t = useTranslations();
     const [lastPeriodDate, setLastPeriodDate] = useState('');
     const [category, setCategory] = useState<CategoryKey | null>(null);
     const [error, setError] = useState<string | null>(null);
@@ -21,11 +23,11 @@ export default function Onboarding({ onStart }: Props) {
     const submit = () => {
         const dateError = validateLastPeriodDate(lastPeriodDate);
         if (dateError) {
-            setError(dateError);
+            setError(t(`dateErrors.${dateError}`));
             return;
         }
         if (!category) {
-            setError('Choisis une catégorie de comparaison !');
+            setError(t('onboarding.errorCategory'));
             return;
         }
         onStart(lastPeriodDate, category);
@@ -36,12 +38,9 @@ export default function Onboarding({ onStart }: Props) {
             <header className="mb-8 text-center">
                 <div className="mb-3 text-6xl">🤰</div>
                 <h1 className="text-ink text-3xl font-extrabold tracking-tight">
-                    Lé gro mon bébé
+                    {t('app.name')}
                 </h1>
-                <p className="text-ink-soft mt-2">
-                    Suis la croissance de bébé semaine après semaine, en trucs
-                    rigolos.
-                </p>
+                <p className="text-ink-soft mt-2">{t('onboarding.tagline')}</p>
             </header>
 
             <section className="mb-8">
@@ -49,7 +48,7 @@ export default function Onboarding({ onStart }: Props) {
                     htmlFor="ddr"
                     className="text-ink mb-2 block text-sm font-semibold"
                 >
-                    Date de tes dernières règles
+                    {t('onboarding.dateLabel')}
                 </label>
                 <input
                     id="ddr"
@@ -63,14 +62,13 @@ export default function Onboarding({ onStart }: Props) {
                     className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 shadow-sm outline-none"
                 />
                 <p className="text-ink-soft mt-2 text-xs">
-                    On calcule la semaine de grossesse (SA) à partir de cette
-                    date.
+                    {t('onboarding.dateHint')}
                 </p>
             </section>
 
             <section className="mb-8">
                 <p className="text-ink mb-3 text-sm font-semibold">
-                    Bébé, tu le compares en quoi ?
+                    {t('onboarding.categoryLabel')}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                     {categoryList.map((cat) => {
@@ -113,7 +111,7 @@ export default function Onboarding({ onStart }: Props) {
                 onClick={submit}
                 className="bg-accent shadow-accent/30 hover:bg-accent-deep mt-auto w-full rounded-2xl px-6 py-4 text-lg font-bold text-white shadow-lg transition active:scale-[0.98]"
             >
-                C&apos;est parti&nbsp;! 🚀
+                {t('onboarding.submit')}
             </button>
         </main>
     );
