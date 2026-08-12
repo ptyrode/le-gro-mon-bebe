@@ -19,6 +19,10 @@
 - [ ] **Reprendre les illustrations de `fruits`, `cheeses` et `fish`.** Le rendu est inégal : sur certaines images le bébé est bien visible sous le costume (tête entière, mains, pieds), sur d'autres — les poissons surtout — on n'a qu'un sujet avec un œil un peu humain et deux mains. L'effet « déguisement » manque.
     - La consigne a été renforcée dans `scripts/gen-illustration-prompts.py` **après** la génération de ces trois catégories : elle demande désormais explicitement la tête entière du bébé émergeant du costume, plus les mains et les pieds qui dépassent. `animals` en bénéficie déjà.
     - Regénérer les 114 images avec le prompt actuel, ou seulement les plus faibles (les poissons en priorité).
+- [ ] **Refaire les icônes de l'appli.** Une version biberon sur fond corail a été générée puis annulée — à reprendre.
+    - Sources à produire depuis une image carrée 2048 px : `public/icon-192.png`, `public/icon-512.png`, `src/app/apple-icon.png` (180), `src/app/icon.png` (512), `src/app/favicon.ico` (16/32/48).
+    - ⚠️ **Prévoir des fichiers `maskable` séparés**, avec le sujet à ~72 % du cadre. Le manifest déclare aujourd'hui les mêmes fichiers en `any` et `maskable`, or Android rogne les maskable d'environ 20 % : le haut de la tétine est coupé sur l'écran d'accueil.
+    - ⚠️ **Coins arrondis uniquement sur les icônes `any`.** iOS applique son propre masque à `apple-icon.png` et remplit les coins transparents en noir ; Android fait de même avec les maskable.
 - [ ] **Formulaire feedback** : remplacer le `mailto:` par une Serverless Function + Resend.
 - [ ] Gérer plusieurs grossesses (cf. `SPECS.md`).
 - [ ] Proposer de clore la grossesse quand le terme est dépassé (lié au multi-grossesses).
