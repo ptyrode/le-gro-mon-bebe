@@ -7,6 +7,7 @@ import Settings from '@/components/Settings';
 import Timeline from '@/components/Timeline';
 import { usePregnancy } from '@/hooks/usePregnancy';
 import { categories } from '@/lib/data';
+import { showNotification } from '@/lib/notifications';
 import { equivalenceForWeek, pregnancyStatus } from '@/lib/pregnancy';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
@@ -46,14 +47,16 @@ export default function Home() {
         if (week <= state.notifications.lastSeenWeek) return;
 
         const item = equivalenceForWeek(state.pregnancy.category, week);
-        new Notification(t('notification.title'), {
+        setLastSeenWeek(week);
+        void showNotification(t('notification.title'), {
             body: t('notification.body', {
                 week,
                 name: item.name,
                 emoji: categories[state.pregnancy.category].emoji,
             }),
+            icon: '/icon-192.png',
+            badge: '/icon-192.png',
         });
-        setLastSeenWeek(week);
     }, [state, setLastSeenWeek, setNotificationsEnabled, t]);
 
     if (loading) {

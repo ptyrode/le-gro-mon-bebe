@@ -1,4 +1,4 @@
-const CACHE = 'lgmb-v1';
+const CACHE = 'lgmb-v2';
 const APP_SHELL = ['/'];
 
 self.addEventListener('install', (event) => {
@@ -58,5 +58,18 @@ self.addEventListener('fetch', (event) => {
                 .catch(() => cached);
             return cached || network;
         })
+    );
+});
+
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close();
+    event.waitUntil(
+        self.clients
+            .matchAll({ type: 'window', includeUncontrolled: true })
+            .then((clientsList) => {
+                const client = clientsList.find((c) => 'focus' in c);
+                if (client) return client.focus();
+                return self.clients.openWindow('/');
+            })
     );
 });
