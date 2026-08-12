@@ -5,36 +5,32 @@ import process from 'node:process';
 import sharp from 'sharp';
 
 const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
-const TAILLE_CIBLE = 512;
-const QUALITE_WEBP = 82;
-const FOND = { r: 255, g: 244, b: 238 };
+const TARGET_SIZE = 512;
+const WEBP_QUALITY = 82;
+const BACKGROUND = { r: 255, g: 244, b: 238 };
 
-const [, , source, categorie, semaineArg, colsArg = '2', rowsArg = '2'] =
+const [, , source, category, weekArg, colsArg = '2', rowsArg = '2'] =
     process.argv;
 
-if (!source || !categorie || !semaineArg) {
+if (!source || !category || !weekArg) {
     console.error(
-        'Usage : node scripts/split-illustrations.mjs <planche.png> <catégorie> <semaineDépart> [cols] [rows]'
+        'Usage : node scripts/split-illustrations.mjs <sheet.png> <catégorie> <semaineDépart> [cols] [rows]'
     );
     process.exit(1);
 }
-if (!CATEGORIES.includes(categorie)) {
+if (!CATEGORIES.includes(category)) {
     console.error(
-        `Catégorie inconnue : « ${categorie} ». Attendu : ${CATEGORIES.join(', ')}.`
+        `Catégorie inconnue : « ${category} ». Attendu : ${CATEGORIES.join(', ')}.`
     );
     process.exit(1);
 }
 
-const semaineDepart = Number(semaineArg);
+const startWeek = Number(weekArg);
 const cols = Number(colsArg);
 const rows = Number(rowsArg);
 
-if (
-    !Number.isInteger(semaineDepart) ||
-    semaineDepart < 4 ||
-    semaineDepart > 41
-) {
-    console.error('La semaine de départ doit être un entier entre 4 et 41.');
+if (!Number.isInteger(startWeek) || startWeek < 4 || startWeek > 41) {
+    console.error('La week de départ doit être un entier entre 4 et 41.');
     process.exit(1);
 }
 if (
@@ -46,35 +42,35 @@ if (
     console.error('cols et rows doivent être des entiers positifs.');
     process.exit(1);
 }
-const SEMAINE_MAX = 41;
+const MAX_WEEK = 41;
 
-const dossier = path.join('public', 'images', categorie);
-await mkdir(dossier, { recursive: true });
+const folder = path.join('public', 'images', category);
+await mkdir(folder, { recursive: true });
 
 const image = sharp(source);
 const { width, height } = await image.metadata();
-const tuileL = Math.floor(width / cols);
-const tuileH = Math.floor(height / rows);
+const tileWidth = Math.floor(width / cols);
+const tileHeight = Math.floor(height / rows);
 
 console.log(
-    `Planche ${width}×${height} → ${cols}×${rows} vignettes de ${tuileL}×${tuileH} px`
+    `Planche ${width}×${height} → ${cols}×${rows} vignettes de ${tileWidth}×${tileHeight} px`
 );
-if (tuileL < TAILLE_CIBLE) {
+if (tileWidth < TARGET_SIZE) {
     console.warn(
-        `⚠️  Vignettes de ${tuileL} px, en dessous des ${TAILLE_CIBLE} px visés : ` +
-            `générer des planches plus grandes, ou moins de vignettes par planche.`
+        `⚠️  Vignettes de ${tileWidth} px, en dessous des ${TARGET_SIZE} px visés : ` +
+            `générer des planches plus grandes, ou moins de vignettes par sheet.`
     );
 }
 
-let semaine = semaineDepart;
-let ignorees = 0;
+let week = startWeek;
+let skipped = 0;
 for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
-        if (semaine > SEMAINE_MAX) {
-            ignorees++;
+        if (week > MAX_WEEK) {
+            skipped++;
             continue;
         }
-        const destination = path.join(dossier, `${categorie}-${semaine}.webp`);
+        const destination = path.join(folder, `${category}-${week}.webp`);
         try {
             await access(destination);
             console.error(
@@ -85,26 +81,26 @@ for (let y = 0; y < rows; y++) {
         } catch {}
         await sharp(source)
             .extract({
-                left: x * tuileL,
-                top: y * tuileH,
-                width: tuileL,
-                height: tuileH,
+                left: x * tileWidth,
+                top: y * tileHeight,
+                width: tileWidth,
+                height: tileHeight,
             })
-            .resize(TAILLE_CIBLE, TAILLE_CIBLE, {
-                fit: tuileL === tuileH ? 'cover' : 'contain',
-                background: FOND,
+            .resize(TARGET_SIZE, TARGET_SIZE, {
+                fit: tileWidth === tileHeight ? 'cover' : 'contain',
+                background: BACKGROUND,
             })
-            .webp({ quality: QUALITE_WEBP })
+            .webp({ quality: WEBP_QUALITY })
             .toFile(destination);
         console.log(`  ${destination}`);
-        semaine++;
+        week++;
     }
 }
 
 console.log(
-    `\n✅ ${semaine - semaineDepart} image(s) écrite(s) (semaines ${semaineDepart} à ${semaine - 1}).` +
-        (ignorees
-            ? ` ${ignorees} vignette(s) au-delà de S${SEMAINE_MAX} ignorée(s).`
+    `\n✅ ${week - startWeek} image(s) écrite(s) (semaines ${startWeek} à ${week - 1}).` +
+        (skipped
+            ? ` ${skipped} vignette(s) au-delà de S${MAX_WEEK} ignorée(s).`
             : '')
 );
 console.log(

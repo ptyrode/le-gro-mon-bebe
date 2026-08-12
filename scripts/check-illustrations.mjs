@@ -5,86 +5,80 @@ import process from 'node:process';
 import sharp from 'sharp';
 
 const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
-const TAILLE_ATTENDUE = 512;
+const EXPECTED_SIZE = 512;
 
-let problemes = 0;
+let issues = 0;
 
-for (const categorie of CATEGORIES) {
+for (const category of CATEGORIES) {
     const items = JSON.parse(
-        await readFile(`src/data/categories/${categorie}.json`, 'utf8')
+        await readFile(`src/data/categories/${category}.json`, 'utf8')
     ).items;
-    const attendus = new Map(items.map((i) => [i.week, i.name]));
+    const expected = new Map(items.map((i) => [i.week, i.name]));
 
-    const dossier = path.join('public', 'images', categorie);
-    let fichiers = [];
+    const folder = path.join('public', 'images', category);
+    let files = [];
     try {
-        fichiers = (await readdir(dossier)).filter((f) => f.endsWith('.webp'));
+        files = (await readdir(folder)).filter((f) => f.endsWith('.webp'));
     } catch {
-        problemes++;
+        issues++;
         console.log(
-            `\n${categorie} : 0/${attendus.size} images — dossier ${dossier} absent`
+            `\n${category} : 0/${expected.size} images — folder ${folder} absent`
         );
         continue;
     }
 
-    const presentes = new Map();
-    const invalides = [];
-    for (const f of fichiers) {
-        const m = f.match(new RegExp(`^${categorie}-(\\d+)\\.webp$`));
+    const present = new Map();
+    const invalid = [];
+    for (const f of files) {
+        const m = f.match(new RegExp(`^${category}-(\\d+)\\.webp$`));
         if (!m) {
-            invalides.push(f);
+            invalid.push(f);
             continue;
         }
-        presentes.set(Number(m[1]), f);
+        present.set(Number(m[1]), f);
     }
 
-    const manquantes = [...attendus.keys()].filter((w) => !presentes.has(w));
-    const superflues = [...presentes.keys()].filter((w) => !attendus.has(w));
+    const missing = [...expected.keys()].filter((w) => !present.has(w));
+    const extra = [...present.keys()].filter((w) => !expected.has(w));
 
     console.log(
-        `\n${categorie} : ${presentes.size}/${attendus.size} images` +
-            (manquantes.length || superflues.length || invalides.length
-                ? ''
-                : ' ✅')
+        `\n${category} : ${present.size}/${expected.size} images` +
+            (missing.length || extra.length || invalid.length ? '' : ' ✅')
     );
 
-    if (invalides.length) {
-        problemes++;
-        console.log(`  ⚠️  nom non conforme : ${invalides.join(', ')}`);
+    if (invalid.length) {
+        issues++;
+        console.log(`  ⚠️  nom non conforme : ${invalid.join(', ')}`);
     }
-    if (superflues.length) {
-        problemes++;
-        console.log(
-            `  ⚠️  semaine sans item correspondant : ${superflues.join(', ')}`
-        );
+    if (extra.length) {
+        issues++;
+        console.log(`  ⚠️  week sans item correspondant : ${extra.join(', ')}`);
     }
-    if (manquantes.length) {
-        problemes++;
-        console.log(`  manquantes (${manquantes.length}) :`);
-        for (const w of manquantes) {
-            console.log(`      ${categorie}-${w}.webp → ${attendus.get(w)}`);
+    if (missing.length) {
+        issues++;
+        console.log(`  missing (${missing.length}) :`);
+        for (const w of missing) {
+            console.log(`      ${category}-${w}.webp → ${expected.get(w)}`);
         }
     }
 
-    for (const [semaine, fichier] of [...presentes].sort(
-        (a, b) => a[0] - b[0]
-    )) {
+    for (const [week, file] of [...present].sort((a, b) => a[0] - b[0])) {
         const { width, height } = await sharp(
-            path.join(dossier, fichier)
+            path.join(folder, file)
         ).metadata();
-        if (width !== TAILLE_ATTENDUE || height !== TAILLE_ATTENDUE) {
-            problemes++;
+        if (width !== EXPECTED_SIZE || height !== EXPECTED_SIZE) {
+            issues++;
             console.log(
-                `  ⚠️  ${fichier} fait ${width}×${height}, attendu ${TAILLE_ATTENDUE}×${TAILLE_ATTENDUE}` +
-                    ` (semaine ${semaine} : ${attendus.get(semaine)})`
+                `  ⚠️  ${file} fait ${width}×${height}, attendu ${EXPECTED_SIZE}×${EXPECTED_SIZE}` +
+                    ` (week ${week} : ${expected.get(week)})`
             );
         }
     }
 }
 
 console.log(
-    problemes
-        ? `\n${problemes} point(s) à corriger.`
+    issues
+        ? `\n${issues} point(s) à corriger.`
         : '\n✅ Toutes les illustrations sont en place.'
 );
-process.exit(problemes ? 1 : 0);
+process.exit(issues ? 1 : 0);

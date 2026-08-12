@@ -160,6 +160,7 @@ Pas de push server-side (incompatible avec un déploiement statique simple).
 ## 6. PWA
 
 - `manifest.json` : nom, icônes, couleur de thème, `display: standalone`.
+- **Bandeau d'installation** (`InstallBanner`) affiché sous le dashboard tant que l'appli n'est pas installée : bouton natif sur Android (`beforeinstallprompt`), instructions Partager → Sur l'écran d'accueil sur iOS, où aucune API n'existe. Masquable, choix retenu en localStorage.
 - Service Worker : mise en cache de l'app shell pour fonctionnement offline.
 - Installable sur l'écran d'accueil mobile.
 

@@ -16,7 +16,7 @@ export default function Timeline({ state }: Props) {
     const status = pregnancyStatus(lastPeriodDate);
     const cat = categories[category];
     const currentWeek = status.kind === 'ongoing' ? status.week : 0;
-    const passees =
+    const pastItems =
         status.kind === 'born'
             ? cat.items
             : status.kind === 'ongoing'
@@ -37,14 +37,14 @@ export default function Timeline({ state }: Props) {
                 </p>
             </header>
 
-            {passees.length === 0 && (
+            {pastItems.length === 0 && (
                 <p className="text-ink-soft rounded-2xl bg-white/60 p-4 text-center text-sm">
                     {t('timeline.empty')}
                 </p>
             )}
 
             <ol className="space-y-2">
-                {passees.map((item) => {
+                {pastItems.map((item) => {
                     const past = item.week < currentWeek;
                     const current = item.week === currentWeek;
                     const g = growthForWeek(item.week);

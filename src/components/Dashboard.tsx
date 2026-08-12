@@ -1,5 +1,6 @@
 'use client';
 
+import InstallBanner from '@/components/InstallBanner';
 import ItemVisual from '@/components/ItemVisual';
 import { categoryList } from '@/lib/data';
 import {
@@ -198,7 +199,11 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                                         : `${g.weight.toLocaleString('fr-FR')} g`,
                             })}
                         </p>
-                        {joke && <p className="text-ink-soft mt-1">{joke}</p>}
+                        {joke && (
+                            <p className="text-ink-soft mt-3 text-sm italic">
+                                {joke}
+                            </p>
+                        )}
                     </div>
                 )}
             </section>
@@ -228,6 +233,8 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 category={category}
                 onSetCategory={onSetCategory}
             />
+
+            <InstallBanner />
         </div>
     );
 }

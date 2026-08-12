@@ -11,9 +11,9 @@ const FEEDBACK_EMAIL = 'pierrick.tyrode@gmail.com';
 
 type Permission = NotificationPermission | 'unsupported';
 
-const sansAbonnement = () => () => {};
+const noSubscribe = () => () => {};
 
-function lirePermission(): Permission {
+function readPermission(): Permission {
     if (typeof window === 'undefined' || !('Notification' in window)) {
         return 'unsupported';
     }
@@ -44,8 +44,8 @@ export default function Settings({
     const notifsEnabled = state.notifications.enabled;
     const [notifMsg, setNotifMsg] = useState<string | null>(null);
     const permissionInitiale = useSyncExternalStore<Permission>(
-        sansAbonnement,
-        lirePermission,
+        noSubscribe,
+        readPermission,
         () => 'unsupported'
     );
     const [permissionDemandee, setPermissionDemandee] =

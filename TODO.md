@@ -5,7 +5,9 @@
 ## 🔴 v1 — ce qui reste
 
 - [x] **Illustrations** : les 4 catégories sont faites — **152 images** (2,9 Mo en WebP 512).
-- [ ] **Tests sur mobile réel** : notifications (Option A), installation de la PWA depuis la prod (iOS + Android), et comportement des liens Wikipédia en mode standalone.
+- [ ] **Tests sur mobile réel** (iPhone) : installation via le bandeau, popup de permission des notifications, et comportement des liens Wikipédia en mode standalone.
+    - ⚠️ Sur iOS, les notifications web n'existent **que si la PWA est installée** sur l'écran d'accueil. Sans installation, aucune notif possible.
+    - ⚠️ La notification actuelle (Option A) se déclenche **à l'ouverture de l'appli**, pas spontanément. Un vrai push hebdomadaire demande un service worker `push` + VAPID + une fonction serverless — c'est l'Option B, en v2.
 
 ## 🔵 v2 — plus tard
 

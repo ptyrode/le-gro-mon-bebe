@@ -75,5 +75,12 @@
         "invalid": "Cette date n'est pas valide 🤔",
         "future": "Cette date est dans le futur, ça coince un peu 😅",
         "implausible": "Ça fait plus de deux ans… tu es sûre de la date ? 🤨"
+    },
+    "install": {
+        "title": "Installe l’appli sur ton téléphone",
+        "ios": "Appuie sur le bouton Partager en bas de Safari, puis sur « Sur l’écran d’accueil ». C’est la seule façon de recevoir les notifications sur iPhone.",
+        "android": "Ajoute Lé gro mon bébé à ton écran d’accueil pour l’ouvrir comme une vraie appli.",
+        "cta": "Installer",
+        "dismiss": "Plus tard"
     }
 }
