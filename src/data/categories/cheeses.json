@@ -2,223 +2,273 @@
     "key": "cheeses",
     "label": "Fromages",
     "emoji": "🧀",
-    "description": "Parce qu'un bébé, ça se savoure. Du chèvre frais au comté de garde.",
+    "description": "De la paillette de parmesan à la meule de soixante-dix kilos. Parce qu'un bébé, ça s'affine.",
     "items": [
         {
-            "week": 5,
-            "name": "une miette de parmesan",
+            "week": 4,
+            "name": "une paillette de parmesan",
             "emoji": "🧀",
-            "funText": "Un éclat sur les pâtes, microscopique."
+            "funText": "Ce qu'il reste sur la râpe quand on a fini. Bébé démarre là.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Parmigiano_Reggiano"
+        },
+        {
+            "week": 5,
+            "name": "une miette de roquefort",
+            "emoji": "🧀",
+            "funText": "Un éclat bleu tombé du couteau. Puissant pour sa taille, comme bébé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Roquefort_%28fromage%29"
         },
         {
             "week": 6,
-            "name": "un dé de feta",
+            "name": "une miette de pecorino",
             "emoji": "🧀",
-            "funText": "Un petit cube dans la salade grecque."
+            "funText": "Du brebis italien bien sec. Bébé pèse encore moins que ça.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pecorino_romano"
         },
         {
             "week": 7,
-            "name": "une crotte de chèvre",
-            "emoji": "🐐",
-            "funText": "Oui, ça s'appelle vraiment comme ça. Et c'est mignon."
+            "name": "un dé de feta",
+            "emoji": "🧀",
+            "funText": "Un petit cube blanc perdu dans la salade grecque.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Feta"
         },
         {
             "week": 8,
-            "name": "un bouton de chèvre frais",
+            "name": "une bille de mozzarella",
             "emoji": "🧀",
-            "funText": "Tout doux, tout frais, tout petit."
+            "funText": "Une perle toute blanche, toute molle. Bébé aussi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Mozzarella"
         },
         {
             "week": 9,
-            "name": "un Babybel",
-            "emoji": "🔴",
-            "funText": "Bébé est emballé dans sa petite cire rouge."
+            "name": "une bouchée de Boursin",
+            "emoji": "🧀",
+            "funText": "Ail et fines herbes. Il paraît qu'on ne peut pas s'arrêter.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Boursin_%28marque%29"
         },
         {
             "week": 10,
-            "name": "un Saint-Marcellin",
-            "emoji": "🧀",
-            "funText": "Petit, crémeux, irrésistible."
+            "name": "une portion de Vache qui rit",
+            "emoji": "🐄",
+            "funText": "Le triangle qu'on ouvre par la languette. Enfin, qu'on essaie.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/La_vache_qui_rit"
         },
         {
             "week": 11,
-            "name": "un crottin de Chavignol",
-            "emoji": "🐐",
-            "funText": "Le chèvre qui a du caractère."
+            "name": "un Babybel",
+            "emoji": "🔴",
+            "funText": "Bébé est emballé dans sa petite cire rouge, bien au chaud.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Babybel"
         },
         {
             "week": 12,
-            "name": "un Rocamadour",
-            "emoji": "🧀",
-            "funText": "Fond dans la bouche, comme on craque pour bébé."
+            "name": "un crottin de Chavignol",
+            "emoji": "🐐",
+            "funText": "Oui, ça s'appelle vraiment comme ça. Non, ce n'est pas une insulte.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Crottin_de_Chavignol"
         },
         {
             "week": 13,
-            "name": "un Cabécou",
-            "emoji": "🐐",
-            "funText": "Petit palet de chèvre du Sud-Ouest."
+            "name": "un Saint-Marcellin",
+            "emoji": "🧀",
+            "funText": "Tellement coulant qu'il se vend dans un pot en terre.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Saint-marcellin"
         },
         {
             "week": 14,
-            "name": "un Chaource",
+            "name": "un Camembert",
             "emoji": "🧀",
-            "funText": "Crémeux et bien rond."
+            "funText": "Pile la taille d'un camembert. Et c'est la semaine où on mesure bébé de la tête aux pieds.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Camembert_%28fromage%29"
         },
         {
             "week": 15,
             "name": "un Coulommiers",
             "emoji": "🧀",
-            "funText": "Le petit cousin du brie, tout en douceur."
+            "funText": "Le cousin discret du brie. Il mérite mieux.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Coulommiers_%28fromage%29"
         },
         {
             "week": 16,
-            "name": "un Camembert",
+            "name": "un Reblochon",
             "emoji": "🧀",
-            "funText": "Pile la taille d'un camembert. Coïncidence ? Oui."
+            "funText": "Bébé sent la tartiflette du bonheur.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Reblochon"
         },
         {
             "week": 17,
-            "name": "un Reblochon",
+            "name": "un Munster",
             "emoji": "🧀",
-            "funText": "Bébé sent... la tartiflette du bonheur."
+            "funText": "Celui qu'on n'ouvre pas dans le train.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Munster_%28fromage%29"
         },
         {
             "week": 18,
-            "name": "un Saint-Nectaire",
+            "name": "un Bleu d'Auvergne",
             "emoji": "🧀",
-            "funText": "Une belle galette d'Auvergne."
+            "funText": "Persillé, puissant, il ne fait pas semblant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bleu_d%27Auvergne"
         },
         {
             "week": 19,
-            "name": "un Munster",
+            "name": "un Saint-Nectaire",
             "emoji": "🧀",
-            "funText": "Du caractère (et un peu d'odeur, on assume)."
+            "funText": "Une belle galette d'Auvergne, croûte fleurie comprise.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Saint-nectaire"
         },
         {
             "week": 20,
-            "name": "un Pont-l'Évêque",
-            "emoji": "🧀",
-            "funText": "Mi-parcours ! Bébé fait un carré normand bien fait."
+            "name": "une Mimolette",
+            "emoji": "🟠",
+            "funText": "Mi-parcours ! Et cette boule orange est creusée par des acariens. Bon appétit.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Mimolette"
         },
         {
             "week": 21,
-            "name": "un Maroilles",
+            "name": "un Vacherin Mont d'Or",
             "emoji": "🧀",
-            "funText": "Le ch'ti qui ne passe pas inaperçu."
+            "funText": "Il se mange à la cuillère, dans sa boîte en épicéa. La classe absolue.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Mont_d%27Or_%28fromage%29"
         },
         {
             "week": 22,
-            "name": "un Livarot",
-            "emoji": "🧀",
-            "funText": "Surnommé le colonel, avec ses galons."
+            "name": "un Ossau-Iraty",
+            "emoji": "🐑",
+            "funText": "Brebis des Pyrénées. Bébé prend de la bouteille.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Ossau-Iraty"
         },
         {
             "week": 23,
-            "name": "un Vacherin",
+            "name": "un Brie de Melun",
             "emoji": "🧀",
-            "funText": "Si coulant qu'on le mange à la cuillère."
+            "funText": "Le brie qui a du caractère, pas celui du supermarché.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Brie_de_Melun"
         },
         {
             "week": 24,
-            "name": "un Morbier",
+            "name": "un Bleu de Gex",
             "emoji": "🧀",
-            "funText": "Avec sa petite ligne de cendre au milieu."
+            "funText": "Du Jura, tout en finesse malgré les veines bleues.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bleu_de_Gex_Haut-Jura"
         },
         {
             "week": 25,
-            "name": "un Bleu d'Auvergne",
+            "name": "un Morbier",
             "emoji": "🧀",
-            "funText": "Persillé et fier de l'être."
+            "funText": "Avec sa ligne de cendre au milieu. Bébé aussi a une ligne, la linea nigra.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Morbier_%28fromage%29"
         },
         {
             "week": 26,
-            "name": "un Cantal entre-deux",
+            "name": "un Gouda",
             "emoji": "🧀",
-            "funText": "Une belle part de tomme d'Auvergne."
+            "funText": "On sort de France, mais on ne va pas se priver.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Gouda_%28fromage%29"
         },
         {
             "week": 27,
-            "name": "une Tomme de Savoie",
+            "name": "une meule de raclette",
             "emoji": "🧀",
-            "funText": "Bébé prend de la montagne."
+            "funText": "Il faudrait déjà toute une soirée entre potes pour en venir à bout.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Raclette_%28fromage%29"
         },
         {
             "week": 28,
-            "name": "un Roquefort",
+            "name": "un Brie de Meaux",
             "emoji": "🧀",
-            "funText": "Le roi des bleus, affiné en cave."
+            "funText": "Le roi des fromages, paraît-il. Bébé se met au niveau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Brie_de_Meaux"
         },
         {
             "week": 29,
-            "name": "une meule de Reblochon",
+            "name": "un Bethmale",
             "emoji": "🧀",
-            "funText": "Là on parle d'une vraie meule."
+            "funText": "Ariégeois, discret, et redoutable sur un plateau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bethmale_%28fromage%29"
         },
         {
             "week": 30,
-            "name": "un Brie de Meaux",
+            "name": "un Cantal",
             "emoji": "🧀",
-            "funText": "Grand, crémeux, royal."
+            "funText": "Une fourme de 40 kilos. On ne cale plus sur le poids, heureusement.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cantal_%28fromage%29"
         },
         {
             "week": 31,
-            "name": "un Époisses entier",
+            "name": "un Laguiole",
             "emoji": "🧀",
-            "funText": "Puissant. Comme les coups de pied de bébé."
+            "funText": "L'aligot vient de là. Rien que pour ça, respect.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Laguiole_%28fromage%29"
         },
         {
             "week": 32,
-            "name": "un Beaufort (part de meule)",
-            "emoji": "🧀",
-            "funText": "Le prince des gruyères."
+            "name": "une Abondance",
+            "emoji": "🐄",
+            "funText": "De Haute-Savoie, avec sa croûte brossée au sel.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Abondance_%28fromage%29"
         },
         {
             "week": 33,
-            "name": "une Mimolette vieille",
-            "emoji": "🟠",
-            "funText": "Une grosse boule orange et dure."
+            "name": "un Cheddar",
+            "emoji": "🧀",
+            "funText": "L'orange fluo, c'est du colorant. Le vrai est pâle et redoutable.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cheddar"
         },
         {
             "week": 34,
-            "name": "une Fourme d'Ambert",
+            "name": "un Salers",
             "emoji": "🧀",
-            "funText": "Haute comme une tour, bleue dedans."
+            "funText": "Fabriqué uniquement quand les vaches sont dans les prés.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Salers_%28fromage%29"
         },
         {
             "week": 35,
-            "name": "une grosse Tomme",
+            "name": "un Grana Padano",
             "emoji": "🧀",
-            "funText": "Une roue de fromage de montagne."
+            "funText": "Le rival du parmesan. La guerre est ouverte depuis des siècles.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Grana_Padano"
         },
         {
             "week": 36,
-            "name": "un Comté (quart de meule)",
+            "name": "un Beaufort",
             "emoji": "🧀",
-            "funText": "Bébé pèse son poids de fromage de garde."
+            "funText": "Le « prince des gruyères », avec son talon concave.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Beaufort_%28fromage%29"
         },
         {
             "week": 37,
-            "name": "un Gruyère",
+            "name": "un Sbrinz",
             "emoji": "🧀",
-            "funText": "Des trous ? Non. Du fromage ? Beaucoup."
+            "funText": "Suisse, très dur, très vieux. Bientôt le grand jour.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Sbrinz"
         },
         {
             "week": 38,
-            "name": "un Emmental (gros bloc)",
+            "name": "un Gruyère",
             "emoji": "🧀",
-            "funText": "À terme bientôt ! Et toujours plus de fromage."
+            "funText": "Et non, il n'a pas de trous. C'est l'emmental. Fin du débat.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Gruy%C3%A8re_%28fromage%29"
         },
         {
             "week": 39,
-            "name": "une demi-meule de Comté",
+            "name": "un Comté",
             "emoji": "🧀",
-            "funText": "On approche de la meule entière."
+            "funText": "Une meule entière. Il ne reste plus grand-chose à attendre.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Comt%C3%A9_%28fromage%29"
         },
         {
             "week": 40,
-            "name": "une meule de Comté",
+            "name": "une meule d'emmental",
             "emoji": "🧀",
-            "funText": "C'est l'heure ! Bébé fait la taille d'une meule de comté entière."
+            "funText": "Celui qui a des trous, cette fois. Et bébé est prêt à sortir.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Emmental"
+        },
+        {
+            "week": 41,
+            "name": "une meule d'Emmental de Savoie",
+            "emoji": "🧀",
+            "funText": "Soixante-dix kilos de fromage à trous. Bébé, lui, dépasse à peine trois kilos.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Emmental_de_Savoie"
         }
     ]
 }

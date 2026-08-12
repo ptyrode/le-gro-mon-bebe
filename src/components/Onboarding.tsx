@@ -1,6 +1,7 @@
 'use client';
 
 import { categoryList } from '@/lib/data';
+import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { CategoryKey } from '@/lib/types';
 import { useState } from 'react';
 
@@ -18,12 +19,9 @@ export default function Onboarding({ onStart }: Props) {
     const [error, setError] = useState<string | null>(null);
 
     const submit = () => {
-        if (!lastPeriodDate) {
-            setError('Il me faut la date de tes dernières règles 🗓️');
-            return;
-        }
-        if (lastPeriodDate > todayISO()) {
-            setError('Cette date est dans le futur, ça coince un peu 😅');
+        const dateError = validateLastPeriodDate(lastPeriodDate);
+        if (dateError) {
+            setError(dateError);
             return;
         }
         if (!category) {

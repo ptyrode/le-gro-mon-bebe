@@ -6,7 +6,14 @@ import unusedImports from 'eslint-plugin-unused-imports';
 
 /** @type {import("eslint").Config} */
 const config = defineConfig([
-    globalIgnores(['.next', 'dist', 'build', 'out', 'next-env.d.ts']),
+    globalIgnores([
+        '.next',
+        'dist',
+        'build',
+        'out',
+        'next-env.d.ts',
+        'scripts',
+    ]),
     ...nextVitals,
     ...nextTs,
     {

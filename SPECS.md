@@ -48,7 +48,9 @@ Une seule grossesse en v1 (multi-grossesses = v2).
 - L'utilisateur saisit la **date des dernières règles (DDR)**.
 - Les données médicales de croissance sont indexées en **semaines d'aménorrhée (SA)** = semaines depuis les dernières règles. Match direct, pas de conversion.
 - Semaine de grossesse (SA) actuelle = `floor((aujourd'hui - DDR) / 7 jours)`.
-- Bornes : on affiche de la **semaine 4** (premières données fiables) à la **semaine 40**.
+- Bornes : on affiche de la **semaine 4** (premières données fiables) à la **semaine 41** (grossesse prolongée).
+- Les cas limites ne sont plus écrasés silencieusement : `pregnancyStatus()` (`src/lib/pregnancy.ts`) distingue `future`, `implausible` (> 2 ans), `tooEarly` (< S4), `born` (au-delà de 41 SA) et `ongoing`. Chacun a son écran dédié dans le Dashboard.
+- La DDR est validée **à la saisie** par `validateLastPeriodDate()`, dans l'onboarding comme dans les réglages.
 
 ---
 
@@ -67,7 +69,7 @@ Une seule grossesse en v1 (multi-grossesses = v2).
 - Grande illustration / emoji de l'équivalence de la semaine (ex : « Cette semaine, bébé fait la taille d'un **camembert** 🧀 »).
 - Taille (cm) + poids (g) du fœtus.
 - Phrase fun générée pour la semaine.
-- Indicateur de progression (semaine X / 40).
+- Indicateur de progression (semaine X / 41).
 - Bouton pour **changer de catégorie** à la volée.
 
 ### 3.3 Timeline / historique
@@ -115,8 +117,8 @@ Pas de push server-side (incompatible avec un déploiement statique simple).
 ```json
 {
     "weeks": {
-        "12": { "sizeCm": 5.4, "weightG": 14, "measure": "lcc" },
-        "40": { "sizeCm": 50.5, "weightG": 3300, "measure": "total" }
+        "12": { "size": 5.4, "weight": 14, "measure": "lcc" },
+        "40": { "size": 50.5, "weight": 3300, "measure": "total" }
     }
 }
 ```
@@ -124,7 +126,7 @@ Pas de push server-side (incompatible avec un déploiement statique simple).
 ### 5.2 Catégories de comparaison
 
 - Un JSON par catégorie dans **`src/data/categories/`**, chaque entrée associée à une semaine.
-- **Fait** : 4 catégories générées — `fruits.json`, `fish.json`, `cheeses.json`, `animals.json` (36 items chacune, semaines 5 → 40). Noms de fichiers et clés en anglais.
+- **Fait** : 4 catégories générées — `fruits.json`, `fish.json`, `cheeses.json`, `animals.json` (38 items chacune, semaines 4 → 41). Noms de fichiers et clés en anglais.
 - Structure :
 
 ```json

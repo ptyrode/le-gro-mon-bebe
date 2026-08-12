@@ -1,5 +1,3 @@
-// Service worker maison — cache l'app shell pour un fonctionnement hors-ligne.
-// Stratégie : network-first pour les navigations, stale-while-revalidate sinon.
 const CACHE = 'lgmb-v1';
 const APP_SHELL = ['/'];
 
@@ -30,7 +28,6 @@ self.addEventListener('fetch', (event) => {
     const url = new URL(request.url);
     if (url.origin !== self.location.origin) return;
 
-    // Navigations : réseau d'abord, cache "/" en secours (offline).
     if (request.mode === 'navigate') {
         event.respondWith(
             fetch(request)
@@ -46,7 +43,6 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Autres assets : stale-while-revalidate.
     event.respondWith(
         caches.match(request).then((cached) => {
             const network = fetch(request)

@@ -4,8 +4,6 @@ import { clearState, createState, loadState, saveState } from '@/lib/storage';
 import type { AppState, CategoryKey } from '@/lib/types';
 import { useCallback, useSyncExternalStore } from 'react';
 
-// --- Store externe adossé au localStorage (pattern useSyncExternalStore) ---
-
 let cache: AppState | null = null;
 let loaded = false;
 const listeners = new Set<() => void>();
@@ -37,7 +35,6 @@ function commit(next: AppState | null): void {
     listeners.forEach((l) => l());
 }
 
-// Petit store dédié à la détection d'hydratation (évite le flash onboarding).
 const emptySubscribe = () => () => {};
 
 interface UsePregnancy {
@@ -57,7 +54,6 @@ export function usePregnancy(): UsePregnancy {
         getSnapshot,
         getServerSnapshot
     );
-    // true pendant le SSR + le 1er rendu client, false une fois hydraté.
     const isServer = useSyncExternalStore(
         emptySubscribe,
         () => false,

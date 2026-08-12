@@ -52,10 +52,10 @@ export default function Timeline({ state }: Props) {
                                 </div>
                                 {g && (
                                     <p className="text-ink-soft text-xs">
-                                        {g.sizeCm.toLocaleString('fr-FR')} cm ·{' '}
-                                        {g.weightG >= 1000
-                                            ? `${(g.weightG / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 2 })} kg`
-                                            : `${g.weightG} g`}
+                                        {g.size.toLocaleString('fr-FR')} cm ·{' '}
+                                        {g.weight >= 1000
+                                            ? `${(g.weight / 1000).toLocaleString('fr-FR', { maximumFractionDigits: 2 })} kg`
+                                            : `${g.weight} g`}
                                     </p>
                                 )}
                             </div>

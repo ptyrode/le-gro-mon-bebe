@@ -27,7 +27,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Empêche le zoom iOS sur les inputs (font-size >= 16px) */
 input,
 select,
 button,

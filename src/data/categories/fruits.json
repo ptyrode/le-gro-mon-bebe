@@ -5,220 +5,269 @@
     "description": "Le grand classique du suivi de grossesse. Pour les puristes.",
     "items": [
         {
+            "week": 4,
+            "name": "une graine de pavot",
+            "emoji": "🌱",
+            "funText": "Un point noir sur un pain aux céréales. C'est tout, et c'est déjà énorme.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pavot_somnif%C3%A8re"
+        },
+        {
             "week": 5,
-            "name": "un grain de pavot",
-            "emoji": "🌑",
-            "funText": "Officiellement la plus petite chose qu'on puisse comparer sans loupe."
+            "name": "une graine de sésame",
+            "emoji": "🌱",
+            "funText": "Celle qui reste coincée entre les dents après un burger.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/S%C3%A9same"
         },
         {
             "week": 6,
             "name": "une lentille",
-            "emoji": "🟤",
-            "funText": "Bébé pèse moins lourd qu'une miette de pain."
+            "emoji": "🫘",
+            "funText": "Bébé pèse moins qu'une lentille. Et pourtant il occupe déjà toutes les pensées.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Lentille_cultiv%C3%A9e"
         },
         {
             "week": 7,
             "name": "une myrtille",
             "emoji": "🫐",
-            "funText": "Tout petit, mais il a déjà des projets."
+            "funText": "Petite, bleue, et déjà pleine de promesses.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Myrtille"
         },
         {
             "week": 8,
             "name": "une framboise",
             "emoji": "🍇",
-            "funText": "Mignon et fragile, comme une framboise sur un gâteau."
+            "funText": "Toute fripée, toute fragile. C'est normal, ça va s'arranger.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Framboise"
         },
         {
             "week": 9,
             "name": "une cerise",
             "emoji": "🍒",
-            "funText": "Il a la taille d'une cerise et déjà du caractère."
+            "funText": "Sans le noyau. Bébé, lui, a déjà un squelette en construction.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cerise"
         },
         {
             "week": 10,
             "name": "une fraise",
             "emoji": "🍓",
-            "funText": "Croquant à l'extérieur... non, en fait pas du tout."
+            "funText": "Une gariguette de bonne taille. On progresse.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Fraise"
         },
         {
             "week": 11,
-            "name": "une figue",
-            "emoji": "🟣",
-            "funText": "Bébé prend ses aises, façon figue bien mûre."
+            "name": "un abricot",
+            "emoji": "🍑",
+            "funText": "Duveteux et sucré. Comme bébé, bientôt.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Abricot"
         },
         {
             "week": 12,
             "name": "un citron vert",
-            "emoji": "🟢",
-            "funText": "Acidulé ? On verra ça à l'adolescence."
+            "emoji": "🍋",
+            "funText": "Il tient dans le creux de la main. Encore.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Lime_%28fruit%29"
         },
         {
             "week": 13,
             "name": "une pêche",
             "emoji": "🍑",
-            "funText": "Tout doux, tout rond, on craque."
+            "funText": "Fin du premier trimestre. Bébé a la taille du dessert.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%AAche_%28fruit%29"
         },
         {
             "week": 14,
-            "name": "un citron",
-            "emoji": "🍋",
-            "funText": "Quand la vie te donne un bébé de la taille d'un citron..."
+            "name": "un avocat",
+            "emoji": "🥑",
+            "funText": "Bébé change d'échelle : on le mesure maintenant de la tête aux pieds, d'où le bond.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Avocat_%28fruit%29"
         },
         {
             "week": 15,
-            "name": "une pomme",
-            "emoji": "🍎",
-            "funText": "Une pomme par jour... éloigne quoi, déjà ?"
+            "name": "un poivron",
+            "emoji": "🫑",
+            "funText": "Rouge, jaune ou vert. Bébé, lui, n'a pas encore choisi son style.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Poivron"
         },
         {
             "week": 16,
-            "name": "un avocat",
-            "emoji": "🥑",
-            "funText": "Bébé est officiellement un brunch."
+            "name": "une carotte",
+            "emoji": "🥕",
+            "funText": "Elle rend aimable, paraît-il. On verra à l'adolescence.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Carotte"
         },
         {
             "week": 17,
-            "name": "une poire",
-            "emoji": "🍐",
-            "funText": "Tout en rondeurs, ça commence à se voir."
+            "name": "une banane",
+            "emoji": "🍌",
+            "funText": "Bébé fait la taille d'une banane et il a probablement déjà le hoquet.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Banane"
         },
         {
             "week": 18,
-            "name": "un poivron",
-            "emoji": "🫑",
-            "funText": "Croquant et coloré, comme l'avenir."
+            "name": "une aubergine",
+            "emoji": "🍆",
+            "funText": "Belle, violette, et personne ne sait vraiment la cuisiner.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Aubergine"
         },
         {
             "week": 19,
-            "name": "une tomate cœur de bœuf",
-            "emoji": "🍅",
-            "funText": "Une grosse tomate juteuse. Appétissant, dit comme ça."
+            "name": "un épi de maïs",
+            "emoji": "🌽",
+            "funText": "Avec les grains bien alignés. Bébé aussi range ses affaires. Pour l'instant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Ma%C3%AFs"
         },
         {
             "week": 20,
-            "name": "une banane",
-            "emoji": "🍌",
-            "funText": "Mi-parcours ! Bébé fait la longueur d'une banane."
+            "name": "un concombre",
+            "emoji": "🥒",
+            "funText": "Mi-parcours ! Et bébé commence à donner des coups de pied.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Concombre"
         },
         {
             "week": 21,
-            "name": "une carotte",
-            "emoji": "🥕",
-            "funText": "Ça pousse, ça pousse."
+            "name": "une courgette",
+            "emoji": "🥒",
+            "funText": "Celle qui pousse trop vite au potager et qu'on ne voit pas venir.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Courgette"
         },
         {
             "week": 22,
             "name": "une papaye",
-            "emoji": "🟠",
-            "funText": "Exotique, comme les envies de minuit."
+            "emoji": "🥭",
+            "funText": "On part sous les tropiques. Bébé, lui, est très bien au chaud.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Papaye"
         },
         {
             "week": 23,
-            "name": "une grosse mangue",
-            "emoji": "🥭",
-            "funText": "Sucré, juteux, irrésistible."
+            "name": "une courge butternut",
+            "emoji": "🎃",
+            "funText": "Douce et fondante. Rien à voir avec les nuits qui arrivent.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Courge_musqu%C3%A9e"
         },
         {
             "week": 24,
-            "name": "un épi de maïs",
-            "emoji": "🌽",
-            "funText": "Bébé s'allonge façon épi de maïs."
+            "name": "une salade romaine",
+            "emoji": "🥬",
+            "funText": "Croquante et bien dressée. Bébé aussi commence à se tenir.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Laitue_romaine"
         },
         {
             "week": 25,
-            "name": "un chou-fleur",
-            "emoji": "🥦",
-            "funText": "On ne va pas mentir, c'est moins glamour. Mais on l'aime."
+            "name": "un ananas et ses feuilles",
+            "emoji": "🍍",
+            "funText": "Les feuilles comptent dans la mesure. On ne triche pas.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Ananas"
         },
         {
             "week": 26,
-            "name": "une courgette",
-            "emoji": "🥒",
-            "funText": "Tout en longueur maintenant."
+            "name": "un chou frisé",
+            "emoji": "🥬",
+            "funText": "Bébé a les yeux qui s'ouvrent cette semaine. Le chou, lui, reste fermé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_fris%C3%A9"
         },
         {
             "week": 27,
-            "name": "une salade",
+            "name": "une botte de blettes",
             "emoji": "🥬",
-            "funText": "Une belle salade bien feuillue."
+            "funText": "Immenses et pleines de côtes. Comme les tiennes, bientôt.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bette_%28plante%29"
         },
         {
             "week": 28,
-            "name": "une aubergine",
-            "emoji": "🍆",
-            "funText": "Bébé prend de la place, et il le sait."
+            "name": "un pied de céleri",
+            "emoji": "🥬",
+            "funText": "Bébé pourrait survivre s'il naissait maintenant. Le céleri, non.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/C%C3%A9leri"
         },
         {
             "week": 29,
-            "name": "une courge butternut",
-            "emoji": "🎃",
-            "funText": "Tout doux, tout rond, prêt pour l'automne."
+            "name": "un poireau",
+            "emoji": "🥬",
+            "funText": "Long, droit, un peu sale à la base. On l'aime quand même.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Poireau"
         },
         {
             "week": 30,
-            "name": "un concombre",
-            "emoji": "🥒",
-            "funText": "Frais comme un concombre. Toi, beaucoup moins."
+            "name": "un pied de rhubarbe",
+            "emoji": "🌿",
+            "funText": "Acide et increvable. Trois quarts du chemin sont faits.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Rhubarbe"
         },
         {
             "week": 31,
-            "name": "une noix de coco",
-            "emoji": "🥥",
-            "funText": "Solide à l'extérieur, tendre à l'intérieur."
+            "name": "un chou-fleur et ses feuilles",
+            "emoji": "🥦",
+            "funText": "Le cerveau de bébé se plisse en ce moment. Le chou-fleur aussi, mais depuis toujours.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chou-fleur"
         },
         {
             "week": 32,
-            "name": "un gros chou frisé",
-            "emoji": "🥬",
-            "funText": "Bébé fait sa pelote."
+            "name": "une courge spaghetti",
+            "emoji": "🎃",
+            "funText": "On la gratte à la fourchette et ça fait des filaments. Magie.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Courge_spaghetti"
         },
         {
             "week": 33,
-            "name": "un ananas",
-            "emoji": "🍍",
-            "funText": "Une couronne, parce que c'est une petite majesté."
+            "name": "un chou chinois",
+            "emoji": "🥬",
+            "funText": "Tout en longueur. Bébé aussi commence à se sentir à l'étroit.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A9-tsa%C3%AF"
         },
         {
             "week": 34,
-            "name": "un melon",
-            "emoji": "🍈",
-            "funText": "Bien rond, bien sucré."
+            "name": "un régime de bananes",
+            "emoji": "🍌",
+            "funText": "Plus une seule banane : tout le régime. C'est dire.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bananier"
         },
         {
             "week": 35,
-            "name": "un melon miel",
-            "emoji": "🍈",
-            "funText": "Encore un melon, mais un gros melon."
+            "name": "une pastèque",
+            "emoji": "🍉",
+            "funText": "La vraie, celle qu'on porte à deux mains en soufflant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Past%C3%A8que"
         },
         {
             "week": 36,
-            "name": "une grosse salade romaine",
-            "emoji": "🥬",
-            "funText": "Bébé s'étire de tout son long."
+            "name": "une citrouille",
+            "emoji": "🎃",
+            "funText": "Bébé se met tête en bas. La citrouille, elle, ne bouge pas d'un pouce.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Citrouille"
         },
         {
             "week": 37,
-            "name": "une botte de blettes",
-            "emoji": "🥬",
-            "funText": "À terme bientôt ! Bébé est presque prêt."
+            "name": "un cardon",
+            "emoji": "🌿",
+            "funText": "Le légume oublié des grands-mères, et il fait plus d'un demi-mètre.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cynara_cardunculus"
         },
         {
             "week": 38,
-            "name": "un poireau",
+            "name": "un pied de chou de Bruxelles",
             "emoji": "🥬",
-            "funText": "Tout en longueur, prêt à débarquer."
+            "funText": "Toute la tige, avec ses boules accrochées. Personne n'aime ça, et pourtant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_de_Bruxelles"
         },
         {
             "week": 39,
-            "name": "une petite pastèque",
-            "emoji": "🍉",
-            "funText": "Tu portes une pastèque. On le savait déjà."
+            "name": "un daikon",
+            "emoji": "🥬",
+            "funText": "Le radis blanc japonais, long comme un avant-bras. Plus que quelques jours.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Radis_blanc"
         },
         {
             "week": 40,
-            "name": "un potiron",
+            "name": "un potiron géant",
             "emoji": "🎃",
-            "funText": "C'est l'heure ! Bébé fait la taille d'un potiron de concours."
+            "funText": "Le gros potiron final. Bébé est prêt, et toi aussi. Enfin, on espère.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Potiron"
+        },
+        {
+            "week": 41,
+            "name": "une courge trombone",
+            "emoji": "🎃",
+            "funText": "Grossesse prolongée : bébé s'incruste. La courge, elle, ne demande rien à personne."
         }
     ]
 }

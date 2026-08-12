@@ -1,6 +1,7 @@
 'use client';
 
 import { categoryList } from '@/lib/data';
+import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
 import { useState } from 'react';
 
@@ -29,6 +30,7 @@ export default function Settings({
     const { lastPeriodDate, category } = state.pregnancy;
     const notifsEnabled = state.notifications.enabled;
     const [notifMsg, setNotifMsg] = useState<string | null>(null);
+    const [dateError, setDateError] = useState<string | null>(null);
     const [confirmReset, setConfirmReset] = useState(false);
 
     const toggleNotifs = async () => {
@@ -75,12 +77,18 @@ export default function Settings({
                     max={todayISO()}
                     value={lastPeriodDate}
                     onChange={(e) => {
-                        if (e.target.value && e.target.value <= todayISO()) {
-                            onSetLastPeriodDate(e.target.value);
-                        }
+                        const next = e.target.value;
+                        const error = validateLastPeriodDate(next);
+                        setDateError(error);
+                        if (!error) onSetLastPeriodDate(next);
                     }}
                     className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 outline-none"
                 />
+                {dateError && (
+                    <p className="text-berry mt-2 text-sm font-medium">
+                        {dateError}
+                    </p>
+                )}
             </section>
 
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">

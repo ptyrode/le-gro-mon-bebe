@@ -26,7 +26,6 @@ export default function Home() {
     } = usePregnancy();
     const [view, setView] = useState<View>('dashboard');
 
-    // Notif Option A : à l'ouverture, si une nouvelle semaine a commencé.
     useEffect(() => {
         if (!state || !state.notifications.enabled) return;
         if (typeof window === 'undefined' || !('Notification' in window))

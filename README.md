@@ -54,12 +54,17 @@ La configuration ESLint, Prettier et Stylelint est reprise du projet Aubade : 4 
 src/
 ├── app/          # App Router : layout, page unique, manifest, icônes
 ├── components/   # Onboarding, Dashboard, Timeline, Settings, BottomNav
-├── data/         # fetalGrowth.json (SA 4→41) + categories/*.json
+├── data/         # fetalGrowth.json, weightJokes.json, categories/*.json
 ├── hooks/        # usePregnancy (useSyncExternalStore sur le localStorage)
 └── lib/          # types, chargement des données, calcul SA, storage
 
-scripts/          # outils hors build : audit des données, fichiers de référence
+public/           # servi tel quel : icônes, service worker, illustrations/
+scripts/          # outils hors build : audit des données, illustrations, références
+docs/             # prompts de génération des illustrations, un par catégorie
 ```
+
+`scripts/` et `docs/` restent **hors de `src/`** : ce ne sont ni du code applicatif ni
+des fichiers compilés. Même logique que le dossier `tools/` du projet Aubade.
 
 ## Fonctionnement
 
@@ -67,7 +72,7 @@ L'utilisateur saisit sa **date des dernières règles (DDR)**. La semaine de gro
 
 ⚠️ Les valeurs de croissance sont des **ordres de grandeur à visée ludique**, pas un outil de suivi médical.
 
-⚠️ La taille change de méthode de mesure en cours de route : **longueur cranio-caudale** jusqu'à S13, **tête-talons** à partir de S14. D'où le saut de 7 à 12,5 cm entre les deux — ce n'est pas une erreur. Le champ `measure` de chaque semaine porte l'information, et le Dashboard l'affiche.
+⚠️ La taille change de méthode de mesure en cours de route : **longueur cranio-caudale** jusqu'à S13, **tête-talons** à partir de S14. D'où le saut de 7 à 12,5 cm entre les deux — ce n'est pas une erreur. Le champ `measure` de chaque semaine porte l'information, à titre documentaire.
 
 ## Déploiement
 
@@ -79,6 +84,6 @@ Sur mobile, « Ajouter à l'écran d'accueil » installe la PWA.
 
 - [`SPECS.md`](SPECS.md) — spécifications détaillées et décisions
 - [`TODO.md`](TODO.md) — ce qu'il reste à faire
-- [`DATA-AUDIT.md`](DATA-AUDIT.md) — cohérence des données de comparaison
 - [`src/data/README.md`](src/data/README.md) — format des fichiers de données
-- [`AGENTS.md`](AGENTS.md) — consignes pour les agents de code
+- [`CLAUDE.md`](CLAUDE.md) — consignes de développement (pièges Next 16, chaîne de lint, rédaction)
+- [`docs/`](docs/) — prompts de génération des illustrations
