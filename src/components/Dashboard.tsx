@@ -1,5 +1,6 @@
 'use client';
 
+import ItemVisual from '@/components/ItemVisual';
 import { categoryList } from '@/lib/data';
 import {
     daysUntilDue,
@@ -148,8 +149,14 @@ export default function Dashboard({ state, onSetCategory }: Props) {
             {header}
 
             <section className="shadow-accent/10 rounded-3xl bg-white p-6 text-center shadow-lg">
-                {/* TODO(illustrations) : remplacer l'emoji par l'image de l'item. */}
-                <div className="mb-4 text-7xl leading-none">{item.emoji}</div>
+                <ItemVisual
+                    category={category}
+                    item={item}
+                    size={160}
+                    priority
+                    className="mx-auto mb-4"
+                    emojiClassName="mb-4 block leading-none"
+                />
 
                 {g && (
                     <p className="text-ink text-xl font-extrabold">

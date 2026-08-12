@@ -33,7 +33,7 @@ export default function BottomNav({ view, onChange }: Props) {
                             }`}
                         >
                             <span className="text-xl">{tab.icon}</span>
-                            {t(tab.key)}
+                            {t(`nav.${tab.key}`)}
                         </button>
                     );
                 })}

@@ -5,7 +5,8 @@ import process from 'node:process';
 import sharp from 'sharp';
 
 const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
-const TAILLE_CIBLE = 1024;
+const TAILLE_CIBLE = 512;
+const QUALITE_WEBP = 82;
 
 const [, , source, categorie, semaineArg, colsArg = '2', rowsArg = '2'] =
     process.argv;
@@ -44,14 +45,9 @@ if (
     console.error('cols et rows doivent être des entiers positifs.');
     process.exit(1);
 }
-if (semaineDepart + cols * rows - 1 > 41) {
-    console.error(
-        `Cette planche couvrirait jusqu'à la semaine ${semaineDepart + cols * rows - 1}, au-delà de 41.`
-    );
-    process.exit(1);
-}
+const SEMAINE_MAX = 41;
 
-const dossier = path.join('public', 'illustrations', categorie);
+const dossier = path.join('public', 'images', categorie);
 await mkdir(dossier, { recursive: true });
 
 const image = sharp(source);
@@ -70,9 +66,14 @@ if (tuileL < TAILLE_CIBLE) {
 }
 
 let semaine = semaineDepart;
+let ignorees = 0;
 for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
-        const destination = path.join(dossier, `${categorie}-${semaine}.png`);
+        if (semaine > SEMAINE_MAX) {
+            ignorees++;
+            continue;
+        }
+        const destination = path.join(dossier, `${categorie}-${semaine}.webp`);
         try {
             await access(destination);
             console.error(
@@ -89,7 +90,7 @@ for (let y = 0; y < rows; y++) {
                 height: tuileH,
             })
             .resize(TAILLE_CIBLE, TAILLE_CIBLE, { fit: 'cover' })
-            .png({ compressionLevel: 9 })
+            .webp({ quality: QUALITE_WEBP })
             .toFile(destination);
         console.log(`  ${destination}`);
         semaine++;
@@ -97,7 +98,10 @@ for (let y = 0; y < rows; y++) {
 }
 
 console.log(
-    `\n✅ ${cols * rows} images écrites (semaines ${semaineDepart} à ${semaine - 1}).`
+    `\n✅ ${semaine - semaineDepart} image(s) écrite(s) (semaines ${semaineDepart} à ${semaine - 1}).` +
+        (ignorees
+            ? ` ${ignorees} vignette(s) au-delà de S${SEMAINE_MAX} ignorée(s).`
+            : '')
 );
 console.log(
     '   Vérifier la correspondance avec : node scripts/check-illustrations.mjs'

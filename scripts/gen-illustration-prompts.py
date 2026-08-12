@@ -126,7 +126,7 @@ automatisés. Pour une planche 2 × 2 démarrant à la semaine {first_week} :
 node scripts/split-illustrations.mjs ~/Downloads/<planche>.png {cat} {first_week}
 ```
 
-Le script écrit `public/illustrations/{cat}/{cat}-{first_week}.png` … et refuse
+Le script écrit `public/images/{cat}/{cat}-{first_week}.webp` … et refuse
 d'écraser un fichier existant. Il redimensionne chaque vignette en 1024 × 1024.
 
 ⚠️ **La dernière planche ne contient que 2 vignettes** (S40 et S41) : préciser la

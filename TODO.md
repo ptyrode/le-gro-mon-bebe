@@ -4,7 +4,7 @@
 
 ## 🔴 v1 — ce qui reste
 
-- [ ] **Illustrations** : 152 images à générer (voir ci-dessous). Un prompt par catégorie dans [`docs/`](docs/).
+- [ ] **Illustrations** : `fruits` ✅ fait (38 images). Restent `fish`, `cheeses`, `animals` — un prompt par catégorie dans [`docs/`](docs/).
 - [ ] **Tests sur mobile réel** : notifications (Option A), installation de la PWA depuis la prod (iOS + Android), et comportement des liens Wikipédia en mode standalone.
 
 ## 🔵 v2 — plus tard
@@ -22,17 +22,18 @@
 
 Une **image par item** (ex : un munster avec une petite tête de bébé mignonne), pour remplacer l'emoji du Dashboard.
 
-- Volume : 38 items × 4 catégories = **152 images**. Commencer par `animals`.
+- Volume : 38 items × 4 catégories = **152 images**. `fruits` est fait.
 - ⚠️ Aucun générateur d'images dans l'environnement de dev → les images sont produites par un modèle externe, à partir d'une image de référence fournie par Pierrick.
 - 📄 **Un prompt prêt à copier-coller par catégorie** : `docs/PROMPT-animals.md`, `-fruits.md`, `-fish.md`, `-cheeses.md`.
 - Ces fichiers sont **générés** depuis les JSON par `python3 scripts/gen-illustration-prompts.py` : après toute modification d'un item, régénérer plutôt que corriger à la main.
-- Destination : `public/illustrations/<catégorie>/<catégorie>-<semaine>.png`. Le point d'insertion est marqué `TODO(illustrations)` dans `Dashboard.tsx`.
+- Destination : `public/images/<catégorie>/<catégorie>-<semaine>.webp`. Affiché par `ItemVisual` dans `Dashboard.tsx`, avec **repli sur l'emoji** si l'image manque — les catégories sans illustrations continuent donc de fonctionner.
+- Le découpage produit du **WebP 512 px** (≈ 15 Ko l'image, contre 1,2 Mo en PNG 1024). Les 4 catégories tiendront dans ~3 Mo.
+- ⚠️ Les planches sources déposées dans `docs/<catégorie>/` sont **ignorées par git** (58 Mo pour `fruits` seul).
 - **Chaîne outillée** : les modèles rendent une planche contact plutôt que des fichiers séparés, le prompt exploite ce comportement en demandant des planches 2 × 2 de 2048 px.
     - Chaque fichier `PROMPT-*.md` contient **10 blocs autonomes**, un par planche, avec les 4 sujets nommés **et décrits visuellement** — c'est ce qui empêche le modèle d'improviser ou de dupliquer un sujet pour remplir la grille.
     - `node scripts/split-illustrations.mjs <planche.png> <catégorie> <semaineDépart>` découpe, redimensionne en 1024 et nomme. Refuse d'écraser un fichier existant.
     - `node scripts/check-illustrations.mjs` contrôle qu'il ne manque rien et rappelle le sujet attendu pour chaque image absente.
 - ⚠️ **Relire visuellement chaque image** : un décalage d'un cran et bébé fait la taille du mauvais objet toute une semaine.
-- Penser à **optimiser le poids des PNG** avant commit : 152 images en 1024 px, c'est lourd pour une PWA. `sharp` est déjà dans `node_modules`.
 
 ---
 

@@ -253,7 +253,7 @@ automatisés. Pour une planche 2 × 2 démarrant à la semaine 4 :
 node scripts/split-illustrations.mjs ~/Downloads/<planche>.png cheeses 4
 ```
 
-Le script écrit `public/illustrations/cheeses/cheeses-4.png` … et refuse
+Le script écrit `public/images/cheeses/cheeses-4.webp` … et refuse
 d'écraser un fichier existant. Il redimensionne chaque vignette en 1024 × 1024.
 
 ⚠️ **La dernière planche ne contient que 2 vignettes** (S40 et S41) : préciser la

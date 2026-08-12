@@ -60,7 +60,7 @@ src/
 ├── hooks/        # usePregnancy (useSyncExternalStore sur le localStorage)
 └── lib/          # types, chargement des données, calcul SA, storage
 
-public/           # servi tel quel : icônes, service worker, locales/, illustrations/
+public/           # servi tel quel : icônes, service worker, locales/, images/
 scripts/          # outils hors build : audit des données, illustrations, références
 docs/             # prompts de génération des illustrations, un par catégorie
 ```

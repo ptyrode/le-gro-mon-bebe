@@ -26,12 +26,12 @@ Le champ **`measure`** indique comment la taille est mesurée :
 Comparaison humoristique du **poids**, une par semaine (S4 → S41).
 
 ```json
-"20": "Soit le poids de la mère de trois enfants qui commence toutes ses phrases par « tu devrais »."
+"20": "Aussi lourd que la mère de trois enfants qui commence toutes ses phrases par « tu devrais »."
 ```
 
 Ce fichier est **indépendant des catégories** : la taille compare bébé à un objet (fromage, poisson…), le poids à une lourdeur de l'entourage. Les deux s'affichent l'un sous l'autre dans le Dashboard, quelle que soit la catégorie choisie.
 
-⚠️ Chaque valeur est une **phrase complète** — majuscule initiale, point final, contractions (`du`, `des`) écrites dans le texte. Ne pas revenir à des fragments recollés par le composant : ça produit des fautes de français dès qu'un déterminant change (« le poids de le débat »).
+⚠️ Chaque valeur est une **phrase complète** — majuscule initiale, point final. Toutes commencent par « Aussi lourd que ». Ne pas revenir à des fragments recollés par le composant : ça produisait des fautes de contraction (« le poids de le débat »), que la formulation actuelle évite d'emblée.
 
 Le concept est inspiré d'une infographie de Bonjour Ocytocine (transcrite dans `scripts/reference-bonjourocytocine.json`), mais **aucune formulation n'en est reprise**.
 

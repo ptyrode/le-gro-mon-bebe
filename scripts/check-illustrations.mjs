@@ -5,7 +5,7 @@ import process from 'node:process';
 import sharp from 'sharp';
 
 const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
-const TAILLE_ATTENDUE = 1024;
+const TAILLE_ATTENDUE = 512;
 
 let problemes = 0;
 
@@ -15,10 +15,10 @@ for (const categorie of CATEGORIES) {
     ).items;
     const attendus = new Map(items.map((i) => [i.week, i.name]));
 
-    const dossier = path.join('public', 'illustrations', categorie);
+    const dossier = path.join('public', 'images', categorie);
     let fichiers = [];
     try {
-        fichiers = (await readdir(dossier)).filter((f) => f.endsWith('.png'));
+        fichiers = (await readdir(dossier)).filter((f) => f.endsWith('.webp'));
     } catch {
         problemes++;
         console.log(
@@ -30,7 +30,7 @@ for (const categorie of CATEGORIES) {
     const presentes = new Map();
     const invalides = [];
     for (const f of fichiers) {
-        const m = f.match(new RegExp(`^${categorie}-(\\d+)\\.png$`));
+        const m = f.match(new RegExp(`^${categorie}-(\\d+)\\.webp$`));
         if (!m) {
             invalides.push(f);
             continue;
@@ -62,7 +62,7 @@ for (const categorie of CATEGORIES) {
         problemes++;
         console.log(`  manquantes (${manquantes.length}) :`);
         for (const w of manquantes) {
-            console.log(`      ${categorie}-${w}.png → ${attendus.get(w)}`);
+            console.log(`      ${categorie}-${w}.webp → ${attendus.get(w)}`);
         }
     }
 

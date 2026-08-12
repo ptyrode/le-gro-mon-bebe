@@ -1,5 +1,6 @@
 'use client';
 
+import ItemVisual from '@/components/ItemVisual';
 import { categories } from '@/lib/data';
 import { clampWeek, growthForWeek, rawGestationalWeek } from '@/lib/pregnancy';
 import type { AppState } from '@/lib/types';
@@ -45,7 +46,13 @@ export default function Timeline({ state }: Props) {
                                       : 'border-transparent bg-white'
                             }`}
                         >
-                            <span className="text-3xl">{item.emoji}</span>
+                            <ItemVisual
+                                category={category}
+                                item={item}
+                                size={48}
+                                className="shrink-0"
+                                emojiClassName="shrink-0 leading-none"
+                            />
                             <div className="min-w-0 flex-1">
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-accent-deep text-xs font-bold">

@@ -45,3 +45,6 @@ next-env.d.ts
 
 # python
 __pycache__/
+
+# planches sources des illustrations (lourdes, non nécessaires au build)
+docs/*/

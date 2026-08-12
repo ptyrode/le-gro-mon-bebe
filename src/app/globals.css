@@ -15,14 +15,20 @@
     color-scheme: light;
 }
 
+html {
+    background-color: var(--color-cream);
+    background-image: radial-gradient(
+        120% 80% at 50% -10%,
+        var(--color-cream-deep),
+        transparent 60%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 60vh;
+}
+
 body {
-    background:
-        radial-gradient(
-            120% 80% at 50% -10%,
-            var(--color-cream-deep),
-            transparent 60%
-        ),
-        var(--color-cream);
+    background: transparent;
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
 }
