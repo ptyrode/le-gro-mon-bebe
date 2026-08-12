@@ -18,8 +18,11 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Chaque animal marin a une petite tête de bébé mignonne : grands yeux, joues rondes, expression
-  tendre et rigolote. Le sujet reste reconnaissable au premier coup d'œil.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
+  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
+  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil : on identifie l'animal marin sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
 - Sujet unique, centré, entier (pas de recadrage qui coupe le sujet).
@@ -61,186 +64,298 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 
 ## Les planches, une par une
 
-Envoyer **un bloc à la fois**, en réattachant l'image de référence à chaque planche.
-Chaque bloc est autonome : il nomme ses sujets et les décrit, ce qui évite au modèle
-d'improviser ou de répéter un sujet pour remplir la grille.
+**Envoyer un bloc à la fois, avec l'image de référence en pièce jointe.**
+
+Chaque bloc est **entièrement autonome** : il porte le style, le format et ses sujets.
+Il n'y a rien à envoyer avant — pas besoin du texte ci-dessus, qui n'est là que pour
+expliquer la démarche.
 
 ### Planche 1/10 — S4, S5, S6, S7
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une perle de caviar — petite bille noire brillante
 Haut droite. un œuf de lompe — minuscule bille noire mate
 Bas gauche. un œuf de saumon — bille orange translucide
 Bas droite. un alevin tout juste éclos — tout petit poisson translucide avec de gros yeux et une poche ventrale
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 2/10 — S8, S9, S10, S11
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un krill — crevette minuscule rosée translucide
 Haut droite. un hippocampe nain — hippocampe, queue enroulée, museau en tube
 Bas gauche. une crevette grise — petite crevette grise translucide
 Bas droite. une coque — coquillage bivalve strié beige, fermé
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 3/10 — S12, S13, S14, S15
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une civelle — bébé anguille filiforme et transparent
 Haut droite. un petit anchois — petit poisson argenté fin à bande bleutée
 Bas gauche. une sardine — petit poisson argenté au dos bleuté
 Bas droite. un éperlan — petit poisson argenté effilé
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 4/10 — S16, S17, S18, S19
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un rouget — poisson rouge-rose à barbillons sous le menton
 Haut droite. un chinchard — poisson argenté fuselé à ligne latérale marquée
 Bas gauche. un hareng — poisson argenté élancé au dos vert-bleu
 Bas droite. une truite portion — truite mouchetée de brun et rose
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 5/10 — S20, S21, S22, S23
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un maquereau — poisson au dos bleu-vert ZÉBRÉ de noir, ventre argenté
 Haut droite. une dorade royale — poisson gris argenté avec une tache dorée entre les yeux
 Bas gauche. une sole — poisson PLAT ovale brun, vu de dessus, les deux yeux du même côté
 Bas droite. un merlan — poisson allongé gris-argent à museau pointu
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 6/10 — S24, S25, S26, S27
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un tacaud — poisson cuivré trapu avec un barbillon sous le menton
 Haut droite. un mulet — poisson gris argenté au corps épais et à la tête plate
 Bas gauche. une plie — poisson plat brun couvert de taches ORANGE vif
 Bas droite. un cabillaud de portion — gros poisson gris-vert moucheté à barbillon
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 7/10 — S28, S29, S30, S31
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un lieu jaune — poisson doré-brun élancé, ligne latérale claire
 Haut droite. une truite de mer — truite argentée à petits points noirs
 Bas gauche. un merlu — poisson gris-argent très allongé à grande bouche
 Bas droite. un turbot — poisson plat presque rond, brun tacheté, vu de dessus
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 8/10 — S32, S33, S34, S35
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un lieu noir — poisson gris foncé élancé, dos sombre
 Haut droite. un jeune brochet — poisson long vert olive à gueule allongée pleine de dents
 Bas gauche. une raie bouclée — raie en losange brun clair tacheté, longue queue
 Bas droite. un saint-pierre — poisson haut et plat gris doré avec une grosse tache noire ronde sur le flanc
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 9/10 — S36, S37, S38, S39
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une lotte — baudroie à énorme tête aplatie et grande bouche
 Haut droite. un maigre — grand poisson argenté élancé
 Bas gauche. une roussette — petit requin brun tacheté, silhouette de requin
 Bas droite. un homard — crustacé bleu-noir à grosses pinces
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 10/10 — S40, S41
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
 côte à côte (2 vignettes), sans bordure ni séparateur.
 
-Les 2 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un beau bar de ligne — poisson argenté élégant à dos gris-bleu
 Haut droite. un saumon sauvage — saumon argenté à dos bleuté et flancs rosés
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ---

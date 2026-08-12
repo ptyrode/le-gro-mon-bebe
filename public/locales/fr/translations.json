@@ -39,7 +39,8 @@
     },
     "timeline": {
         "title": "Toute la grossesse",
-        "subtitle": "{emoji} {label} — semaine après semaine"
+        "subtitle": "{emoji} {label} : Le chemin parcouru",
+        "empty": "Rien à montrer pour l'instant. Reviens quand bébé aura quelques semaines !"
     },
     "settings": {
         "title": "Réglages",
@@ -57,7 +58,8 @@
         "resetCta": "Tout effacer et recommencer",
         "resetConfirm": "Sûr ? Toutes les données locales seront effacées.",
         "resetConfirmCta": "Oui, effacer",
-        "resetCancel": "Annuler"
+        "resetCancel": "Annuler",
+        "notificationsBlocked": "Les notifications sont bloquées par ton navigateur. Il faut les réautoriser dans ses réglages de site."
     },
     "nav": {
         "dashboard": "Accueil",
@@ -66,7 +68,7 @@
     },
     "notification": {
         "title": "Bébé a grandi ! 🎉",
-        "body": "Semaine {week} : bébé fait maintenant la taille d'{name} {emoji}"
+        "body": "Semaine {week} : Bébé fait maintenant la taille d''{name} {emoji}"
     },
     "dateErrors": {
         "missing": "Il me faut la date de tes dernières règles 🗓️",

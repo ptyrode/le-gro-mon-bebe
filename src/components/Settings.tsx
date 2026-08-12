@@ -4,10 +4,21 @@ import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 
 // TODO(v1.1): remplacer le mailto par l'envoi via Serverless Function + Resend.
 const FEEDBACK_EMAIL = 'pierrick.tyrode@gmail.com';
+
+type Permission = NotificationPermission | 'unsupported';
+
+const sansAbonnement = () => () => {};
+
+function lirePermission(): Permission {
+    if (typeof window === 'undefined' || !('Notification' in window)) {
+        return 'unsupported';
+    }
+    return Notification.permission;
+}
 
 interface Props {
     state: AppState;
@@ -32,26 +43,38 @@ export default function Settings({
     const { lastPeriodDate, category } = state.pregnancy;
     const notifsEnabled = state.notifications.enabled;
     const [notifMsg, setNotifMsg] = useState<string | null>(null);
+    const permissionInitiale = useSyncExternalStore<Permission>(
+        sansAbonnement,
+        lirePermission,
+        () => 'unsupported'
+    );
+    const [permissionDemandee, setPermissionDemandee] =
+        useState<Permission | null>(null);
+    const permission = permissionDemandee ?? permissionInitiale;
+    const notifsActives = notifsEnabled && permission === 'granted';
     const [dateError, setDateError] = useState<string | null>(null);
     const [confirmReset, setConfirmReset] = useState(false);
 
     const toggleNotifs = async () => {
-        if (notifsEnabled) {
-            onSetNotificationsEnabled(false);
-            return;
-        }
-        if (typeof window === 'undefined' || !('Notification' in window)) {
+        if (permission === 'unsupported') {
             setNotifMsg(t('settings.notificationsUnsupported'));
             return;
         }
-        const perm = await Notification.requestPermission();
-        if (perm === 'granted') {
-            onSetNotificationsEnabled(true);
-            setNotifMsg(null);
-        } else {
+        if (notifsActives) {
             onSetNotificationsEnabled(false);
-            setNotifMsg(t('settings.notificationsDenied'));
+            setNotifMsg(null);
+            return;
         }
+        if (permission === 'denied') {
+            setNotifMsg(t('settings.notificationsBlocked'));
+            return;
+        }
+        const perm = await Notification.requestPermission();
+        setPermissionDemandee(perm);
+        onSetNotificationsEnabled(perm === 'granted');
+        setNotifMsg(
+            perm === 'granted' ? null : t('settings.notificationsDenied')
+        );
     };
 
     const feedbackHref = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
@@ -130,14 +153,14 @@ export default function Settings({
                         type="button"
                         onClick={toggleNotifs}
                         role="switch"
-                        aria-checked={notifsEnabled}
+                        aria-checked={notifsActives}
                         className={`relative h-7 w-12 rounded-full transition ${
-                            notifsEnabled ? 'bg-accent' : 'bg-cream-deep'
+                            notifsActives ? 'bg-accent' : 'bg-cream-deep'
                         }`}
                     >
                         <span
                             className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all ${
-                                notifsEnabled ? 'left-6' : 'left-1'
+                                notifsActives ? 'left-6' : 'left-1'
                             }`}
                         />
                     </button>

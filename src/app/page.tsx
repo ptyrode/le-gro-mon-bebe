@@ -6,11 +6,8 @@ import Onboarding from '@/components/Onboarding';
 import Settings from '@/components/Settings';
 import Timeline from '@/components/Timeline';
 import { usePregnancy } from '@/hooks/usePregnancy';
-import {
-    clampWeek,
-    equivalenceForWeek,
-    rawGestationalWeek,
-} from '@/lib/pregnancy';
+import { categories } from '@/lib/data';
+import { equivalenceForWeek, pregnancyStatus } from '@/lib/pregnancy';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
@@ -30,13 +27,22 @@ export default function Home() {
 
     useEffect(() => {
         if (!state || !state.notifications.enabled) return;
+        if (
+            typeof window !== 'undefined' &&
+            'Notification' in window &&
+            Notification.permission === 'denied'
+        ) {
+            setNotificationsEnabled(false);
+            return;
+        }
         if (typeof window === 'undefined' || !('Notification' in window))
             return;
         if (Notification.permission !== 'granted') return;
 
-        const week = clampWeek(
-            rawGestationalWeek(state.pregnancy.lastPeriodDate)
-        );
+        const status = pregnancyStatus(state.pregnancy.lastPeriodDate);
+        if (status.kind !== 'ongoing') return;
+
+        const week = status.week;
         if (week <= state.notifications.lastSeenWeek) return;
 
         const item = equivalenceForWeek(state.pregnancy.category, week);
@@ -44,11 +50,11 @@ export default function Home() {
             body: t('notification.body', {
                 week,
                 name: item.name,
-                emoji: item.emoji,
+                emoji: categories[state.pregnancy.category].emoji,
             }),
         });
         setLastSeenWeek(week);
-    }, [state, setLastSeenWeek, t]);
+    }, [state, setLastSeenWeek, setNotificationsEnabled, t]);
 
     if (loading) {
         return (
@@ -59,7 +65,14 @@ export default function Home() {
     }
 
     if (!state) {
-        return <Onboarding onStart={start} />;
+        return (
+            <Onboarding
+                onStart={(lastPeriodDate, category) => {
+                    setView('dashboard');
+                    start(lastPeriodDate, category);
+                }}
+            />
+        );
     }
 
     return (
@@ -77,7 +90,10 @@ export default function Home() {
                     onSetCategory={setCategory}
                     onSetLastPeriodDate={setLastPeriodDate}
                     onSetNotificationsEnabled={setNotificationsEnabled}
-                    onReset={reset}
+                    onReset={() => {
+                        setView('dashboard');
+                        reset();
+                    }}
                 />
             )}
             <BottomNav

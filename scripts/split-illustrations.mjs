@@ -7,6 +7,7 @@ import sharp from 'sharp';
 const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
 const TAILLE_CIBLE = 512;
 const QUALITE_WEBP = 82;
+const FOND = { r: 255, g: 244, b: 238 };
 
 const [, , source, categorie, semaineArg, colsArg = '2', rowsArg = '2'] =
     process.argv;
@@ -89,7 +90,10 @@ for (let y = 0; y < rows; y++) {
                 width: tuileL,
                 height: tuileH,
             })
-            .resize(TAILLE_CIBLE, TAILLE_CIBLE, { fit: 'cover' })
+            .resize(TAILLE_CIBLE, TAILLE_CIBLE, {
+                fit: tuileL === tuileH ? 'cover' : 'contain',
+                background: FOND,
+            })
             .webp({ quality: QUALITE_WEBP })
             .toFile(destination);
         console.log(`  ${destination}`);

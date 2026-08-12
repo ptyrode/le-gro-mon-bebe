@@ -20,7 +20,7 @@ export default function Onboarding({ onStart }: Props) {
     const [category, setCategory] = useState<CategoryKey | null>(null);
     const [error, setError] = useState<string | null>(null);
 
-    const submit = () => {
+    const submit = async () => {
         const dateError = validateLastPeriodDate(lastPeriodDate);
         if (dateError) {
             setError(t(`dateErrors.${dateError}`));
@@ -29,6 +29,13 @@ export default function Onboarding({ onStart }: Props) {
         if (!category) {
             setError(t('onboarding.errorCategory'));
             return;
+        }
+        if (
+            typeof window !== 'undefined' &&
+            'Notification' in window &&
+            Notification.permission === 'default'
+        ) {
+            await Notification.requestPermission();
         }
         onStart(lastPeriodDate, category);
     };

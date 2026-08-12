@@ -49,11 +49,11 @@ SPECIFIQUE = {
   au milieu, « un Camembert » et « un Coulommiers » ont une croûte blanche fleurie.""",
 }
 
-TETE = {
-    'animals': "Chaque animal a une petite tête de bébé mignonne",
-    'fruits': "Chaque fruit ou légume a un petit visage de bébé mignon",
-    'fish': "Chaque animal marin a une petite tête de bébé mignonne",
-    'cheeses': "Chaque fromage a un petit visage de bébé mignon",
+SUJET_COURT = {
+    'animals': "on identifie l'animal sans hésiter",
+    'fruits': "on identifie le fruit ou le légume sans hésiter",
+    'fish': "on identifie l'animal marin sans hésiter",
+    'cheeses': "on identifie le fromage sans hésiter",
 }
 
 GABARIT = """# Prompt d'illustration — {label}
@@ -76,8 +76,11 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- {tete} : grands yeux, joues rondes, expression
-  tendre et rigolote. Le sujet reste reconnaissable au premier coup d'œil.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
+  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
+  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil : {sujet_court}.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
 - Sujet unique, centré, entier (pas de recadrage qui coupe le sujet).
@@ -109,9 +112,11 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 
 ## Les planches, une par une
 
-Envoyer **un bloc à la fois**, en réattachant l'image de référence à chaque planche.
-Chaque bloc est autonome : il nomme ses sujets et les décrit, ce qui évite au modèle
-d'improviser ou de répéter un sujet pour remplir la grille.
+**Envoyer un bloc à la fois, avec l'image de référence en pièce jointe.**
+
+Chaque bloc est **entièrement autonome** : il porte le style, le format et ses sujets.
+Il n'y a rien à envoyer avant — pas besoin du texte ci-dessus, qui n'est là que pour
+expliquer la démarche.
 
 {liste}
 
@@ -173,26 +178,33 @@ def main() -> None:
             blocs.append(
                 f'### Planche {n}/{len(planches)} — {semaines}\n\n'
                 f'```\n'
-                f'Même style que l\'image de référence jointe, même fond crème, '
-                f'même échelle.\n'
+                f'Reprends exactement le style de l\'image de référence jointe.\n\n'
+                f'STYLE\n'
+                f'- Illustration cartoon douce, style livre pour enfants, contours arrondis.\n'
+                f'- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d\'un\n'
+                f'  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage\n'
+                f'  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS\n'
+                f'  potelées et ses deux PETITS PIEDS qui dépassent.\n'
+                f'- Le costume reste reconnaissable au premier coup d\'œil.\n'
+                f'- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.\n'
+                f'- Chaque sujet occupe ~80 % de sa case, centré et entier.\n'
+                f'- Même échelle visuelle partout : ne PAS refléter la taille réelle.\n'
+                f'- Aucun texte, aucun chiffre, aucun logo dans l\'image.\n\n'
+                f'FORMAT\n'
                 f'Produis UNE image carrée 2048 × 2048 px composée de '
                 f'{len(groupe)} vignettes\n'
                 f'{"disposées en 2 × 2" if len(groupe) == 4 else f"côte à côte ({len(groupe)} vignettes)"}, '
                 f'sans bordure ni séparateur.\n\n'
-                f'Les {len(groupe)} sujets, dans cet ordre exact — chacun DIFFÉRENT, '
-                f'aucune répétition :\n\n{sujets}\n\n'
-                f'Rappels : un seul sujet par vignette, centré, entier, occupant '
-                f'~80 % de sa case.\n'
-                f'Chaque sujet a un petit visage de bébé mignon. Aucun texte, '
-                f'aucun chiffre dans l\'image.\n'
+                f'LES {len(groupe)} SUJETS, dans cet ordre exact — chacun DIFFÉRENT, '
+                f'aucune répétition :\n\n{sujets}\n'
                 f'```'
             )
         liste = '\n\n'.join(blocs)
         texte = GABARIT.format(
+            sujet_court=SUJET_COURT[cat],
             label=data['label'],
             cat=cat,
             n=len(items),
-            tete=TETE[cat],
             liste=liste,
             specifique=SPECIFIQUE[cat],
             first=f'{cat}-{items[0]["week"]}.png',

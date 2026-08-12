@@ -75,8 +75,8 @@ Une seule grossesse en v1 (multi-grossesses = v2).
 
 ### 3.3 Timeline / historique
 
-- Liste scrollable des semaines passées et à venir avec leurs équivalences.
-- Permet de revoir les comparaisons précédentes et d'anticiper les suivantes.
+- Liste scrollable des semaines **déjà atteintes** uniquement, avec leurs équivalences.
+- Les semaines à venir ne sont pas montrées : on garde la surprise d'une semaine sur l'autre.
 
 ### 3.4 Réglages
 

@@ -7,266 +7,228 @@
         {
             "week": 4,
             "name": "un œuf de fourmi",
-            "emoji": "🥚",
             "funText": "Un grain de riz miniature. On ne voit rien, mais tout est déjà lancé.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Fourmi"
         },
         {
             "week": 5,
             "name": "un puceron",
-            "emoji": "🪲",
             "funText": "Le truc que ta grand-mère écrase sur ses rosiers. On commence petit.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Aphidoidea"
         },
         {
             "week": 6,
             "name": "une fourmi",
-            "emoji": "🐜",
             "funText": "Déjà plus costaud qu'un puceron. Bébé progresse.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Fourmi"
         },
         {
             "week": 7,
             "name": "une coccinelle",
-            "emoji": "🐞",
             "funText": "Ça porte bonheur. On prend.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Coccinellidae"
         },
         {
             "week": 8,
             "name": "une abeille",
-            "emoji": "🐝",
             "funText": "Elle bosse non-stop. Bébé aussi, il fabrique des organes à la chaîne.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Abeille"
         },
         {
             "week": 9,
             "name": "un frelon",
-            "emoji": "🐝",
             "funText": "On passe à la version qui fait peur à tout le monde.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Vespa_%28insecte%29"
         },
         {
             "week": 10,
             "name": "un escargot",
-            "emoji": "🐌",
             "funText": "Il prend son temps. Encore trente semaines, autant s'installer.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Escargot"
         },
         {
             "week": 11,
             "name": "une sauterelle",
-            "emoji": "🦗",
             "funText": "Elle saute soixante fois sa taille. Bébé se contente de gigoter.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Sauterelle_%28insecte%29"
         },
         {
             "week": 12,
             "name": "une grenouille",
-            "emoji": "🐸",
             "funText": "Bébé a des petits doigts palmés à ce stade. Coïncidence troublante.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Grenouille"
         },
         {
             "week": 13,
             "name": "une souris",
-            "emoji": "🐭",
             "funText": "Celle qui fait grimper les gens sur les chaises.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Souris"
         },
         {
             "week": 14,
             "name": "un hamster",
-            "emoji": "🐹",
             "funText": "Bébé change d'échelle d'un coup : on le mesure maintenant de la tête aux pieds.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Hamster"
         },
         {
             "week": 15,
             "name": "un rouge-gorge",
-            "emoji": "🐦",
             "funText": "Petit, rond, et il vous regarde de travers.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Rouge-gorge_familier"
         },
         {
             "week": 16,
             "name": "une taupe",
-            "emoji": "🦫",
             "funText": "Aveugle et bien au chaud sous terre. La ressemblance s'arrête là.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Taupe_d%27Europe"
         },
         {
             "week": 17,
             "name": "un rat",
-            "emoji": "🐀",
             "funText": "Oui, un rat. On avait dit qu'on ne ferait pas que du mignon.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Rat"
         },
         {
             "week": 18,
             "name": "un écureuil",
-            "emoji": "🐿️",
             "funText": "Il planque des noisettes partout et oublie où. Ça rappelle quelqu'un.",
             "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89cureuil"
         },
         {
             "week": 19,
             "name": "un merle",
-            "emoji": "🐦",
             "funText": "Il chante à 5 h du matin. Bon entraînement pour la suite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Merle_noir"
         },
         {
             "week": 20,
             "name": "un hérisson",
-            "emoji": "🦔",
             "funText": "Mi-parcours ! Et pour l'instant bébé n'a pas encore de piquants.",
             "wikipedia": "https://fr.wikipedia.org/wiki/H%C3%A9risson"
         },
         {
             "week": 21,
             "name": "un cochon d'Inde",
-            "emoji": "🐹",
             "funText": "Il couine quand il entend le frigo s'ouvrir. Un modèle.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cavia_porcellus"
         },
         {
             "week": 22,
             "name": "un furet",
-            "emoji": "🦡",
             "funText": "Long, souple, et il se faufile partout. Comme un pied dans les côtes.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Furet"
         },
         {
             "week": 23,
             "name": "un chaton de deux mois",
-            "emoji": "🐱",
             "funText": "L'âge où ça grimpe aux rideaux. Profite du calme.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chaton_%28animal%29"
         },
         {
             "week": 24,
             "name": "un lapereau",
-            "emoji": "🐰",
             "funText": "Les oreilles ne comptent pas dans la mesure. On est rigoureux.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Lapin"
         },
         {
             "week": 25,
             "name": "un pigeon",
-            "emoji": "🐦",
             "funText": "Le roi des villes. Aucun respect, aucune limite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Columba_%28oiseau%29"
         },
         {
             "week": 26,
             "name": "un chihuahua",
-            "emoji": "🐕",
             "funText": "Petit format, gros caractère. On verra bien.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chihuahua_%28chien%29"
         },
         {
             "week": 27,
             "name": "un chat de quatre mois",
-            "emoji": "🐱",
             "funText": "Encore un peu bête, déjà très sûr de lui.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chat"
         },
         {
             "week": 28,
             "name": "un carlin",
-            "emoji": "🐶",
             "funText": "Il ronfle plus fort que le papa. Prépare-toi.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Carlin"
         },
         {
             "week": 29,
             "name": "une poule",
-            "emoji": "🐔",
             "funText": "Elle pond, elle gratte, elle râle. Une vraie personnalité.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Poule"
         },
         {
             "week": 30,
             "name": "un lapin",
-            "emoji": "🐇",
             "funText": "Fini le lapereau, place au vrai lapin. Ça va vite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Lapin"
         },
         {
             "week": 31,
             "name": "un chat adulte",
-            "emoji": "🐈",
             "funText": "Le poids du regard en plus. Bébé s'entraîne déjà à juger.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chat"
         },
         {
             "week": 32,
             "name": "un renardeau",
-            "emoji": "🦊",
             "funText": "Malin, joueur, et déjà un peu vicieux.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Renard_roux"
         },
         {
             "week": 33,
             "name": "un canard colvert",
-            "emoji": "🦆",
             "funText": "Tête verte, démarche ridicule, fierté intacte.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Canard_colvert"
         },
         {
             "week": 34,
             "name": "un beagle",
-            "emoji": "🐕",
             "funText": "Un nez sur pattes. Il trouve la nourriture avant toi.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Beagle_%28chien%29"
         },
         {
             "week": 35,
             "name": "un raton laveur",
-            "emoji": "🦝",
             "funText": "Il fouille les poubelles avec des mains de chirurgien.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Raton_laveur"
         },
         {
             "week": 36,
             "name": "un bouledogue français",
-            "emoji": "🐶",
             "funText": "Compact, têtu, et il fait des bruits inquiétants en dormant.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Bouledogue"
         },
         {
             "week": 37,
             "name": "un renard",
-            "emoji": "🦊",
             "funText": "Le renardeau a grandi. Bébé aussi, et ça commence à se sentir.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Renard_roux"
         },
         {
             "week": 38,
             "name": "un blaireau",
-            "emoji": "🦡",
             "funText": "Costaud, râleur, il ne lâche rien. On y est presque.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Blaireau_europ%C3%A9en"
         },
         {
             "week": 39,
             "name": "un cocker",
-            "emoji": "🐕",
             "funText": "Des oreilles immenses et un enthousiasme sans limite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cocker_spaniel_anglais"
         },
         {
             "week": 40,
             "name": "un agneau nouveau-né",
-            "emoji": "🐑",
             "funText": "Un bébé animal pour finir. Le tien arrive, et il tient debout moins vite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Agneau"
         },
         {
             "week": 41,
             "name": "un porcelet",
-            "emoji": "🐷",
             "funText": "Lui, il tète déjà debout. Bébé, lui, prend encore ses aises.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Porc"
         }

@@ -52,11 +52,14 @@ Chaque `item` associe une **semaine** à une comparaison :
 {
     "week": 16,
     "name": "un avocat",
-    "emoji": "🥑",
     "funText": "Bien mûr, prêt à croquer.",
     "wikipedia": "https://fr.wikipedia.org/wiki/Avocat_(fruit)"
 }
 ```
+
+Les items n'ont **pas** d'emoji : chacun a son illustration dans `public/images/`. Seule la
+**catégorie** garde un `emoji`, qui sert au sélecteur de catégorie et de repli si une image
+manque.
 
 La clé `key` doit correspondre à une valeur de `CategoryKey` (`src/lib/types.ts`) **et** au nom du fichier, sans quoi `src/lib/data.ts` ne s'y retrouvera pas.
 

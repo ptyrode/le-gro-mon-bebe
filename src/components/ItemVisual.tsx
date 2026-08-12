@@ -1,5 +1,6 @@
 'use client';
 
+import { categories } from '@/lib/data';
 import type { CategoryItem, CategoryKey } from '@/lib/types';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -29,7 +30,7 @@ export default function ItemVisual({
                 className={emojiClassName}
                 style={{ fontSize: size * 0.75 }}
             >
-                {item.emoji}
+                {categories[category].emoji}
             </span>
         );
     }

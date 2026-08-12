@@ -7,266 +7,228 @@
         {
             "week": 4,
             "name": "une perle de caviar",
-            "emoji": "🥚",
             "funText": "Bébé démarre sa carrière au sommet du luxe. Ça se gâtera vite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Caviar"
         },
         {
             "week": 5,
             "name": "un œuf de lompe",
-            "emoji": "🥚",
             "funText": "Le truc noir sur les toasts. Bébé en est là.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cyclopterus_lumpus"
         },
         {
             "week": 6,
             "name": "un œuf de saumon",
-            "emoji": "🟠",
             "funText": "Une petite bille orange qui éclate sous la dent. Mignon, non ?",
             "wikipedia": "https://fr.wikipedia.org/wiki/%C5%92ufs_de_saumon"
         },
         {
             "week": 7,
             "name": "un alevin tout juste éclos",
-            "emoji": "🐟",
             "funText": "Deux yeux, une queue, et beaucoup d'ambition.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Alevin"
         },
         {
             "week": 8,
             "name": "un krill",
-            "emoji": "🦐",
             "funText": "Ce que les baleines mangent par tonnes. Bébé fait la taille du casse-croûte.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Euphausiacea"
         },
         {
             "week": 9,
             "name": "un hippocampe nain",
-            "emoji": "🌊",
             "funText": "Chez eux, c'est le mâle qui porte les petits. On dit ça, on dit rien.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Hippocampe_%28poisson%29"
         },
         {
             "week": 10,
             "name": "une crevette grise",
-            "emoji": "🦐",
             "funText": "La crevette qu'on décortique par vingt sans compter.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Crevette_grise"
         },
         {
             "week": 11,
             "name": "une coque",
-            "emoji": "🐚",
             "funText": "Bien planquée dans le sable, comme bébé dans son coin.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cerastoderma"
         },
         {
             "week": 12,
             "name": "une civelle",
-            "emoji": "🐟",
             "funText": "Bébé anguille translucide. Et hors de prix, la civelle.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Anguilla_anguilla"
         },
         {
             "week": 13,
             "name": "un petit anchois",
-            "emoji": "🐟",
             "funText": "Celui qui traîne sur la pizza et que personne n'assume aimer.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Engraulidae"
         },
         {
             "week": 14,
             "name": "une sardine",
-            "emoji": "🐟",
             "funText": "Bébé passe direct de l'anchois à la sardine : c'est la semaine où on change de mètre ruban.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Sardine"
         },
         {
             "week": 15,
             "name": "un éperlan",
-            "emoji": "🐟",
             "funText": "Le poisson de la friture du dimanche.",
             "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89perlan"
         },
         {
             "week": 16,
             "name": "un rouget",
-            "emoji": "🐠",
             "funText": "Rouge vif et plein de caractère. Ça promet.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Mullus_surmuletus"
         },
         {
             "week": 17,
             "name": "un chinchard",
-            "emoji": "🐟",
             "funText": "Le maquereau du pauvre, mais on l'aime bien quand même.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Trachurus"
         },
         {
             "week": 18,
             "name": "un hareng",
-            "emoji": "🐟",
             "funText": "Fumé, saur, mariné : il a plus de vies qu'un chat.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Hareng"
         },
         {
             "week": 19,
             "name": "une truite portion",
-            "emoji": "🐟",
             "funText": "Calibrée pour une assiette. Bébé aussi commence à se caler.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Truite"
         },
         {
             "week": 20,
             "name": "un maquereau",
-            "emoji": "🐟",
             "funText": "Mi-parcours ! Bébé a des rayures dans le dos, façon de parler.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Maquereau"
         },
         {
             "week": 21,
             "name": "une dorade royale",
-            "emoji": "🐠",
             "funText": "Avec la petite tache dorée sur la joue. La classe.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Dorade_royale"
         },
         {
             "week": 22,
             "name": "une sole",
-            "emoji": "🐟",
             "funText": "Toute plate, couchée sur le côté. Bébé fait pareil, mais pas pour les mêmes raisons.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Sole_commune"
         },
         {
             "week": 23,
             "name": "un merlan",
-            "emoji": "🐟",
             "funText": "Se faire des yeux de merlan frit devant l'écho : validé.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Merlan"
         },
         {
             "week": 24,
             "name": "un tacaud",
-            "emoji": "🐟",
             "funText": "Le poisson qu'on remonte quand on visait autre chose. On l'aime quand même.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Trisopterus_luscus"
         },
         {
             "week": 25,
             "name": "un mulet",
-            "emoji": "🐟",
             "funText": "Il remonte les estuaires sans se poser de question. Comme bébé, tête baissée.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Mulet_%28poisson%29"
         },
         {
             "week": 26,
             "name": "une plie",
-            "emoji": "🐟",
             "funText": "Encore un poisson plat, mais avec des points orange. On progresse.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Plie"
         },
         {
             "week": 27,
             "name": "un cabillaud de portion",
-            "emoji": "🐟",
             "funText": "Le dos de cabillaud du vendredi soir.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Morue_de_l%27Atlantique"
         },
         {
             "week": 28,
             "name": "un lieu jaune",
-            "emoji": "🐟",
             "funText": "Beau, doré, et il tire fort. Bébé aussi commence à tirer fort.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Lieu_jaune"
         },
         {
             "week": 29,
             "name": "une truite de mer",
-            "emoji": "🐟",
             "funText": "La truite qui est partie voir la mer et qui a bien grandi.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Truite_de_mer"
         },
         {
             "week": 30,
             "name": "un merlu",
-            "emoji": "🐟",
             "funText": "Le colin des cantines, en version noble. Trois quarts du chemin sont faits.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Merlucciidae"
         },
         {
             "week": 31,
             "name": "un turbot",
-            "emoji": "🐟",
             "funText": "Large comme une assiette de fête. Bébé prend ses aises.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Scophthalmus_maximus"
         },
         {
             "week": 32,
             "name": "un lieu noir",
-            "emoji": "🐟",
             "funText": "Moins chic que le jaune, tout aussi costaud.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Lieu_noir"
         },
         {
             "week": 33,
             "name": "un jeune brochet",
-            "emoji": "🐟",
             "funText": "Une gueule pleine de dents. On espère que ça ne se transmet pas.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Brochet"
         },
         {
             "week": 34,
             "name": "une raie bouclée",
-            "emoji": "🐟",
             "funText": "Large comme une assiette de fête, et couverte de petits boutons.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Raja_clavata"
         },
         {
             "week": 35,
             "name": "un saint-pierre",
-            "emoji": "🐠",
             "funText": "Avec sa tache noire sur le flanc. Moche mais délicieux, comme certains.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Zeus_faber"
         },
         {
             "week": 36,
             "name": "une lotte",
-            "emoji": "🐟",
             "funText": "Une tête improbable et une chair parfaite. Ne jugeons pas.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Baudroie"
         },
         {
             "week": 37,
             "name": "un maigre",
-            "emoji": "🐟",
             "funText": "Il porte mal son nom : il fait déjà plus d'un demi-mètre.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Maigre_%28poisson%29"
         },
         {
             "week": 38,
             "name": "une roussette",
-            "emoji": "🦈",
             "funText": "Un petit requin, oui madame. Bébé joue dans la cour des grands.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Scyliorhinidae"
         },
         {
             "week": 39,
             "name": "un homard",
-            "emoji": "🦞",
             "funText": "Pinces comprises. On approche du grand jour, autant sortir le homard.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Homard"
         },
         {
             "week": 40,
             "name": "un beau bar de ligne",
-            "emoji": "🐟",
             "funText": "La prise du pêcheur, celle qu'on raconte pendant des années. C'est le moment.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Dicentrarchus_labrax"
         },
         {
             "week": 41,
             "name": "un saumon sauvage",
-            "emoji": "🐟",
             "funText": "Il remonte la rivière et prend son temps. Bébé s'en inspire un peu trop.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Saumon"
         }

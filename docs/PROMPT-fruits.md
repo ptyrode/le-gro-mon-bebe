@@ -18,8 +18,11 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Chaque fruit ou légume a un petit visage de bébé mignon : grands yeux, joues rondes, expression
-  tendre et rigolote. Le sujet reste reconnaissable au premier coup d'œil.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
+  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
+  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil : on identifie le fruit ou le légume sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
 - Sujet unique, centré, entier (pas de recadrage qui coupe le sujet).
@@ -59,186 +62,298 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 
 ## Les planches, une par une
 
-Envoyer **un bloc à la fois**, en réattachant l'image de référence à chaque planche.
-Chaque bloc est autonome : il nomme ses sujets et les décrit, ce qui évite au modèle
-d'improviser ou de répéter un sujet pour remplir la grille.
+**Envoyer un bloc à la fois, avec l'image de référence en pièce jointe.**
+
+Chaque bloc est **entièrement autonome** : il porte le style, le format et ses sujets.
+Il n'y a rien à envoyer avant — pas besoin du texte ci-dessus, qui n'est là que pour
+expliquer la démarche.
 
 ### Planche 1/10 — S4, S5, S6, S7
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une graine de pavot — minuscule grain rond gris ardoise, surface mate
 Haut droite. une graine de sésame — petite goutte plate beige clair, lisse
 Bas gauche. une lentille — petit disque PLAT brun-vert, comme une lentille sèche du paquet — surtout pas une boule
 Bas droite. une myrtille — petite baie bleu-violet à couronne étoilée
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 2/10 — S8, S9, S10, S11
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une framboise — baie rouge composée de petites boules serrées
 Haut droite. une cerise — cerise rouge brillante avec sa queue verte
 Bas gauche. une fraise — fraise rouge en cœur, mouchetée, avec sa collerette verte
 Bas droite. un abricot — petit fruit orange velouté avec un sillon
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 3/10 — S12, S13, S14, S15
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un citron vert — boule vert vif à peau grenue
 Haut droite. une pêche — fruit rond duveteux rose-orangé avec un sillon
 Bas gauche. un avocat — fruit vert foncé en forme de poire, peau grenue
 Bas droite. un poivron — poivron rouge brillant à quatre lobes et queue verte
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 4/10 — S16, S17, S18, S19
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une carotte — carotte orange conique avec ses fanes vertes
 Haut droite. une banane — banane jaune incurvée, une seule
 Bas gauche. une aubergine — fruit violet foncé brillant et allongé, calice vert
 Bas droite. un épi de maïs — épi jaune aux grains alignés, feuilles vertes écartées
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 5/10 — S20, S21, S22, S23
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un concombre — concombre vert foncé long et régulier
 Haut droite. une courgette — courgette vert clair allongée avec sa fleur
 Bas gauche. une papaye — gros fruit ovale jaune-orangé
 Bas droite. une courge butternut — courge beige en forme de poire allongée
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 6/10 — S24, S25, S26, S27
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une salade romaine — laitue haute aux feuilles vertes dressées et serrées
 Haut droite. un ananas et ses feuilles — ananas entier AVEC son plumeau de feuilles pointues
 Bas gauche. un chou frisé — boule de feuilles vert foncé très gaufrées
 Bas droite. une botte de blettes — bouquet de tiges blanches à larges feuilles vertes, lié
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 7/10 — S28, S29, S30, S31
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un pied de céleri — botte de longues côtes vert pâle serrées
 Haut droite. un poireau — poireau long, blanc à la base et vert au sommet
 Bas gauche. un pied de rhubarbe — tiges rouge-rosé à grandes feuilles vertes
 Bas droite. un chou-fleur et ses feuilles — boule blanche entourée de ses grandes feuilles vertes
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 8/10 — S32, S33, S34, S35
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une courge spaghetti — courge ovale jaune pâle, lisse
 Haut droite. un chou chinois — chou allongé vert pâle aux feuilles serrées, façon pé-tsaï
 Bas gauche. un régime de bananes — grappe entière de bananes attachées, pas une seule
 Bas droite. une pastèque — grosse boule vert rayé de vert foncé
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 9/10 — S36, S37, S38, S39
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une citrouille — citrouille ronde orange vif, façon Halloween
 Haut droite. un cardon — longues côtes gris-vert épaisses, façon céleri géant
 Bas gauche. un pied de chou de Bruxelles — haute tige verticale couverte de petites boules vertes
 Bas droite. un daikon — long radis BLANC droit, avec ses fanes vertes — pas une carotte
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 10/10 — S40, S41
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
 côte à côte (2 vignettes), sans bordure ni séparateur.
 
-Les 2 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un potiron géant — énorme citrouille orange bien ronde
 Haut droite. une courge trombone — courge très longue et recourbée, beige-vert, col étroit
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ---

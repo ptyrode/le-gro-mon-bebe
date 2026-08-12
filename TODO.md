@@ -4,7 +4,7 @@
 
 ## 🔴 v1 — ce qui reste
 
-- [ ] **Illustrations** : `fruits` ✅ fait (38 images). Restent `fish`, `cheeses`, `animals` — un prompt par catégorie dans [`docs/`](docs/).
+- [x] **Illustrations** : les 4 catégories sont faites — **152 images** (2,9 Mo en WebP 512).
 - [ ] **Tests sur mobile réel** : notifications (Option A), installation de la PWA depuis la prod (iOS + Android), et comportement des liens Wikipédia en mode standalone.
 
 ## 🔵 v2 — plus tard
@@ -14,6 +14,9 @@
     - **Blob** (« fast object storage ») : stockage de fichiers façon S3, pour images et médias.
     - ⚠️ **Gain réel à questionner.** Aujourd'hui les JSON sont importés au build : ils partent dans le bundle, sans aucune requête réseau — donc plus rapides que n'importe quelle base. Le seul vrai bénéfice de Global Config serait de **modifier le contenu sans redéployer**. Idem pour Blob : `public/` est déjà servi par le CDN Vercel gratuitement, Blob n'a d'intérêt que pour des fichiers uploadés depuis l'appli.
     - À trancher quand le besoin d'éditer sans redéployer se fera sentir.
+- [ ] **Reprendre les illustrations de `fruits`, `cheeses` et `fish`.** Le rendu est inégal : sur certaines images le bébé est bien visible sous le costume (tête entière, mains, pieds), sur d'autres — les poissons surtout — on n'a qu'un sujet avec un œil un peu humain et deux mains. L'effet « déguisement » manque.
+    - La consigne a été renforcée dans `scripts/gen-illustration-prompts.py` **après** la génération de ces trois catégories : elle demande désormais explicitement la tête entière du bébé émergeant du costume, plus les mains et les pieds qui dépassent. `animals` en bénéficie déjà.
+    - Regénérer les 114 images avec le prompt actuel, ou seulement les plus faibles (les poissons en priorité).
 - [ ] **Formulaire feedback** : remplacer le `mailto:` par une Serverless Function + Resend.
 - [ ] Gérer plusieurs grossesses (cf. `SPECS.md`).
 - [ ] Proposer de clore la grossesse quand le terme est dépassé (lié au multi-grossesses).
@@ -22,7 +25,7 @@
 
 Une **image par item** (ex : un munster avec une petite tête de bébé mignonne), pour remplacer l'emoji du Dashboard.
 
-- Volume : 38 items × 4 catégories = **152 images**. `fruits` est fait.
+- Volume : 38 items × 4 catégories = **152 images**, toutes générées.
 - ⚠️ Aucun générateur d'images dans l'environnement de dev → les images sont produites par un modèle externe, à partir d'une image de référence fournie par Pierrick.
 - 📄 **Un prompt prêt à copier-coller par catégorie** : `docs/PROMPT-animals.md`, `-fruits.md`, `-fish.md`, `-cheeses.md`.
 - Ces fichiers sont **générés** depuis les JSON par `python3 scripts/gen-illustration-prompts.py` : après toute modification d'un item, régénérer plutôt que corriger à la main.

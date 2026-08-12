@@ -2,7 +2,7 @@
 
 import ItemVisual from '@/components/ItemVisual';
 import { categories } from '@/lib/data';
-import { clampWeek, growthForWeek, rawGestationalWeek } from '@/lib/pregnancy';
+import { growthForWeek, pregnancyStatus } from '@/lib/pregnancy';
 import type { AppState } from '@/lib/types';
 import { useTranslations } from 'next-intl';
 
@@ -13,8 +13,15 @@ interface Props {
 export default function Timeline({ state }: Props) {
     const t = useTranslations();
     const { lastPeriodDate, category } = state.pregnancy;
-    const currentWeek = clampWeek(rawGestationalWeek(lastPeriodDate));
+    const status = pregnancyStatus(lastPeriodDate);
     const cat = categories[category];
+    const currentWeek = status.kind === 'ongoing' ? status.week : 0;
+    const passees =
+        status.kind === 'born'
+            ? cat.items
+            : status.kind === 'ongoing'
+              ? cat.items.filter((item) => item.week <= currentWeek)
+              : [];
 
     return (
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
@@ -30,8 +37,14 @@ export default function Timeline({ state }: Props) {
                 </p>
             </header>
 
+            {passees.length === 0 && (
+                <p className="text-ink-soft rounded-2xl bg-white/60 p-4 text-center text-sm">
+                    {t('timeline.empty')}
+                </p>
+            )}
+
             <ol className="space-y-2">
-                {cat.items.map((item) => {
+                {passees.map((item) => {
                     const past = item.week < currentWeek;
                     const current = item.week === currentWeek;
                     const g = growthForWeek(item.week);

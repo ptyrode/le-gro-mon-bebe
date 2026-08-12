@@ -17,7 +17,6 @@ export interface WeightJokes {
 export interface CategoryItem {
     week: number;
     name: string;
-    emoji: string;
     funText: string;
     wikipedia?: string;
 }

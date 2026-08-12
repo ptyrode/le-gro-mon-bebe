@@ -18,8 +18,11 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Chaque animal a une petite tête de bébé mignonne : grands yeux, joues rondes, expression
-  tendre et rigolote. Le sujet reste reconnaissable au premier coup d'œil.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
+  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
+  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil : on identifie l'animal sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
 - Sujet unique, centré, entier (pas de recadrage qui coupe le sujet).
@@ -57,186 +60,298 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 
 ## Les planches, une par une
 
-Envoyer **un bloc à la fois**, en réattachant l'image de référence à chaque planche.
-Chaque bloc est autonome : il nomme ses sujets et les décrit, ce qui évite au modèle
-d'improviser ou de répéter un sujet pour remplir la grille.
+**Envoyer un bloc à la fois, avec l'image de référence en pièce jointe.**
+
+Chaque bloc est **entièrement autonome** : il porte le style, le format et ses sujets.
+Il n'y a rien à envoyer avant — pas besoin du texte ci-dessus, qui n'est là que pour
+expliquer la démarche.
 
 ### Planche 1/10 — S4, S5, S6, S7
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un œuf de fourmi — minuscule œuf blanc nacré ovale — pas une fourmi
 Haut droite. un puceron — minuscule insecte vert tendre poire, pattes fines
 Bas gauche. une fourmi — fourmi noire à trois segments et antennes
 Bas droite. une coccinelle — coccinelle rouge à points noirs
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 2/10 — S8, S9, S10, S11
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une abeille — abeille dodue rayée jaune et noir, ailes translucides
 Haut droite. un frelon — grosse guêpe brun-jaune, plus grande et plus massive que l'abeille
 Bas gauche. un escargot — escargot à coquille spiralée brune
 Bas droite. une sauterelle — sauterelle verte à longues pattes arrière repliées
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 3/10 — S12, S13, S14, S15
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une grenouille — grenouille verte assise, pattes palmées
 Haut droite. une souris — petite souris grise à grandes oreilles rondes et longue queue fine
 Bas gauche. un hamster — hamster doré tout rond, petites oreilles, joues pleines
 Bas droite. un rouge-gorge — petit oiseau brun à POITRINE ORANGE
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 4/10 — S16, S17, S18, S19
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. une taupe — petit animal noir au museau rose pointu et aux grosses pattes-pelles
 Haut droite. un rat — rat gris-brun au museau allongé et à la longue queue nue
 Bas gauche. un écureuil — écureuil roux à grande queue touffue
 Bas droite. un merle — oiseau NOIR au bec ORANGE vif
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 5/10 — S20, S21, S22, S23
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un hérisson — hérisson brun couvert de piquants, museau pointu
 Haut droite. un cochon d'Inde — petit rongeur trapu au poil roux et blanc, SANS queue
 Bas gauche. un furet — petit mustélidé long et souple, beige à masque foncé
 Bas droite. un chaton de deux mois — tout petit chaton maladroit aux pattes courtes
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 6/10 — S24, S25, S26, S27
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un lapereau — petit lapin aux oreilles encore courtes
 Haut droite. un pigeon — pigeon gris-bleu à reflets verts sur le cou
 Bas gauche. un chihuahua — tout petit chien à grandes oreilles dressées et gros yeux ronds
 Bas droite. un chat de quatre mois — jeune chat dégingandé, plus grand que le chaton
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 7/10 — S28, S29, S30, S31
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un carlin — petit chien beige au museau écrasé, plis sur le front, queue en tire-bouchon
 Haut droite. une poule — poule rousse à crête rouge
 Bas gauche. un lapin — lapin adulte aux longues oreilles dressées
 Bas droite. un chat adulte — chat adulte assis, queue enroulée autour des pattes
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 8/10 — S32, S33, S34, S35
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un renardeau — bébé renard roux aux oreilles rondes et à la queue courte
 Haut droite. un canard colvert — canard à TÊTE VERTE brillante et collier blanc
 Bas gauche. un beagle — chien tricolore blanc-brun-noir à longues oreilles tombantes
 Bas droite. un raton laveur — animal gris à MASQUE noir sur les yeux et queue annelée
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 9/10 — S36, S37, S38, S39
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
 disposées en 2 × 2, sans bordure ni séparateur.
 
-Les 4 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un bouledogue français — chien trapu à grandes oreilles DROITES en chauve-souris, museau plat
 Haut droite. un renard — renard roux adulte à grande queue touffue à bout blanc
 Bas gauche. un blaireau — animal gris trapu à tête blanche rayée de deux bandes noires
 Bas droite. un cocker — chien à très longues oreilles tombantes et poil ondulé doré
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ### Planche 10/10 — S40, S41
 
 ```
-Même style que l'image de référence jointe, même fond crème, même échelle.
+Reprends exactement le style de l'image de référence jointe.
+
+STYLE
+- Illustration cartoon douce, style livre pour enfants, contours arrondis.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
+  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
+  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le costume reste reconnaissable au premier coup d'œil.
+- Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
+- Chaque sujet occupe ~80 % de sa case, centré et entier.
+- Même échelle visuelle partout : ne PAS refléter la taille réelle.
+- Aucun texte, aucun chiffre, aucun logo dans l'image.
+
+FORMAT
 Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
 côte à côte (2 vignettes), sans bordure ni séparateur.
 
-Les 2 sujets, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
 
 Haut gauche. un agneau nouveau-né — tout petit agneau blanc sur ses pattes flageolantes
 Haut droite. un porcelet — petit cochon rose au groin rond et à la queue en tire-bouchon
-
-Rappels : un seul sujet par vignette, centré, entier, occupant ~80 % de sa case.
-Chaque sujet a un petit visage de bébé mignon. Aucun texte, aucun chiffre dans l'image.
 ```
 
 ---
