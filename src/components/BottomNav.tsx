@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/cn';
 import { useTranslations } from 'next-intl';
 
 export type View = 'dashboard' | 'timeline' | 'settings';
@@ -28,11 +29,17 @@ export default function BottomNav({ view, onChange }: Props) {
                             key={tab.key}
                             type="button"
                             onClick={() => onChange(tab.key)}
-                            className={`flex flex-1 flex-col items-center gap-0.5 py-2.5 text-xs font-semibold transition ${
+                            className={cn(
+                                'flex flex-1 flex-col items-center gap-0.5 py-2.5 text-xs font-semibold transition',
                                 active ? 'text-accent-deep' : 'text-ink-soft'
-                            }`}
+                            )}
                         >
-                            <span className="text-xl">{tab.icon}</span>
+                            <span
+                                aria-hidden="true"
+                                className="text-xl"
+                            >
+                                {tab.icon}
+                            </span>
                             {t(`nav.${tab.key}`)}
                         </button>
                     );

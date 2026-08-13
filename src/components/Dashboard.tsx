@@ -2,6 +2,7 @@
 
 import InstallBanner from '@/components/InstallBanner';
 import ItemVisual from '@/components/ItemVisual';
+import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import {
     daysUntilDue,
@@ -44,13 +45,15 @@ function CategoryPicker({
                             key={cat.key}
                             type="button"
                             onClick={() => onSetCategory(cat.key)}
-                            className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition ${
+                            className={cn(
+                                'inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition',
                                 active
                                     ? 'border-accent bg-accent text-white'
                                     : 'border-cream-deep text-ink hover:border-accent/50 bg-white'
-                            }`}
+                            )}
                         >
-                            {cat.emoji} {cat.label}
+                            <span aria-hidden="true">{cat.emoji}</span>
+                            {cat.label}
                         </button>
                     );
                 })}

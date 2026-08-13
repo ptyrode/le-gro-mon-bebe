@@ -8,15 +8,16 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 
 ## Stack
 
-| Élément     | Choix                                                      |
-| ----------- | ---------------------------------------------------------- |
-| Framework   | Next.js 16 (App Router, Turbopack)                         |
-| Langage     | TypeScript                                                 |
-| UI          | React 19 + Tailwind CSS 4                                  |
-| Stockage    | `localStorage` (clé `lgmb:v1`)                             |
-| Textes      | next-intl, sans routing i18n (`public/locales/fr/`)        |
-| PWA         | `app/manifest.ts` + service worker maison (`public/sw.js`) |
-| Hébergement | Vercel                                                     |
+| Élément     | Choix                                                         |
+| ----------- | ------------------------------------------------------------- |
+| Framework   | Next.js 16 (App Router, Turbopack)                            |
+| Langage     | TypeScript                                                    |
+| UI          | React 19 + Tailwind CSS 4                                     |
+| Stockage    | `localStorage` (clé `lgmb:v1`)                                |
+| Textes      | next-intl, sans routing i18n (`public/locales/fr/`)           |
+| PWA         | `app/manifest.ts` + service worker maison (`public/sw.js`)    |
+| Hébergement | Vercel                                                        |
+| Analytics   | Google Tag Manager (`GTM-586X3SW9`) via `@next/third-parties` |
 
 ## Démarrer
 

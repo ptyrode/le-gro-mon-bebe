@@ -1,10 +1,14 @@
 import './globals.css';
 import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
 import { locale } from '@/i18n/request';
+import { cn } from '@/lib/cn';
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+
+const GTM_ID = 'GTM-586X3SW9';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -41,8 +45,9 @@ export default function RootLayout({
     return (
         <html
             lang={locale}
-            className={`${geistSans.variable} h-full antialiased`}
+            className={cn(geistSans.variable, 'h-full antialiased')}
         >
+            <GoogleTagManager gtmId={GTM_ID} />
             <body className="min-h-full">
                 <NextIntlClientProvider>
                     {children}

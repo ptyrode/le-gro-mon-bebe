@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { CategoryKey } from '@/lib/types';
@@ -88,13 +89,19 @@ export default function Onboarding({ onStart }: Props) {
                                     setCategory(cat.key);
                                     setError(null);
                                 }}
-                                className={`flex flex-col items-start gap-1 rounded-2xl border-2 p-4 text-left transition ${
+                                className={cn(
+                                    'flex flex-col items-start gap-1 rounded-2xl border-2 p-4 text-left transition',
                                     selected
                                         ? 'border-accent bg-accent/10 shadow-sm'
                                         : 'border-cream-deep hover:border-accent/50 bg-white'
-                                }`}
+                                )}
                             >
-                                <span className="text-3xl">{cat.emoji}</span>
+                                <span
+                                    aria-hidden="true"
+                                    className="text-3xl"
+                                >
+                                    {cat.emoji}
+                                </span>
                                 <span className="text-ink font-semibold">
                                     {cat.label}
                                 </span>
@@ -116,8 +123,9 @@ export default function Onboarding({ onStart }: Props) {
             <button
                 type="button"
                 onClick={submit}
-                className="bg-accent shadow-accent/30 hover:bg-accent-deep mt-auto w-full rounded-2xl px-6 py-4 text-lg font-bold text-white shadow-lg transition active:scale-[0.98]"
+                className="bg-accent shadow-accent/30 hover:bg-accent-deep mt-auto inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-lg font-bold text-white shadow-lg transition active:scale-[0.98]"
             >
+                <span aria-hidden="true">🚀</span>
                 {t('onboarding.submit')}
             </button>
         </main>

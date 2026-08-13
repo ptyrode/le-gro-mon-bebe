@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/cn';
 import { categories } from '@/lib/data';
 import type { CategoryItem, CategoryKey } from '@/lib/types';
 import Image from 'next/image';
@@ -44,7 +45,7 @@ export default function ItemVisual({
             priority={priority}
             onError={() => setIllustre(false)}
             style={{ width: size, height: size }}
-            className={`rounded-xl object-cover ${className}`}
+            className={cn('rounded-xl object-cover', className)}
         />
     );
 }

@@ -1,5 +1,6 @@
 'use client';
 
+import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
@@ -8,6 +9,7 @@ import { useState, useSyncExternalStore } from 'react';
 
 // TODO(v1.1): remplacer le mailto par l'envoi via Serverless Function + Resend.
 const FEEDBACK_EMAIL = 'pierrick.tyrode@gmail.com';
+const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/ptyrode';
 
 type Permission = NotificationPermission | 'unsupported';
 
@@ -126,13 +128,15 @@ export default function Settings({
                                 key={cat.key}
                                 type="button"
                                 onClick={() => onSetCategory(cat.key)}
-                                className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition ${
+                                className={cn(
+                                    'inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition',
                                     active
                                         ? 'border-accent bg-accent text-white'
                                         : 'border-cream-deep text-ink hover:border-accent/50 bg-white'
-                                }`}
+                                )}
                             >
-                                {cat.emoji} {cat.label}
+                                <span aria-hidden="true">{cat.emoji}</span>
+                                {cat.label}
                             </button>
                         );
                     })}
@@ -154,14 +158,16 @@ export default function Settings({
                         onClick={toggleNotifs}
                         role="switch"
                         aria-checked={notifsActives}
-                        className={`relative h-7 w-12 rounded-full transition ${
+                        className={cn(
+                            'relative h-7 w-12 rounded-full transition',
                             notifsActives ? 'bg-accent' : 'bg-cream-deep'
-                        }`}
+                        )}
                     >
                         <span
-                            className={`absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all ${
+                            className={cn(
+                                'absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all',
                                 notifsActives ? 'left-6' : 'left-1'
-                            }`}
+                            )}
                         />
                     </button>
                 </div>
@@ -179,9 +185,28 @@ export default function Settings({
                 </p>
                 <a
                     href={feedbackHref}
-                    className="bg-accent hover:bg-accent-deep inline-block rounded-2xl px-5 py-2.5 text-sm font-bold text-white transition"
+                    className="bg-accent hover:bg-accent-deep inline-flex items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-white transition"
                 >
+                    <span aria-hidden="true">✉️</span>
                     {t('settings.feedbackCta')}
+                </a>
+            </section>
+
+            <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
+                <p className="text-ink text-sm font-semibold">
+                    {t('settings.supportTitle')}
+                </p>
+                <p className="text-ink-soft mb-3 text-xs">
+                    {t('settings.supportBody')}
+                </p>
+                <a
+                    href={BUY_ME_A_COFFEE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-2xl bg-[#FFDD00] px-5 py-2.5 text-sm font-bold text-black transition hover:brightness-95"
+                >
+                    <span aria-hidden="true">☕</span>
+                    {t('settings.supportCta')}
                 </a>
             </section>
 

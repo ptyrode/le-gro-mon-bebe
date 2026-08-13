@@ -23,6 +23,7 @@
     - Sources à produire depuis une image carrée 2048 px : `public/icon-192.png`, `public/icon-512.png`, `src/app/apple-icon.png` (180), `src/app/icon.png` (512), `src/app/favicon.ico` (16/32/48).
     - ⚠️ **Prévoir des fichiers `maskable` séparés**, avec le sujet à ~72 % du cadre. Le manifest déclare aujourd'hui les mêmes fichiers en `any` et `maskable`, or Android rogne les maskable d'environ 20 % : le haut de la tétine est coupé sur l'écran d'accueil.
     - ⚠️ **Coins arrondis uniquement sur les icônes `any`.** iOS applique son propre masque à `apple-icon.png` et remplit les coins transparents en noir ; Android fait de même avec les maskable.
+- [ ] **Bandeau de consentement cookies.** GTM est branché sans demande de consentement préalable : si des tags analytiques y sont activés, ils déposent des cookies dès la première visite, ce que le RGPD n'autorise pas sans accord. Deux voies possibles — n'activer dans GTM que des tags sans cookie, ou ajouter un vrai bandeau et piloter le Consent Mode.
 - [ ] **Formulaire feedback** : remplacer le `mailto:` par une Serverless Function + Resend.
 - [ ] Gérer plusieurs grossesses (cf. `SPECS.md`).
 - [ ] Proposer de clore la grossesse quand le terme est dépassé (lié au multi-grossesses).

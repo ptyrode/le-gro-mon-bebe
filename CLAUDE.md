@@ -35,6 +35,21 @@ next-intl tourne **sans routing i18n** : une seule locale, définie dans `src/i1
 
 Les **données** (`src/data/`) ne sont pas concernées : les noms d'items, `funText` et comparaisons de poids sont du contenu, pas de l'interface.
 
+## Cohérence de l'interface
+
+Dans tout élément interactif — bouton, onglet, pastille de catégorie, badge — **l'icône se place AVANT le texte**, dans son propre `span` marqué `aria-hidden`, l'espacement venant du conteneur :
+
+```tsx
+<a className="inline-flex items-center gap-2 …">
+    <span aria-hidden="true">☕</span>
+    {t('settings.supportCta')}
+</a>
+```
+
+L'emoji ne doit donc **jamais être écrit dans la clé de traduction** d'un libellé de bouton : le texte reste seul, l'icône vit dans le JSX.
+
+Les emoji en **fin de phrase** dans les messages (erreurs de saisie, notifications, encarts d'état) ne sont pas des icônes mais de la ponctuation expressive : ils restent dans le texte traduit.
+
 ## Documentation
 
 - [`README.md`](README.md) — installation, scripts, structure

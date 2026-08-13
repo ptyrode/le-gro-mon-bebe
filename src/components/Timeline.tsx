@@ -1,6 +1,7 @@
 'use client';
 
 import ItemVisual from '@/components/ItemVisual';
+import { cn } from '@/lib/cn';
 import { categories } from '@/lib/data';
 import { growthForWeek, pregnancyStatus } from '@/lib/pregnancy';
 import type { AppState } from '@/lib/types';
@@ -51,13 +52,17 @@ export default function Timeline({ state }: Props) {
                     return (
                         <li
                             key={item.week}
-                            className={`flex items-center gap-3 rounded-2xl border-2 p-3 transition ${
-                                current
-                                    ? 'border-accent bg-accent/10 shadow-sm'
-                                    : past
-                                      ? 'border-transparent bg-white/60 opacity-70'
-                                      : 'border-transparent bg-white'
-                            }`}
+                            className={cn(
+                                'flex items-center gap-3 rounded-2xl border-2 p-3 transition',
+                                current &&
+                                    'border-accent bg-accent/10 shadow-sm',
+                                !current &&
+                                    past &&
+                                    'border-transparent bg-white/60 opacity-70',
+                                !current &&
+                                    !past &&
+                                    'border-transparent bg-white'
+                            )}
                         >
                             <ItemVisual
                                 category={category}
