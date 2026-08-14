@@ -50,6 +50,18 @@ La configuration ESLint, Prettier et Stylelint est reprise du projet Aubade : 4 
 
 ⚠️ Lancer `npm run lint` seul peut recasser la mise en forme Prettier (il réordonne les imports). D'où `lint:fix`, qui enchaîne les trois outils dans le bon ordre.
 
+### Outils lancés à la main
+
+Ils vivent dans `scripts/`, hors du cycle de build, et sont exclus du linter (`console.log` assumé).
+
+| Commande                                      | Effet                                                            |
+| --------------------------------------------- | ---------------------------------------------------------------- |
+| `python3 scripts/audit-data.py`               | contrôle le calibrage des 152 items sur la courbe de croissance  |
+| `python3 scripts/gen-illustration-prompts.py` | régénère les quatre `docs/PROMPT-*.md` depuis les JSON           |
+| `node scripts/split-illustrations.mjs`        | découpe une planche 2 × 2 en vignettes WebP nommées par semaine  |
+| `node scripts/check-illustrations.mjs`        | vérifie qu'aucune illustration ne manque, avec le sujet attendu  |
+| `node scripts/gen-icons.mjs`                  | regénère les icônes et le favicon depuis `_temp/baby-bottle.svg` |
+
 ## Structure
 
 ```
@@ -62,8 +74,8 @@ src/
 └── lib/          # types, chargement des données, calcul SA, storage
 
 public/           # servi tel quel : icônes, service worker, locales/, images/
-scripts/          # outils hors build : audit des données, illustrations, références
-docs/             # prompts de génération des illustrations, un par catégorie
+scripts/          # outils hors build : audit des données, illustrations, icônes
+docs/             # prompts de génération des illustrations et audits de rendu
 ```
 
 `scripts/` et `docs/` restent **hors de `src/`** : ce ne sont ni du code applicatif ni

@@ -1,5 +1,6 @@
 'use client';
 
+import { track } from '@/lib/analytics';
 import {
     dismiss,
     getDeferredPrompt,
@@ -76,7 +77,15 @@ export default function InstallBanner() {
                         {state.canPrompt && (
                             <button
                                 type="button"
-                                onClick={() => promptInstall()}
+                                onClick={async () => {
+                                    const accepted = await promptInstall();
+                                    track({
+                                        event: 'pwa_install',
+                                        outcome: accepted
+                                            ? 'accepted'
+                                            : 'dismissed',
+                                    });
+                                }}
                                 className="bg-accent hover:bg-accent-deep rounded-xl px-4 py-2 text-xs font-bold text-white transition"
                             >
                                 {t('install.cta')}

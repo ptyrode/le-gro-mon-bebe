@@ -17,7 +17,7 @@ Le champ **`measure`** indique comment la taille est mesurée :
 
 ⚠️ **Les deux mesures ne se raccordent pas** : la taille saute de 7 cm à 12,5 cm entre S13 et S14. Ce n'est pas une erreur de saisie, c'est un changement de méthode. Le champ `measure` n'est plus affiché dans l'appli, il reste ici pour documenter la donnée.
 
-**Provenance** : aucune API publique JSON propre n'existe pour ces données ; les sources fiables (WHO Fetal Growth Charts, INTERGROWTH-21st) ne sont disponibles que sous forme de calculateurs web ou de PDF. Les valeurs sont des **ordres de grandeur** communs aux chartes de croissance grand public, recoupées avec `scripts/reference-miraparent.json`.
+**Provenance** : aucune API publique JSON propre n'existe pour ces données ; les sources fiables (WHO Fetal Growth Charts, INTERGROWTH-21st) ne sont disponibles que sous forme de calculateurs web ou de PDF. Les valeurs sont des **ordres de grandeur** communs aux chartes de croissance grand public, recoupées avec une transcription de Mira Parent conservée hors du repo.
 
 ⚠️ **À usage ludique, non médical.**
 
@@ -33,7 +33,9 @@ Ce fichier est **indépendant des catégories** : la taille compare bébé à un
 
 ⚠️ Chaque valeur est une **phrase complète** — majuscule initiale, point final. Toutes commencent par « Aussi lourd que ». Ne pas revenir à des fragments recollés par le composant : ça produisait des fautes de contraction (« le poids de le débat »), que la formulation actuelle évite d'emblée.
 
-Le concept est inspiré d'une infographie de Bonjour Ocytocine (transcrite dans `scripts/reference-bonjourocytocine.json`), mais **aucune formulation n'en est reprise**.
+Le concept est inspiré d'une infographie de Bonjour Ocytocine, mais **aucune formulation n'en est reprise** : les 38 phrases ont été écrites pour ce projet.
+
+⚠️ Les transcriptions des sources tierces ayant servi de repère ont été **sorties du repo** : c'était du contenu éditorial appartenant à ses auteurs, sans raison d'être versionné ici.
 
 ## `categories/*.json`
 

@@ -18,10 +18,21 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
-  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
-  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé humain.** On doit voir son
+  VISAGE HUMAIN entier (joues rondes, grands yeux brillants, petit nez, bouche
+  souriante), ses deux PETITES MAINS potelées et ses deux PETITS PIEDS nus.
+- Bébé est toujours **assis**, vu de face.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- **UN SEUL VISAGE par image**, celui du bébé. Deux visages superposés, ou un sujet
+  seul sans visage humain, est un échec.
 - Le costume reste reconnaissable au premier coup d'œil : on identifie l'animal sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
@@ -53,7 +64,8 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 - « un lapereau » puis « un lapin », « un renardeau » puis « un renard » : même logique,
   le second est visiblement plus âgé.
 - Les races de chiens (chihuahua, carlin, beagle, bouledogue français, cocker) doivent
-  être reconnaissables entre elles : museau, oreilles et silhouette caractéristiques.
+  être reconnaissables entre elles par les OREILLES, la robe et la silhouette du
+  costume — jamais par un museau, puisque c'est le visage du bébé qu'on voit.
 ```
 
 ---
@@ -73,10 +85,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -102,10 +127,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -131,10 +169,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -160,10 +211,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -189,10 +253,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -218,10 +295,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -247,10 +337,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -276,10 +379,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -305,10 +421,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -334,10 +463,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DE L'ANIMAL VUE DE FACE : son ouverture de gueule
+  forme l'ouverture de la capuche, et le visage du bébé s'y encadre,
+  exactement à l'emplacement où seraient les yeux de l'animal. L'animal n'a
+  donc AUCUN œil, AUCUN museau, AUCUNE truffe : c'est le visage du bébé qui
+  les remplace.
+- Les oreilles, cornes, becs, antennes ou plumes restent sur le DESSUS de la
+  capuche, jamais devant le visage.
+- Ne JAMAIS poser l'animal entier en travers du crâne comme un chapeau : ce
+  n'est pas un animal posé sur la tête, c'est un costume que bébé porte.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -345,13 +487,15 @@ STYLE
 - Aucun texte, aucun chiffre, aucun logo dans l'image.
 
 FORMAT
-Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
-côte à côte (2 vignettes), sans bordure ni séparateur.
+Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
+disposées en 2 × 2, sans bordure ni séparateur.
 
-LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — les 2 derniers REPRENNENT les premiers, c'est voulu :
 
 Haut gauche. un agneau nouveau-né — tout petit agneau blanc sur ses pattes flageolantes
 Haut droite. un porcelet — petit cochon rose au groin rond et à la queue en tire-bouchon
+Bas gauche. un agneau nouveau-né — tout petit agneau blanc sur ses pattes flageolantes
+Bas droite. un porcelet — petit cochon rose au groin rond et à la queue en tire-bouchon
 ```
 
 ---
@@ -368,12 +512,16 @@ node scripts/split-illustrations.mjs ~/Downloads/<planche>.png animals 4
 Le script écrit `public/images/animals/animals-4.webp` … et refuse
 d'écraser un fichier existant. Il redimensionne chaque vignette en 1024 × 1024.
 
-⚠️ **La dernière planche ne contient que 2 vignettes** (S40 et S41) : préciser la
-grille, sinon le script découpe en 2 × 2 et produit deux images vides.
+La **dernière planche n'a que deux sujets réels** (S40 et S41), mais les demander seuls
+fait sortir une image large au lieu d'un carré : le prompt les répète donc pour remplir
+la grille 2 × 2. Le découpage reste identique, les deux doublons tombant au-delà de S41 :
 
 ```bash
-node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png animals 40 2 1
+node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png animals 40
 ```
+
+⚠️ Vérifier avant découpage que les **deux vignettes du haut** sont bien les originales :
+c'est celles-là que le script retient.
 
 Une fois toutes les planches découpées :
 

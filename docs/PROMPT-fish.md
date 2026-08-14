@@ -18,10 +18,21 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
-  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
-  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé humain.** On doit voir son
+  VISAGE HUMAIN entier (joues rondes, grands yeux brillants, petit nez, bouche
+  souriante), ses deux PETITES MAINS potelées et ses deux PETITS PIEDS nus.
+- Bébé est toujours **assis**, vu de face.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- **UN SEUL VISAGE par image**, celui du bébé. Deux visages superposés, ou un sujet
+  seul sans visage humain, est un échec.
 - Le costume reste reconnaissable au premier coup d'œil : on identifie l'animal marin sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
@@ -54,7 +65,11 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
 - « une coque » est un coquillage, « un homard » un crustacé à pinces,
   « un hippocampe nain » un hippocampe : ne pas les dessiner en poissons.
 - Les poissons de forme voisine doivent rester distincts : le tacaud, le merlan et
-  le merlu ont des silhouettes et des couleurs différentes.
+  le merlu ont des silhouettes et des couleurs différentes. Même exigence pour le
+  trio argenté « un petit anchois », « une sardine », « un éperlan », qui ressort
+  trop souvent en trois silhouettes blanc-bleu interchangeables : l'anchois est
+  fin et bleu sombre au dos, la sardine trapue avec une ligne de points sombres,
+  l'éperlan menu et translucide.
 - Les poissons plats (« une sole », « une plie », « un turbot ») se dessinent de dessus,
   couchés sur le flanc.
 - « une roussette » est un petit requin.
@@ -77,10 +92,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -106,10 +134,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -135,10 +176,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -164,10 +218,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -193,10 +260,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -222,10 +302,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -251,10 +344,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -280,10 +386,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -309,10 +428,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -338,10 +470,23 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est la TÊTE DU POISSON VUE DE FACE : sa bouche ouverte forme
+  l'ouverture de la capuche, et le visage du bébé s'y encadre, exactement à
+  l'emplacement où seraient les yeux du poisson. Le poisson n'a donc AUCUN
+  œil : ce sont ceux du bébé qui les remplacent.
+- Ne JAMAIS poser le poisson de profil en travers du crâne comme un chapeau :
+  ce n'est pas un poisson posé sur la tête, c'est un costume que bébé porte.
+- Le corps, les nageoires et la queue prolongent le costume derrière bébé.
+- Pour les poissons plats et les crustacés, dont les deux yeux sont sur la
+  même face, la règle vaut aussi : la capuche n'a pas d'yeux du tout.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -349,13 +494,15 @@ STYLE
 - Aucun texte, aucun chiffre, aucun logo dans l'image.
 
 FORMAT
-Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
-côte à côte (2 vignettes), sans bordure ni séparateur.
+Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
+disposées en 2 × 2, sans bordure ni séparateur.
 
-LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — les 2 derniers REPRENNENT les premiers, c'est voulu :
 
 Haut gauche. un beau bar de ligne — poisson argenté élégant à dos gris-bleu
 Haut droite. un saumon sauvage — saumon argenté à dos bleuté et flancs rosés
+Bas gauche. un beau bar de ligne — poisson argenté élégant à dos gris-bleu
+Bas droite. un saumon sauvage — saumon argenté à dos bleuté et flancs rosés
 ```
 
 ---
@@ -372,12 +519,16 @@ node scripts/split-illustrations.mjs ~/Downloads/<planche>.png fish 4
 Le script écrit `public/images/fish/fish-4.webp` … et refuse
 d'écraser un fichier existant. Il redimensionne chaque vignette en 1024 × 1024.
 
-⚠️ **La dernière planche ne contient que 2 vignettes** (S40 et S41) : préciser la
-grille, sinon le script découpe en 2 × 2 et produit deux images vides.
+La **dernière planche n'a que deux sujets réels** (S40 et S41), mais les demander seuls
+fait sortir une image large au lieu d'un carré : le prompt les répète donc pour remplir
+la grille 2 × 2. Le découpage reste identique, les deux doublons tombant au-delà de S41 :
 
 ```bash
-node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png fish 40 2 1
+node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png fish 40
 ```
+
+⚠️ Vérifier avant découpage que les **deux vignettes du haut** sont bien les originales :
+c'est celles-là que le script retient.
 
 Une fois toutes les planches découpées :
 

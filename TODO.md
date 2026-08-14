@@ -19,11 +19,26 @@
 - [ ] **Reprendre les illustrations de `fruits`, `cheeses` et `fish`.** Le rendu est inégal : sur certaines images le bébé est bien visible sous le costume (tête entière, mains, pieds), sur d'autres — les poissons surtout — on n'a qu'un sujet avec un œil un peu humain et deux mains. L'effet « déguisement » manque.
     - La consigne a été renforcée dans `scripts/gen-illustration-prompts.py` **après** la génération de ces trois catégories : elle demande désormais explicitement la tête entière du bébé émergeant du costume, plus les mains et les pieds qui dépassent. `animals` en bénéficie déjà.
     - Regénérer les 114 images avec le prompt actuel, ou seulement les plus faibles (les poissons en priorité).
-- [ ] **Refaire les icônes de l'appli.** Une version biberon sur fond corail a été générée puis annulée — à reprendre.
-    - Sources à produire depuis une image carrée 2048 px : `public/icon-192.png`, `public/icon-512.png`, `src/app/apple-icon.png` (180), `src/app/icon.png` (512), `src/app/favicon.ico` (16/32/48).
-    - ⚠️ **Prévoir des fichiers `maskable` séparés**, avec le sujet à ~72 % du cadre. Le manifest déclare aujourd'hui les mêmes fichiers en `any` et `maskable`, or Android rogne les maskable d'environ 20 % : le haut de la tétine est coupé sur l'écran d'accueil.
-    - ⚠️ **Coins arrondis uniquement sur les icônes `any`.** iOS applique son propre masque à `apple-icon.png` et remplit les coins transparents en noir ; Android fait de même avec les maskable.
-- [ ] **Bandeau de consentement cookies.** GTM est branché sans demande de consentement préalable : si des tags analytiques y sont activés, ils déposent des cookies dès la première visite, ce que le RGPD n'autorise pas sans accord. Deux voies possibles — n'activer dans GTM que des tags sans cookie, ou ajouter un vrai bandeau et piloter le Consent Mode.
+    - `fish` a été **régénéré en v2 et installé** : 6 vignettes sur 38 seulement sont conformes. Relevé complet : [`docs/REPRISE-fish.md`](REPRISE-fish.md).
+    - Le générateur a été corrigé depuis (montage de la capuche décrit au lieu d'être interdit, posture assise imposée, dernière planche complétée par répétition) et **les 4 prompts sont régénérés**. Les 152 images sont donc toutes à refaire avec cette version — `animals` compris, dont le rendu v2 souffrait du même défaut de double visage.
+    - ✅ `fruits` **v3 générée et installée** : **36 vignettes sur 38** sont bonnes, ce qui valide le correctif. Restent S6 (lentille) et S41 (courge trombone), décrites depuis dans le prompt : [`docs/REPRISE-fruits.md`](REPRISE-fruits.md).
+    - ⚠️ `cheeses` **v3 générée et installée, mais seulement 12 vignettes sur 38** : [`docs/REPRISE-cheeses.md`](REPRISE-cheeses.md). Le prompt a été corrigé (le fromage redevenait un disque percé plutôt qu'un costume ; des noms étaient gravés sur les croûtes), **mais un défaut ne se règle pas au prompt** — voir ci-dessous.
+    - ⬜ `animals` **v3 générée et installée** : le montage est bon sur les 38, mais 29 capuches portent une tête d'animal complète, ce que le prompt interdit : [`docs/REPRISE-animals.md`](REPRISE-animals.md).
+    - ✅ `fish` **v3 générée et installée** : le poisson posé en chapeau sur le crâne a **totalement disparu** (c'était 9 vignettes en v2), et la planche S20-S23 est exemplaire. Restent 26 capuches à yeux, même question que pour `animals` : [`docs/REPRISE-fish.md`](REPRISE-fish.md).
+- [ ] **Trancher la règle « aucun œil sur la capuche ».** Une seule décision débloque `animals` et `fish` — soit 34/38 dans chaque catégorie si on l'assouplit, soit 55 vignettes à regénérer si on la maintient. Écrite à l'origine pour empêcher le poisson-chapeau, elle prive les mammifères de ce qui rend leur costume lisible. Détail de l'arbitrage dans les deux fichiers de reprise.
+- [ ] **Revoir les items de `cheeses.json`.** Une dizaine de fromages de la liste sont visuellement indiscernables : Beaufort, Sbrinz, Gruyère et Comté donnent quatre meules jaunes identiques, et les deux emmentals de S40-S41 la même image. Soit **six semaines d'affilée avec la même illustration**, juste avant le terme. À remplacer avant de relancer la génération, sinon on regénère pour rien.
+    - Vérifier que les tailles de substitution passent `python3 scripts/audit-data.py`, et réécrire les `funText`.
+- [x] **Icônes de l'appli refaites** depuis `_temp/baby-bottle.svg`, par `node scripts/gen-icons.mjs`.
+    - Cinq fichiers générés : `public/icon-{192,512}.png`, `src/app/icon.png` (512), `src/app/apple-icon.png` (180), `src/app/favicon.ico` (16/32/48).
+    - Le SVG source dessine le biberon **en évidement** dans le disque : le script en extrait les deux tracés et les repeint en blanc sur un aplat corail, ce qui permet de choisir la taille du sujet et la forme du cadre.
+    - **`SUBJECT = 0.5` : le biberon occupe la même part du cadre sur toutes les tailles.** Ce ratio est dicté par le rognage d'environ 20 % qu'Android applique aux icônes `maskable`.
+    - **Pas de fichiers `maskable` séparés** : le manifest déclare les mêmes `icon-192` et `icon-512` en `any` et en `maskable`, puisqu'ils sont dimensionnés pour les deux. Les coins arrondis (22 %) ne gênent pas — les masques Android sont inscrits dans le cadre et ne les atteignent jamais.
+    - **`apple-icon.png` est le seul carré plein** — iOS applique son propre masque et remplirait des coins transparents en noir.
+- [ ] **Événements GA4 — reste la configuration dans GTM.** Le code pousse les six événements dans le `dataLayer` (`src/lib/analytics.ts`), mais tant qu'aucune balise ne les relaie, ils n'arrivent pas dans GA4.
+    - Dans GTM, pour chaque nom : un déclencheur « Événement personnalisé » + une balise « Google Analytics : Événement GA4 ».
+    - `view_change` (`view`), `category_change` (`category`, `source`), `wikipedia_click` (`category`, `week`, `item`), `pwa_install` (`outcome`), `notifications_toggle` (`enabled`, `permission`), `support_click`.
+    - Chaque paramètre demande une variable « Variable de couche de données » du même nom.
+    - ⚠️ `pwa_install` ne remonte que sur Android : iOS n'expose pas `beforeinstallprompt`, l'installation s'y fait par le menu de partage et reste invisible.
 - [ ] **Formulaire feedback** : remplacer le `mailto:` par une Serverless Function + Resend.
 - [ ] Gérer plusieurs grossesses (cf. `SPECS.md`).
 - [ ] Proposer de clore la grossesse quand le terme est dépassé (lié au multi-grossesses).
@@ -116,6 +131,16 @@ Le nom de l'item est cliquable dans le Dashboard et ouvre son article Wikipédia
 ### Texte drôle sur chaque item
 
 Le champ `funText` est rempli sur les 152 items et s'affiche dans le Dashboard. Décidé : **pas d'affichage dans la Timeline**, la liste doit rester dense.
+
+### Consentement cookies — écarté
+
+**Décision prise : pas de bandeau de consentement.** L'appli est destinée à un cercle privé,
+le consentement est considéré comme implicite.
+
+À savoir si le sujet revient : le cercle privé n'est pas une exemption au sens du RGPD,
+puisque l'URL Vercel reste publiquement accessible, et le texte ne reconnaît pas le
+consentement implicite. L'exposition réelle est faible — pas de compte, aucune donnée
+personnelle transmise, une poignée d'utilisateurs — mais l'arbitrage est assumé, pas ignoré.
 
 ### Autres
 

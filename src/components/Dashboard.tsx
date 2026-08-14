@@ -2,6 +2,7 @@
 
 import InstallBanner from '@/components/InstallBanner';
 import ItemVisual from '@/components/ItemVisual';
+import { track } from '@/lib/analytics';
 import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import {
@@ -44,7 +45,14 @@ function CategoryPicker({
                         <button
                             key={cat.key}
                             type="button"
-                            onClick={() => onSetCategory(cat.key)}
+                            onClick={() => {
+                                track({
+                                    event: 'category_change',
+                                    category: cat.key,
+                                    source: 'dashboard',
+                                });
+                                onSetCategory(cat.key);
+                            }}
                             className={cn(
                                 'inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition',
                                 active
@@ -176,6 +184,14 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                             href={item.wikipedia}
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() =>
+                                track({
+                                    event: 'wikipedia_click',
+                                    category,
+                                    week,
+                                    item: item.name,
+                                })
+                            }
                             className="text-ink decoration-accent hover:text-accent-deep font-bold underline decoration-2 underline-offset-4 transition"
                         >
                             {item.name}

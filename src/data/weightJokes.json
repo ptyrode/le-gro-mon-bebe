@@ -1,7 +1,7 @@
 {
     "_meta": {
         "description": "Comparaison humoristique du POIDS de bebe, par semaine d'amenorrhee (SA). Affichee sous la comparaison de taille, independamment de la categorie choisie.",
-        "notes": "Concept inspire d'une infographie de Bonjour Ocytocine (voir scripts/reference-bonjourocytocine.json). Les formulations ci-dessous sont ecrites pour ce projet : aucune n'est reprise de l'original. Ton assume : trash gentil.",
+        "notes": "Concept inspire d'une infographie de Bonjour Ocytocine. Les formulations ci-dessous sont ecrites pour ce projet : aucune n'est reprise de l'original. Ton assume : trash gentil.",
         "usage": "Chaque valeur est une PHRASE COMPLETE, affichee telle quelle sous « Bebe pese X ». Majuscule au debut, point a la fin. Toutes commencent par « Aussi lourd que » : ne pas revenir a des fragments recolles par le composant."
     },
     "weeks": {

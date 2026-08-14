@@ -18,10 +18,17 @@ paraître issues de la même main, du même livre.
 
 ## Style à reproduire fidèlement
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- **Le sujet est porté comme un DÉGUISEMENT par un bébé**, pas décoré d'un visage.
-  On doit voir : sa TÊTE ENTIÈRE qui émerge du costume (visage complet, joues rondes,
-  grands yeux brillants, expression tendre et rigolote), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- **Le sujet est porté comme un DÉGUISEMENT par un bébé humain.** On doit voir son
+  VISAGE HUMAIN entier (joues rondes, grands yeux brillants, petit nez, bouche
+  souriante), ses deux PETITES MAINS potelées et ses deux PETITS PIEDS nus.
+- Bébé est toujours **assis**, vu de face.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- **UN SEUL VISAGE par image**, celui du bébé. Deux visages superposés, ou un sujet
+  seul sans visage humain, est un échec.
 - Le costume reste reconnaissable au premier coup d'œil : on identifie le fruit ou le légume sans hésiter.
 - Palette chaleureuse et pastel, cohérente d'une image à l'autre.
 - Aucun texte, aucun chiffre, aucun logo, aucune signature dans l'image.
@@ -55,6 +62,11 @@ soit 4 sujets par planche (chaque vignette fait ainsi 1024 × 1024 px, la taille
   quand même en gros plan, à la même échelle que les autres.
 - « un potiron », « une citrouille », « une courge spaghetti », « un potiron géant » :
   quatre cucurbitacées à différencier nettement par la couleur et la forme.
+- « une lentille » est une graine PLATE et ronde, brun-vert, façon petit palet — surtout
+  pas une baie sphérique à tige, qui la ferait passer pour un kiwi.
+- « une courge trombone » est une courge très LONGUE et RECOURBÉE en col de cygne, vert
+  pâle, renflée seulement à son extrémité. Ce n'est pas une courge en forme de poire :
+  ainsi dessinée, elle devient un butternut et fait doublon avec la semaine 23.
 - « un daikon » est un long radis blanc, pas une carotte.
 ```
 
@@ -75,10 +87,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -104,10 +125,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -133,10 +163,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -162,10 +201,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -191,10 +239,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -220,10 +277,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -249,10 +315,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -278,10 +353,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -307,10 +391,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -336,10 +429,19 @@ Reprends exactement le style de l'image de référence jointe.
 
 STYLE
 - Illustration cartoon douce, style livre pour enfants, contours arrondis.
-- Le sujet est porté comme un DÉGUISEMENT par un bébé, pas décoré d'un
-  visage. On doit voir sa TÊTE ENTIÈRE qui émerge du costume (visage
-  complet, joues rondes, grands yeux brillants), ses deux PETITES MAINS
-  potelées et ses deux PETITS PIEDS qui dépassent.
+- Le sujet est porté comme un DÉGUISEMENT par un bébé humain.
+  On doit voir son VISAGE HUMAIN entier (joues rondes, grands yeux
+  brillants, petit nez, bouche souriante), ses deux PETITES MAINS
+  potelées et ses deux PETITS PIEDS nus qui dépassent du costume.
+- Bébé est toujours ASSIS, vu de face, jamais debout ni en pied.
+- La capuche est le sujet lui-même, creusé d'une ouverture ronde à l'avant
+  dans laquelle s'encadre le visage du bébé.
+- Feuilles, tige et pédoncule restent sur le DESSUS de la capuche. Le sujet ne
+  porte ni yeux, ni bouche, ni visage dessiné : le seul visage est celui du
+  bébé.
+- UN SEUL VISAGE par image, et c'est celui du bébé. Deux visages
+  superposés, ou un sujet seul sans visage de bébé humain, est un ÉCHEC :
+  recommence.
 - Le costume reste reconnaissable au premier coup d'œil.
 - Fond uni crème très clair (#FFF4EE), identique sur toutes les images.
 - Chaque sujet occupe ~80 % de sa case, centré et entier.
@@ -347,13 +449,15 @@ STYLE
 - Aucun texte, aucun chiffre, aucun logo dans l'image.
 
 FORMAT
-Produis UNE image carrée 2048 × 2048 px composée de 2 vignettes
-côte à côte (2 vignettes), sans bordure ni séparateur.
+Produis UNE image carrée 2048 × 2048 px composée de 4 vignettes
+disposées en 2 × 2, sans bordure ni séparateur.
 
-LES 2 SUJETS, dans cet ordre exact — chacun DIFFÉRENT, aucune répétition :
+LES 4 SUJETS, dans cet ordre exact — les 2 derniers REPRENNENT les premiers, c'est voulu :
 
 Haut gauche. un potiron géant — énorme citrouille orange bien ronde
 Haut droite. une courge trombone — courge très longue et recourbée, beige-vert, col étroit
+Bas gauche. un potiron géant — énorme citrouille orange bien ronde
+Bas droite. une courge trombone — courge très longue et recourbée, beige-vert, col étroit
 ```
 
 ---
@@ -370,12 +474,16 @@ node scripts/split-illustrations.mjs ~/Downloads/<planche>.png fruits 4
 Le script écrit `public/images/fruits/fruits-4.webp` … et refuse
 d'écraser un fichier existant. Il redimensionne chaque vignette en 1024 × 1024.
 
-⚠️ **La dernière planche ne contient que 2 vignettes** (S40 et S41) : préciser la
-grille, sinon le script découpe en 2 × 2 et produit deux images vides.
+La **dernière planche n'a que deux sujets réels** (S40 et S41), mais les demander seuls
+fait sortir une image large au lieu d'un carré : le prompt les répète donc pour remplir
+la grille 2 × 2. Le découpage reste identique, les deux doublons tombant au-delà de S41 :
 
 ```bash
-node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png fruits 40 2 1
+node scripts/split-illustrations.mjs ~/Downloads/<planche10>.png fruits 40
 ```
+
+⚠️ Vérifier avant découpage que les **deux vignettes du haut** sont bien les originales :
+c'est celles-là que le script retient.
 
 Une fois toutes les planches découpées :
 

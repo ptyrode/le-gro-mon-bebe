@@ -1,5 +1,6 @@
 'use client';
 
+import { track } from '@/lib/analytics';
 import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
@@ -60,15 +61,30 @@ export default function Settings({
     const toggleNotifs = async () => {
         if (permission === 'unsupported') {
             setNotifMsg(t('settings.notificationsUnsupported'));
+            track({
+                event: 'notifications_toggle',
+                enabled: false,
+                permission,
+            });
             return;
         }
         if (notifsActives) {
             onSetNotificationsEnabled(false);
             setNotifMsg(null);
+            track({
+                event: 'notifications_toggle',
+                enabled: false,
+                permission,
+            });
             return;
         }
         if (permission === 'denied') {
             setNotifMsg(t('settings.notificationsBlocked'));
+            track({
+                event: 'notifications_toggle',
+                enabled: false,
+                permission,
+            });
             return;
         }
         const perm = await Notification.requestPermission();
@@ -77,6 +93,11 @@ export default function Settings({
         setNotifMsg(
             perm === 'granted' ? null : t('settings.notificationsDenied')
         );
+        track({
+            event: 'notifications_toggle',
+            enabled: perm === 'granted',
+            permission: perm,
+        });
     };
 
     const feedbackHref = `mailto:${FEEDBACK_EMAIL}?subject=${encodeURIComponent(
@@ -127,7 +148,14 @@ export default function Settings({
                             <button
                                 key={cat.key}
                                 type="button"
-                                onClick={() => onSetCategory(cat.key)}
+                                onClick={() => {
+                                    track({
+                                        event: 'category_change',
+                                        category: cat.key,
+                                        source: 'settings',
+                                    });
+                                    onSetCategory(cat.key);
+                                }}
                                 className={cn(
                                     'inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-semibold transition',
                                     active
@@ -203,6 +231,7 @@ export default function Settings({
                     href={BUY_ME_A_COFFEE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => track({ event: 'support_click' })}
                     className="inline-flex items-center gap-2 rounded-2xl bg-[#FFDD00] px-5 py-2.5 text-sm font-bold text-black transition hover:brightness-95"
                 >
                     <span aria-hidden="true">☕</span>

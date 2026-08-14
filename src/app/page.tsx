@@ -6,6 +6,7 @@ import Onboarding from '@/components/Onboarding';
 import Settings from '@/components/Settings';
 import Timeline from '@/components/Timeline';
 import { usePregnancy } from '@/hooks/usePregnancy';
+import { track } from '@/lib/analytics';
 import { categories } from '@/lib/data';
 import { showNotification } from '@/lib/notifications';
 import { equivalenceForWeek, pregnancyStatus } from '@/lib/pregnancy';
@@ -101,7 +102,10 @@ export default function Home() {
             )}
             <BottomNav
                 view={view}
-                onChange={setView}
+                onChange={(next) => {
+                    track({ event: 'view_change', view: next });
+                    setView(next);
+                }}
             />
         </>
     );
