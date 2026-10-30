@@ -41,13 +41,13 @@ Le concept est inspiré d'une infographie de Bonjour Ocytocine, mais **aucune fo
 
 Une catégorie = un fichier, nommé **en anglais** comme sa clé :
 
-| Fichier         | `key`      | Contenu                      |
-| --------------- | ---------- | ---------------------------- |
-| `fruits.json`   | `fruits`   | fruits et légumes            |
-| `fish.json`     | `fish`     | poissons et crustacés        |
-| `cheeses.json`  | `cheeses`  | fromages                     |
-| `animals.json`  | `animals`  | animaux                      |
-| `desserts.json` | `desserts` | pâtisseries et viennoiseries |
+| Fichier         | `key`      | Contenu                   |
+| --------------- | ---------- | ------------------------- |
+| `fruits.json`   | `fruits`   | fruits et légumes         |
+| `fish.json`     | `fish`     | poissons et fruits de mer |
+| `cheeses.json`  | `cheeses`  | fromages                  |
+| `animals.json`  | `animals`  | animaux                   |
+| `desserts.json` | `desserts` | desserts et pâtisseries   |
 
 Chaque `item` associe une **semaine** à une comparaison :
 
@@ -104,7 +104,7 @@ L'audit signale aussi les **régressions** — un item plus petit que celui de l
 
 ⚠️ Les tailles réelles des objets sont des **estimations d'ordre de grandeur**, pas des mesures sourcées. Elles vivent dans `scripts/data/item-sizes.json` : corriger une valeur qui paraît fausse, puis relancer l'audit.
 
-### Format des pâtisseries
+### Format des desserts
 
 Dans `desserts`, chaque item est pris **à sa taille normale**, jamais en version familiale :
 

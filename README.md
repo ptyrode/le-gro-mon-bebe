@@ -2,7 +2,7 @@
 
 **➜ [le-gro-mon-bebe.vercel.app](https://le-gro-mon-bebe.vercel.app/)**
 
-Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après semaine, avec des comparaisons fun et personnalisables — 🐟 poissons, 🧀 fromages, 🐾 animaux, 🍰 pâtisseries, ou 🍎 fruits et légumes pour les puristes. Chaque semaine a son image : bébé déguisé en l'objet du jour.
+Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après semaine, avec des comparaisons fun et personnalisables (🐟 poissons, 🧀 fromages, 🐾 animaux, 🍰 desserts, ou 🍎 fruits pour les puristes). Chaque semaine a son image : bébé déguisé en l'objet du jour.
 
 > Projet perso, privé (pour les proches), ton décalé assumé. Pas de compte : les données de grossesse vivent dans le navigateur. Le seul backend sert aux notifications push, et il ne reçoit jamais la date de grossesse.
 
@@ -190,7 +190,7 @@ _temp/            # fichiers de travail locaux, ignorés par git, un sous-dossie
 
 Cinq catégories de 38 items (S4 → S41), un JSON par catégorie dans `src/data/categories/`, plus la courbe de croissance (`fetalGrowth.json`) et les comparaisons de poids (`weightJokes.json`). Chaque item est calé sur la **taille** du fœtus de sa semaine : `node scripts/audit-data.mjs` vérifie qu'aucun n'est hors tolérance et que bébé ne rétrécit jamais d'une semaine à l'autre.
 
-Format des fichiers, tolérance, conventions de mesure et format des pâtisseries : [`src/data/README.md`](src/data/README.md).
+Format des fichiers, tolérance, conventions de mesure et format des desserts : [`src/data/README.md`](src/data/README.md).
 
 ## Images
 
