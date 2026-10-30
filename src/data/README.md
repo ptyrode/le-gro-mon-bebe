@@ -43,11 +43,11 @@ Une catégorie = un fichier, nommé **en anglais** comme sa clé :
 
 | Fichier         | `key`      | Contenu                   |
 | --------------- | ---------- | ------------------------- |
-| `fruits.json`   | `fruits`   | fruits et légumes         |
-| `fish.json`     | `fish`     | poissons et fruits de mer |
 | `cheeses.json`  | `cheeses`  | fromages                  |
+| `fish.json`     | `fish`     | poissons et fruits de mer |
 | `animals.json`  | `animals`  | animaux                   |
 | `desserts.json` | `desserts` | desserts et pâtisseries   |
+| `fruits.json`   | `fruits`   | fruits et légumes         |
 
 Chaque `item` associe une **semaine** à une comparaison :
 

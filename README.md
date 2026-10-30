@@ -2,7 +2,7 @@
 
 **➜ [le-gro-mon-bebe.vercel.app](https://le-gro-mon-bebe.vercel.app/)**
 
-Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après semaine, avec des comparaisons fun et personnalisables (🐟 poissons, 🧀 fromages, 🐾 animaux, 🍰 desserts, ou 🍎 fruits pour les puristes). Chaque semaine a son image : bébé déguisé en l'objet du jour.
+Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après semaine, avec des comparaisons fun et personnalisables (🧀 fromages, 🐟 poissons, 🐾 animaux, 🍰 desserts, ou 🍎 fruits pour les puristes). Chaque semaine a son image : bébé déguisé en l'objet du jour.
 
 > Projet perso, privé (pour les proches), ton décalé assumé. Pas de compte : les données de grossesse vivent dans le navigateur. Le seul backend sert aux notifications push, et il ne reçoit jamais la date de grossesse.
 

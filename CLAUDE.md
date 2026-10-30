@@ -19,7 +19,7 @@ Avant de conclure une session : `npm run lint:fix`, `npm run typecheck`, `npm ru
 
 ## Données
 
-Cinq catégories de 38 items (S4 → S41) : `fruits`, `fish`, `cheeses`, `animals`, `desserts`. Après toute modification d'un item, relancer `node scripts/audit-data.mjs` : zéro item hors tolérance, zéro régression (bébé ne doit jamais rétrécir d'une semaine à l'autre). Règles de calibrage dans `src/data/README.md`.
+Cinq catégories de 38 items (S4 → S41) : `cheeses`, `fish`, `animals`, `desserts`, `fruits`. Après toute modification d'un item, relancer `node scripts/audit-data.mjs` : zéro item hors tolérance, zéro régression (bébé ne doit jamais rétrécir d'une semaine à l'autre). Règles de calibrage dans `src/data/README.md`.
 
 Un item ajouté ou renommé demande aussi sa taille estimée dans `scripts/data/item-sizes.json`, sa description visuelle dans `scripts/data/image-subjects.json` et son image (voir `README.md`, section « Images »). Chaque image générée se **relit visuellement** avant d'être gardée.
 

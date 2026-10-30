@@ -6,7 +6,7 @@ import sharp from 'sharp';
 
 import { buildPrompt } from './image-prompts.mjs';
 
-const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals', 'desserts'];
+const CATEGORIES = ['cheeses', 'fish', 'animals', 'desserts', 'fruits'];
 const MODEL = 'gpt-image-2.5-sunburst-2026-09-08';
 const REFERENCES = [
     'scripts/data/style-references/fruits.webp',

@@ -24,9 +24,9 @@ export const categories: Record<CategoryKey, Category> = {
 };
 
 export const categoryList: Category[] = [
-    categories.fruits,
-    categories.fish,
     categories.cheeses,
+    categories.fish,
     categories.animals,
     categories.desserts,
+    categories.fruits,
 ];

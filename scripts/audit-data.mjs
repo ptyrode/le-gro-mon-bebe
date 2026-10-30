@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { readFile } from 'node:fs/promises';
 
-const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals', 'desserts'];
+const CATEGORIES = ['cheeses', 'fish', 'animals', 'desserts', 'fruits'];
 const OK = [0.75, 1.35];
 const WARNING = [0.5, 2.0];
 const RULE = '='.repeat(78);

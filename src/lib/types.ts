@@ -30,7 +30,7 @@ export interface Category {
 }
 
 export type CategoryKey =
-    'fruits' | 'fish' | 'cheeses' | 'animals' | 'desserts';
+    'cheeses' | 'fish' | 'animals' | 'desserts' | 'fruits';
 
 export interface PregnancyData {
     lastPeriodDate: string;

@@ -4,7 +4,7 @@ import path from 'node:path';
 import process from 'node:process';
 import sharp from 'sharp';
 
-const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals', 'desserts'];
+const CATEGORIES = ['cheeses', 'fish', 'animals', 'desserts', 'fruits'];
 const EXPECTED_SIZE = 512;
 
 let issues = 0;
