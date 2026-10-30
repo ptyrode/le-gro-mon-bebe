@@ -211,6 +211,7 @@ node scripts/generate-images.mjs desserts --reframe  # recadre sans appel
 - **Recadrage automatique** : le modèle colle presque toujours le sujet en haut du cadre. Le script le détoure depuis les bords et le recentre avec 6 % de marge sur un fond uni `#FFF4EE`. Une image coupée dans l'original reste à régénérer.
 - Les originaux 1024 px sont gardés dans `_temp/images/`, pour que `--reframe` puisse recadrer sans payer. Ceux des 190 images actuelles ont été supprimés : `--reframe` ne s'applique qu'aux images générées depuis. Le script saute les images déjà présentes.
 - **Pour refaire une image** : corriger la description du sujet, supprimer le WebP, relancer sa semaine. ~0,05 $ l'image.
+- ⚠️ **Après avoir remplacé des images, changer la version du cache** du service worker (`const CACHE = 'lgmb-v4'` dans `public/sw.js`, à passer en `v5`, etc.). Les images gardent le même nom alors que leur contenu change : sans nouvelle version, les téléphones affichent encore l'ancienne image à la première ouverture qui suit le déploiement.
 - ⚠️ **Relire chaque image** : un sujet mal reconnu, et bébé fait la taille du mauvais objet toute une semaine. `node scripts/check-images.mjs` vérifie qu'il n'en manque aucune.
 
 Règle de dessin : bébé est **assis, vu de face**, et porte le sujet comme un déguisement. La capuche peut avoir les yeux, le museau ou le bec de l'animal, plus petits que les yeux du bébé, mais **jamais de bouche ni de sourire** : deux visages qui sourient l'un au-dessus de l'autre, c'est raté.

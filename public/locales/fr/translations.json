@@ -49,7 +49,7 @@
         "notificationsLabel": "Notifications",
         "notificationsHint": "Un petit rappel quand bébé a grandi.",
         "notificationsUnsupported": "Ton navigateur ne gère pas les notifications 🤷",
-        "notificationsDenied": "Autorisation refusée. Active-les dans les réglages du navigateur.",
+        "notificationsDenied": "Autorisation refusée. Tu pourras la donner plus tard dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé.",
         "feedbackTitle": "Une idée de comparaison ?",
         "feedbackBody": "Poissons rares, fromages qui puent, animaux improbables… propose !",
         "feedbackCta": "Proposer une idée",
@@ -59,7 +59,7 @@
         "resetConfirm": "Sûr ? Toutes les données locales seront effacées.",
         "resetConfirmCta": "Oui, effacer",
         "resetCancel": "Annuler",
-        "notificationsBlocked": "Les notifications sont bloquées par ton navigateur. Il faut les réautoriser dans ses réglages de site.",
+        "notificationsBlocked": "Les notifications sont bloquées. Réautorise-les dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé, puis réactive-les ici.",
         "supportTitle": "Ce projet t'a fait sourire ?",
         "supportBody": "Il est gratuit et sans pub. Tu peux m'offrir un café si le cœur t'en dit.",
         "supportCta": "Buy me a coffee"
