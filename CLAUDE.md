@@ -15,6 +15,18 @@ Avant de conclure une session : `npm run lint:fix`, `npm run typecheck`, `npm ru
 
 ⚠️ `npm run lint` seul réordonne les imports et peut recasser la mise en forme Prettier. Toujours passer par `lint:fix`, qui enchaîne `format` → `lint` → `style` dans le bon ordre.
 
+**Pas de commentaires dans le code**, nulle part dans le repo : `src/`, mais aussi `public/sw.js`, `scripts/`, les fichiers de config et le CSS. Les explications vont dans la documentation.
+
+## Données
+
+Cinq catégories de 38 items (S4 → S41) : `fruits`, `fish`, `cheeses`, `animals`, `desserts`. Après toute modification d'un item, relancer `node scripts/audit-data.mjs` : zéro item hors tolérance, zéro régression (bébé ne doit jamais rétrécir d'une semaine à l'autre). Règles de calibrage dans `src/data/README.md`.
+
+Un item ajouté ou renommé demande aussi sa taille estimée dans `scripts/data/item-sizes.json`, sa description visuelle dans `scripts/data/image-subjects.json` et son image (voir `README.md`, section « Images »). Chaque image générée se **relit visuellement** avant d'être gardée.
+
+## Notifications
+
+Le serveur ne doit **jamais recevoir la DDR**, ni rien qui permette de la retrouver : il ne connaît que l'abonnement push et le jour de la semaine. Le texte des notifications est calculé sur le téléphone. Voir la section « Notifications » du README.
+
 ## Rédaction des données
 
 Dans les JSON, toute phrase **commence par une majuscule et se termine par un point**. Ne pas écrire de fragments destinés à être recollés en milieu de phrase par un composant : ça produit des fautes de contraction (« le poids de le débat ») et rend le texte illisible hors contexte.
@@ -52,7 +64,6 @@ Les emoji en **fin de phrase** dans les messages (erreurs de saisie, notificatio
 
 ## Documentation
 
-- [`README.md`](README.md) — installation, scripts, structure
-- [`SPECS.md`](SPECS.md) — spécifications et décisions produit
+- [`README.md`](README.md) — l'appli, ses décisions produit, et le code (installation, scripts, structure)
 - [`TODO.md`](TODO.md) — ce qui reste à faire
 - [`src/data/README.md`](src/data/README.md) — format des fichiers de données

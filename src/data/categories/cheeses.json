@@ -180,51 +180,51 @@
         },
         {
             "week": 33,
+            "name": "une Fontina",
+            "funText": "La reine de la fondue valdôtaine. Ça file, comme les semaines.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Fontine"
+        },
+        {
+            "week": 34,
             "name": "un Cheddar",
             "funText": "L'orange fluo, c'est du colorant. Le vrai est pâle et redoutable.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cheddar"
         },
         {
-            "week": 34,
+            "week": 35,
             "name": "un Salers",
             "funText": "Fabriqué uniquement quand les vaches sont dans les prés.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Salers_%28fromage%29"
         },
         {
-            "week": 35,
+            "week": 36,
             "name": "un Grana Padano",
             "funText": "Le rival du parmesan. La guerre est ouverte depuis des siècles.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Grana_Padano"
         },
         {
-            "week": 36,
+            "week": 37,
             "name": "un Beaufort",
             "funText": "Le « prince des gruyères », avec son talon concave.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Beaufort_%28fromage%29"
         },
         {
-            "week": 37,
+            "week": 38,
             "name": "un Sbrinz",
             "funText": "Suisse, très dur, très vieux. Bientôt le grand jour.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Sbrinz"
         },
         {
-            "week": 38,
+            "week": 39,
             "name": "un Gruyère",
             "funText": "Et non, il n'a pas de trous. C'est l'emmental. Fin du débat.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Gruy%C3%A8re_%28fromage%29"
         },
         {
-            "week": 39,
+            "week": 40,
             "name": "un Comté",
             "funText": "Une meule entière. Il ne reste plus grand-chose à attendre.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Comt%C3%A9_%28fromage%29"
-        },
-        {
-            "week": 40,
-            "name": "une meule d'emmental",
-            "funText": "Celui qui a des trous, cette fois. Et bébé est prêt à sortir.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Emmental"
         },
         {
             "week": 41,

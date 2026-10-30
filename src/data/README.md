@@ -41,12 +41,13 @@ Le concept est inspiré d'une infographie de Bonjour Ocytocine, mais **aucune fo
 
 Une catégorie = un fichier, nommé **en anglais** comme sa clé :
 
-| Fichier        | `key`     | Contenu               |
-| -------------- | --------- | --------------------- |
-| `fruits.json`  | `fruits`  | fruits et légumes     |
-| `fish.json`    | `fish`    | poissons et crustacés |
-| `cheeses.json` | `cheeses` | fromages              |
-| `animals.json` | `animals` | animaux               |
+| Fichier         | `key`      | Contenu                      |
+| --------------- | ---------- | ---------------------------- |
+| `fruits.json`   | `fruits`   | fruits et légumes            |
+| `fish.json`     | `fish`     | poissons et crustacés        |
+| `cheeses.json`  | `cheeses`  | fromages                     |
+| `animals.json`  | `animals`  | animaux                      |
+| `desserts.json` | `desserts` | pâtisseries et viennoiseries |
 
 Chaque `item` associe une **semaine** à une comparaison :
 
@@ -59,7 +60,7 @@ Chaque `item` associe une **semaine** à une comparaison :
 }
 ```
 
-Les items n'ont **pas** d'emoji : chacun a son illustration dans `public/images/`. Seule la
+Les items n'ont **pas** d'emoji : chacun a son image dans `public/images/`. Seule la
 **catégorie** garde un `emoji`, qui sert au sélecteur de catégorie et de repli si une image
 manque.
 
@@ -69,12 +70,14 @@ Pour ajouter une catégorie : copier la structure de `fruits.json`, garder les m
 
 Le champ **`wikipedia` est optionnel** et contient une **URL en dur**. Ne jamais la construire depuis `name` : la validation initiale a montré que 6 titres n'existaient pas et que 9 renvoyaient vers une page d'homonymie — « Camembert » pointe sur la commune de l'Orne, « Beagle » sur le navire de Darwin. Un item sans article pertinent n'a pas de lien, plutôt qu'un lien mort.
 
+Les liens pointent **uniquement vers Wikipédia en français**. Quand l'article FR n'existe pas, l'item reste sans lien : pas de repli sur une autre langue. Sont dans ce cas « une courge trombone », « une jalousie à la framboise » et « un dartois ».
+
 ## Calibrage des items
 
 Le critère de calage est la **taille**, jamais le poids : chaque item doit avoir une plus grande dimension réelle proche de la taille du fœtus de sa semaine. C'est la convention des comparatifs de grossesse, et le seul critère praticable — en calant sur le poids, fromages et fruits n'ont plus d'item crédible au-delà de S32.
 
 ```bash
-python3 scripts/audit-data.py
+node scripts/audit-data.mjs
 ```
 
 **Tolérance appliquée** (ratio = taille de l'objet ÷ taille du fœtus) :
@@ -89,16 +92,30 @@ L'audit signale aussi les **régressions** — un item plus petit que celui de l
 
 **Conventions de mesure** (à ne pas réinventer d'une catégorie à l'autre) :
 
-| Catégorie | Dimension retenue                                           |
-| --------- | ----------------------------------------------------------- |
-| `cheeses` | diamètre de la meule ou du fromage                          |
-| `animals` | longueur du corps **hors queue** ; bec-à-queue pour oiseaux |
-| `fish`    | longueur totale                                             |
-| `fruits`  | plus grande dimension                                       |
+| Catégorie  | Dimension retenue                                                  |
+| ---------- | ------------------------------------------------------------------ |
+| `cheeses`  | diamètre de la meule ou du fromage                                 |
+| `animals`  | longueur du corps **hors queue** ; bec-à-queue pour oiseaux        |
+| `fish`     | longueur totale                                                    |
+| `fruits`   | plus grande dimension                                              |
+| `desserts` | plus grande dimension, **au format du commerce** — voir ci-dessous |
 
 ⚠️ Le début de chaque catégorie (S4 → S13, de 0,1 à 7 cm) impose des objets minuscules : **portions** de fromage, **œufs et alevins**, **arthropodes**, petites graines. Aucun animal ni fromage entier n'est assez petit à cette échelle.
 
-⚠️ Les tailles réelles des objets sont des **estimations d'ordre de grandeur**, pas des mesures sourcées. Elles vivent dans le dict `EST` de `scripts/audit-data.py` : corriger une valeur qui paraît fausse, puis relancer l'audit.
+⚠️ Les tailles réelles des objets sont des **estimations d'ordre de grandeur**, pas des mesures sourcées. Elles vivent dans `scripts/data/item-sizes.json` : corriger une valeur qui paraît fausse, puis relancer l'audit.
+
+### Format des pâtisseries
+
+Dans `desserts`, chaque item est pris **à sa taille normale**, jamais en version familiale :
+
+- **en individuel** quand la pâtisserie se vend ainsi : un Paris-Brest fait 8 à 10 cm, pas les 20 cm d'une couronne à partager ;
+- sinon au **format standard du commerce** : kouglof en moule de 22 cm, galette des rois de 8 parts à 24 cm, bûche de Noël en moule de 30 à 32 cm.
+
+Au-delà de 30 cm, il n'existe presque plus de pâtisserie de taille normale. La fin de grossesse s'appuie donc sur des **formats longs ou de fête** dont la taille est sourcée : pièce montée de 80 choux (36 cm), pyramide de macarons (40 cm), jalousie (40 cm) et dartois (60 cm) aux formats du CAP pâtissier, baguette viennoise (50 à 54 cm), gâteau de mariage à quatre étages (60 cm).
+
+Sont écartés : les **plaques** de boulangerie de 60 × 40 cm, qui ne se reconnaissent pas comme une pâtisserie, et les versions **« géantes »** d'un item déjà présent (éclair géant, grand gâteau à la broche), qui font doublon.
+
+⚠️ Les tailles de cette catégorie ont été **recoupées sur des sources** (fiches de moules, recettes, catalogues de pâtissiers) avant d'être saisies dans `scripts/data/item-sizes.json`. Pour en changer une, vérifier d'abord la nouvelle valeur plutôt que de l'estimer de tête.
 
 ### Éviter les doublons
 
@@ -108,6 +125,6 @@ Restent volontaires dans `animals` quatre paires qui racontent une **progression
 
 ### Après toute modification
 
-- Relancer `python3 scripts/audit-data.py` et viser zéro ❌ et zéro régression.
+- Relancer `node scripts/audit-data.mjs` et viser zéro ❌ et zéro régression.
 - Vérifier que la `description` de la catégorie reste raccord avec ses items **S4 et S41** : elle les cite souvent.
 - Vérifier majuscule initiale et point final sur tous les textes.

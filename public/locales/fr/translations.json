@@ -70,8 +70,7 @@
         "settings": "Réglages"
     },
     "notification": {
-        "title": "Bébé a grandi ! 🎉",
-        "body": "Semaine {week} : Bébé fait maintenant la taille d''{name} {emoji}"
+        "title": "Semaine {week} : Bébé a grandi ! 🎉"
     },
     "dateErrors": {
         "missing": "Il me faut la date de tes dernières règles 🗓️",

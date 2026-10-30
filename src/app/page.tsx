@@ -7,9 +7,9 @@ import Settings from '@/components/Settings';
 import Timeline from '@/components/Timeline';
 import { usePregnancy } from '@/hooks/usePregnancy';
 import { track } from '@/lib/analytics';
-import { categories } from '@/lib/data';
-import { showNotification } from '@/lib/notifications';
-import { equivalenceForWeek, pregnancyStatus } from '@/lib/pregnancy';
+import { readNotificationPermission } from '@/lib/notifications';
+import { equivalenceForWeek, MAX_WEEK, MIN_WEEK } from '@/lib/pregnancy';
+import { disablePush, enablePush, type PushText } from '@/lib/push';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
@@ -21,44 +21,36 @@ export default function Home() {
         setCategory,
         setLastPeriodDate,
         setNotificationsEnabled,
-        setLastSeenWeek,
         reset,
     } = usePregnancy();
     const [view, setView] = useState<View>('dashboard');
     const t = useTranslations();
 
+    const lastPeriodDate = state?.pregnancy.lastPeriodDate;
+    const category = state?.pregnancy.category;
+    const notificationsEnabled = state?.notifications.enabled;
+
     useEffect(() => {
-        if (!state || !state.notifications.enabled) return;
+        if (loading) return;
         if (
-            typeof window !== 'undefined' &&
-            'Notification' in window &&
-            Notification.permission === 'denied'
+            !lastPeriodDate ||
+            !category ||
+            !notificationsEnabled ||
+            readNotificationPermission() !== 'granted'
         ) {
-            setNotificationsEnabled(false);
+            void disablePush();
             return;
         }
-        if (typeof window === 'undefined' || !('Notification' in window))
-            return;
-        if (Notification.permission !== 'granted') return;
 
-        const status = pregnancyStatus(state.pregnancy.lastPeriodDate);
-        if (status.kind !== 'ongoing') return;
-
-        const week = status.week;
-        if (week <= state.notifications.lastSeenWeek) return;
-
-        const item = equivalenceForWeek(state.pregnancy.category, week);
-        setLastSeenWeek(week);
-        void showNotification(t('notification.title'), {
-            body: t('notification.body', {
-                week,
-                name: item.name,
-                emoji: categories[state.pregnancy.category].emoji,
-            }),
-            icon: '/icon-192.png',
-            badge: '/icon-192.png',
-        });
-    }, [state, setLastSeenWeek, setNotificationsEnabled, t]);
+        const weeks: Record<number, PushText> = {};
+        for (let week = MIN_WEEK; week <= MAX_WEEK; week++) {
+            weeks[week] = {
+                title: t('notification.title', { week }),
+                body: equivalenceForWeek(category, week).funText,
+            };
+        }
+        void enablePush({ lastPeriodDate, weeks });
+    }, [loading, lastPeriodDate, category, notificationsEnabled, t]);
 
     if (loading) {
         return (

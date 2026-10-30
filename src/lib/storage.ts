@@ -34,6 +34,6 @@ export function createState(
     return {
         version: STATE_VERSION,
         pregnancy: { lastPeriodDate, category, createdAt: createdAtISO },
-        notifications: { enabled: true, lastSeenWeek: 0 },
+        notifications: { enabled: true },
     };
 }

@@ -1,0 +1,234 @@
+{
+    "key": "desserts",
+    "label": "Pâtisseries",
+    "emoji": "🍰",
+    "description": "Du cristal de sucre au gâteau de mariage. Parce qu'un bébé, ça lève.",
+    "items": [
+        {
+            "week": 4,
+            "name": "un cristal de sucre",
+            "funText": "Un seul grain, pas de quoi sucrer un café. Bébé commence tout doucement.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Sucre"
+        },
+        {
+            "week": 5,
+            "name": "une nonpareille",
+            "funText": "Une de ces minuscules perles colorées qui finissent partout, sauf sur le gâteau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Nonpareille"
+        },
+        {
+            "week": 6,
+            "name": "un vermicelle en chocolat",
+            "funText": "Le petit bâtonnet qu'on retrouve collé sur la tartine. Bébé a déjà du caractère.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Vermicelles_en_chocolat"
+        },
+        {
+            "week": 7,
+            "name": "une pépite de chocolat",
+            "funText": "Celle qu'on pioche directement dans le sachet. Bébé est déjà irrésistible.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A9pite_de_chocolat"
+        },
+        {
+            "week": 8,
+            "name": "une dragée",
+            "funText": "La douceur des baptêmes. Il est un peu tôt pour en commander, mais on peut y penser.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Drag%C3%A9e"
+        },
+        {
+            "week": 9,
+            "name": "une truffe au chocolat",
+            "funText": "Roulée dans le cacao, fondante au cœur. Bébé aussi est tout doux dedans.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Truffe_en_chocolat"
+        },
+        {
+            "week": 10,
+            "name": "une chouquette",
+            "funText": "Légère comme l'air, couverte de sucre perlé. Personne ne s'arrête à une seule.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chouquette"
+        },
+        {
+            "week": 11,
+            "name": "un calisson",
+            "funText": "Un petit losange d'amande venu d'Aix. Bébé prend forme, lui aussi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Calisson"
+        },
+        {
+            "week": 12,
+            "name": "un cannelé",
+            "funText": "Croustillant dehors, moelleux dedans. Bébé est bien installé dans son moule.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cannel%C3%A9"
+        },
+        {
+            "week": 13,
+            "name": "une madeleine",
+            "funText": "La fameuse bosse est là. Bébé, c'est déjà un souvenir d'enfance.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Madeleine_%28p%C3%A2tisserie%29"
+        },
+        {
+            "week": 14,
+            "name": "un Paris-Brest",
+            "funText": "Une couronne de pâte à choux créée pour une course cycliste. Bébé pédale déjà.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Paris-brest"
+        },
+        {
+            "week": 15,
+            "name": "un mille-feuille",
+            "funText": "Une couche de plus chaque semaine. Bébé se construit étage par étage.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Mille-feuille"
+        },
+        {
+            "week": 16,
+            "name": "un éclair au chocolat",
+            "funText": "Il porte bien son nom : bébé grandit à la vitesse de l'éclair.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89clair_%28p%C3%A2tisserie%29"
+        },
+        {
+            "week": 17,
+            "name": "un croissant",
+            "funText": "Bien doré, bien feuilleté. Bébé aussi est en train de lever.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Croissant_%28viennoiserie%29"
+        },
+        {
+            "week": 18,
+            "name": "un panettone",
+            "funText": "La brioche italienne qui monte, qui monte. Comme le ventre de maman.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Panettone"
+        },
+        {
+            "week": 19,
+            "name": "une couronne des rois",
+            "funText": "La brioche aux fruits confits du Sud. Bébé mérite bien sa couronne.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/G%C3%A2teau_des_rois"
+        },
+        {
+            "week": 20,
+            "name": "un kouglof",
+            "funText": "Mi-parcours ! La brioche alsacienne a la forme d'un chapeau, et bébé la tête bien faite.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Kougelhopf"
+        },
+        {
+            "week": 21,
+            "name": "une tarte tropézienne",
+            "funText": "Brioche et crème légère, un air de vacances. Bébé prend le soleil de l'intérieur.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Tarte_trop%C3%A9zienne"
+        },
+        {
+            "week": 22,
+            "name": "une forêt-noire",
+            "funText": "Chocolat, cerises et chantilly. Bébé a déjà tout d'un grand gâteau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/For%C3%AAt-noire_%28g%C3%A2teau%29"
+        },
+        {
+            "week": 23,
+            "name": "une galette des rois",
+            "funText": "Pas de fève cette fois : la surprise, c'est bébé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Galette_des_rois"
+        },
+        {
+            "week": 24,
+            "name": "un gâteau basque",
+            "funText": "Une pâte sablée bien fermée sur sa crème. Bébé aussi garde le meilleur à l'intérieur.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/G%C3%A2teau_basque"
+        },
+        {
+            "week": 25,
+            "name": "un pain d'épices",
+            "funText": "Miel, cannelle et patience. Bébé prend son temps, et il a raison.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pain_d%27%C3%A9pices"
+        },
+        {
+            "week": 26,
+            "name": "un clafoutis",
+            "funText": "Les cerises bien serrées dans leur flan. Bébé commence à manquer de place.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Clafoutis"
+        },
+        {
+            "week": 27,
+            "name": "une tarte aux pommes",
+            "funText": "Le dessert de toutes les grand-mères. Elles vont adorer ce bébé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Tarte_aux_pommes"
+        },
+        {
+            "week": 28,
+            "name": "un far breton",
+            "funText": "Dense, généreux, avec ses pruneaux. Bébé prend du poids, et c'est très bien.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Far_breton"
+        },
+        {
+            "week": 29,
+            "name": "un gâteau à la broche",
+            "funText": "Cuit couche après couche devant le feu, dans les Pyrénées. Bébé aussi se fait par étapes.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/G%C3%A2teau_%C3%A0_la_broche"
+        },
+        {
+            "week": 30,
+            "name": "une omelette norvégienne",
+            "funText": "De la glace sous une meringue flambée. Le chaud et le froid, comme les nuits de maman.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Omelette_norv%C3%A9gienne"
+        },
+        {
+            "week": 31,
+            "name": "une bûche de Noël",
+            "funText": "Roulée, fourrée, décorée. Bébé est tout aussi bien emballé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/B%C3%BBche_de_No%C3%ABl"
+        },
+        {
+            "week": 32,
+            "name": "une colombe de Pâques",
+            "funText": "La brioche italienne en forme d'oiseau. Bébé, lui, prépare tranquillement son envol.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Colombe_de_P%C3%A2ques"
+        },
+        {
+            "week": 33,
+            "name": "un grand œuf de Pâques",
+            "funText": "Une coque de chocolat avec une surprise à l'intérieur. Ça vous rappelle quelque chose ?",
+            "wikipedia": "https://fr.wikipedia.org/wiki/%C5%92uf_de_P%C3%A2ques"
+        },
+        {
+            "week": 34,
+            "name": "un stollen",
+            "funText": "Le pain de Noël allemand, emmailloté dans son sucre glace. Bébé aussi aime être couvert.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Christstollen"
+        },
+        {
+            "week": 35,
+            "name": "une pièce montée",
+            "funText": "Quatre-vingts choux tenus par du caramel. Bébé tient bien en place, lui aussi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pi%C3%A8ce_mont%C3%A9e"
+        },
+        {
+            "week": 36,
+            "name": "une jalousie à la framboise",
+            "funText": "Une bande feuilletée aux lamelles ajourées, pour laisser voir la confiture. Bébé, on aimerait bien le voir aussi."
+        },
+        {
+            "week": 37,
+            "name": "une pyramide de macarons",
+            "funText": "Une centaine de macarons empilés avec soin. Bébé se construit avec la même minutie.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Macaron"
+        },
+        {
+            "week": 38,
+            "name": "un strudel aux pommes",
+            "funText": "Une pâte si fine qu'on lirait le journal à travers. Bébé, lui, s'épaissit.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Strudel"
+        },
+        {
+            "week": 39,
+            "name": "une baguette viennoise",
+            "funText": "Longue, dorée, un peu sucrée. Bébé s'étire de tout son long.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pain_viennois"
+        },
+        {
+            "week": 40,
+            "name": "un dartois",
+            "funText": "Deux feuilletages et de la frangipane, en bande de soixante centimètres. Le terme est là !"
+        },
+        {
+            "week": 41,
+            "name": "un gâteau de mariage à quatre étages",
+            "funText": "Bébé joue les prolongations. Quatre étages et beaucoup d'émotion : il est temps de faire les présentations.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/G%C3%A2teau_%C3%A0_%C3%A9tages"
+        }
+    ]
+}

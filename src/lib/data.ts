@@ -1,5 +1,6 @@
 import animals from '@/data/categories/animals.json';
 import cheeses from '@/data/categories/cheeses.json';
+import desserts from '@/data/categories/desserts.json';
 import fish from '@/data/categories/fish.json';
 import fruits from '@/data/categories/fruits.json';
 import fetalGrowthJson from '@/data/fetalGrowth.json';
@@ -19,6 +20,7 @@ export const categories: Record<CategoryKey, Category> = {
     fish: fish as unknown as Category,
     cheeses: cheeses as unknown as Category,
     animals: animals as unknown as Category,
+    desserts: desserts as unknown as Category,
 };
 
 export const categoryList: Category[] = [
@@ -26,4 +28,5 @@ export const categoryList: Category[] = [
     categories.fish,
     categories.cheeses,
     categories.animals,
+    categories.desserts,
 ];

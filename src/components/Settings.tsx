@@ -3,6 +3,10 @@
 import { track } from '@/lib/analytics';
 import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
+import {
+    type NotificationSupport,
+    readNotificationPermission,
+} from '@/lib/notifications';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
 import { useTranslations } from 'next-intl';
@@ -12,16 +16,7 @@ import { useState, useSyncExternalStore } from 'react';
 const FEEDBACK_EMAIL = 'pierrick.tyrode@gmail.com';
 const BUY_ME_A_COFFEE_URL = 'https://buymeacoffee.com/ptyrode';
 
-type Permission = NotificationPermission | 'unsupported';
-
 const noSubscribe = () => () => {};
-
-function readPermission(): Permission {
-    if (typeof window === 'undefined' || !('Notification' in window)) {
-        return 'unsupported';
-    }
-    return Notification.permission;
-}
 
 interface Props {
     state: AppState;
@@ -46,14 +41,14 @@ export default function Settings({
     const { lastPeriodDate, category } = state.pregnancy;
     const notifsEnabled = state.notifications.enabled;
     const [notifMsg, setNotifMsg] = useState<string | null>(null);
-    const permissionInitiale = useSyncExternalStore<Permission>(
+    const initialPermission = useSyncExternalStore<NotificationSupport>(
         noSubscribe,
-        readPermission,
+        readNotificationPermission,
         () => 'unsupported'
     );
-    const [permissionDemandee, setPermissionDemandee] =
-        useState<Permission | null>(null);
-    const permission = permissionDemandee ?? permissionInitiale;
+    const [requestedPermission, setRequestedPermission] =
+        useState<NotificationSupport | null>(null);
+    const permission = requestedPermission ?? initialPermission;
     const notifsActives = notifsEnabled && permission === 'granted';
     const [dateError, setDateError] = useState<string | null>(null);
     const [confirmReset, setConfirmReset] = useState(false);
@@ -88,7 +83,7 @@ export default function Settings({
             return;
         }
         const perm = await Notification.requestPermission();
-        setPermissionDemandee(perm);
+        setRequestedPermission(perm);
         onSetNotificationsEnabled(perm === 'granted');
         setNotifMsg(
             perm === 'granted' ? null : t('settings.notificationsDenied')

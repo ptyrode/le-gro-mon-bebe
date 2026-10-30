@@ -4,7 +4,7 @@ import path from 'node:path';
 import process from 'node:process';
 import sharp from 'sharp';
 
-const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals'];
+const CATEGORIES = ['fruits', 'fish', 'cheeses', 'animals', 'desserts'];
 const EXPECTED_SIZE = 512;
 
 let issues = 0;
@@ -79,6 +79,6 @@ for (const category of CATEGORIES) {
 console.log(
     issues
         ? `\n${issues} point(s) à corriger.`
-        : '\n✅ Toutes les illustrations sont en place.'
+        : '\n✅ Toutes les images sont en place.'
 );
 process.exit(issues ? 1 : 0);

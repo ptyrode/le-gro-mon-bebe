@@ -23,9 +23,9 @@ export default function ItemVisual({
     emojiClassName = '',
     className = '',
 }: Props) {
-    const [illustre, setIllustre] = useState(true);
+    const [hasImage, setHasImage] = useState(true);
 
-    if (!illustre) {
+    if (!hasImage) {
         return (
             <span
                 className={emojiClassName}
@@ -43,7 +43,7 @@ export default function ItemVisual({
             width={size}
             height={size}
             priority={priority}
-            onError={() => setIllustre(false)}
+            onError={() => setHasImage(false)}
             style={{ width: size, height: size }}
             className={cn('rounded-xl object-cover', className)}
         />

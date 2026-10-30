@@ -36,11 +36,6 @@ export function gestationalAge(lastPeriodDate: string, now: Date = new Date()) {
     return { weeks: Math.floor(days / 7), days: days % 7, totalDays: days };
 }
 
-export function dueDate(lastPeriodDate: string): Date {
-    const ddr = parseISODate(lastPeriodDate);
-    return new Date(ddr.getTime() + TERM_DAYS * MS_PER_DAY);
-}
-
 export function daysUntilDue(
     lastPeriodDate: string,
     now: Date = new Date()

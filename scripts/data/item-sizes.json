@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-import json
-
-OK_LO, OK_HI = 0.75, 1.35      # ✅ acceptable
-WARN_LO, WARN_HI = 0.50, 2.00  # ⚠️ limite ; au-delà => ❌
-
-EST = {
+{
     "fruits": {
         "une graine de pavot": 0.1,
         "une graine de sésame": 0.25,
@@ -43,7 +37,7 @@ EST = {
         "un pied de chou de Bruxelles": 58.0,
         "un daikon": 60.0,
         "un potiron géant": 62.0,
-        "une courge trombone": 66.0,
+        "une courge trombone": 66.0
     },
     "fish": {
         "une perle de caviar": 0.1,
@@ -83,7 +77,7 @@ EST = {
         "une roussette": 55.0,
         "un homard": 56.0,
         "un beau bar de ligne": 57.0,
-        "un saumon sauvage": 62.0,
+        "un saumon sauvage": 62.0
     },
     "cheeses": {
         "une paillette de parmesan": 0.1,
@@ -115,6 +109,7 @@ EST = {
         "un Cantal": 40.0,
         "un Laguiole": 41.0,
         "une Abondance": 43.0,
+        "une Fontina": 43.0,
         "un Cheddar": 45.0,
         "un Salers": 47.0,
         "un Grana Padano": 48.0,
@@ -122,8 +117,7 @@ EST = {
         "un Sbrinz": 52.0,
         "un Gruyère": 55.0,
         "un Comté": 60.0,
-        "une meule d'emmental": 65.0,
-        "une meule d'Emmental de Savoie": 67.0,
+        "une meule d'Emmental de Savoie": 67.0
     },
     "animals": {
         "un œuf de fourmi": 0.1,
@@ -163,57 +157,46 @@ EST = {
         "un blaireau": 56.0,
         "un cocker": 57.0,
         "un agneau nouveau-né": 58.0,
-        "un porcelet": 63.0,
+        "un porcelet": 63.0
     },
+    "desserts": {
+        "un cristal de sucre": 0.08,
+        "une nonpareille": 0.2,
+        "un vermicelle en chocolat": 0.5,
+        "une pépite de chocolat": 1.0,
+        "une dragée": 2.0,
+        "une truffe au chocolat": 2.5,
+        "une chouquette": 3.5,
+        "un calisson": 5.0,
+        "un cannelé": 5.5,
+        "une madeleine": 7.5,
+        "un Paris-Brest": 10.0,
+        "un mille-feuille": 12.0,
+        "un éclair au chocolat": 14.0,
+        "un croissant": 16.0,
+        "un panettone": 18.0,
+        "une couronne des rois": 20.0,
+        "un kouglof": 22.0,
+        "une tarte tropézienne": 22.0,
+        "une forêt-noire": 22.0,
+        "une galette des rois": 24.0,
+        "un gâteau basque": 24.0,
+        "un pain d'épices": 25.0,
+        "un clafoutis": 26.0,
+        "une tarte aux pommes": 28.0,
+        "un far breton": 30.0,
+        "un gâteau à la broche": 30.0,
+        "une omelette norvégienne": 30.0,
+        "une bûche de Noël": 32.0,
+        "une colombe de Pâques": 33.0,
+        "un grand œuf de Pâques": 35.0,
+        "un stollen": 35.0,
+        "une pièce montée": 36.0,
+        "une jalousie à la framboise": 40.0,
+        "une pyramide de macarons": 40.0,
+        "un strudel aux pommes": 45.0,
+        "une baguette viennoise": 52.0,
+        "un dartois": 60.0,
+        "un gâteau de mariage à quatre étages": 60.0
+    }
 }
-
-
-def verdict(ratio):
-    if OK_LO <= ratio <= OK_HI:
-        return "OK"
-    if WARN_LO <= ratio <= WARN_HI:
-        return "LIMITE"
-    return "PROBLEME"
-
-
-growth = json.load(open("src/data/fetalGrowth.json"))["weeks"]
-summary = {}
-
-for cat in ["fruits", "fish", "cheeses", "animals"]:
-    items = json.load(open(f"src/data/categories/{cat}.json"))["items"]
-    rows, prev_size, non_mono = [], None, []
-    counts = {"OK": 0, "LIMITE": 0, "PROBLEME": 0}
-
-    for it in items:
-        week, name = it["week"], it["name"]
-        foetus = growth[str(week)]["size"]
-        est = EST[cat][name]
-        ratio = est / foetus
-        v = verdict(ratio)
-        counts[v] += 1
-        rows.append((week, name, foetus, est, ratio, v))
-        if prev_size is not None and est < prev_size:
-            non_mono.append((week, name, est, prev_size))
-        prev_size = est
-
-    summary[cat] = (rows, counts, non_mono)
-
-    print(f"\n{'=' * 78}\n{cat.upper()}  —  "
-          f"OK {counts['OK']} | limite {counts['LIMITE']} | problème {counts['PROBLEME']}"
-          f"\n{'=' * 78}")
-    for week, name, foetus, est, ratio, v in rows:
-        if v != "OK":
-            flag = "!!" if v == "PROBLEME" else " ~"
-            print(f"{flag} S{week:<3} {name:<30} fœtus {foetus:>5} cm | "
-                  f"objet ~{est:>5} cm | x{ratio:.2f}")
-    if non_mono:
-        print(f"\n  -- Régressions de taille ({len(non_mono)}) : "
-              "l'item est plus petit que celui de la semaine précédente")
-        for week, name, est, prev in non_mono:
-            print(f"     S{week}: {name} (~{est} cm) < semaine précédente (~{prev} cm)")
-
-print(f"\n{'=' * 78}\nRÉCAPITULATIF\n{'=' * 78}")
-print(f"{'catégorie':<12} {'OK':>4} {'limite':>7} {'problème':>9} {'régressions':>12}")
-for cat, (rows, counts, non_mono) in summary.items():
-    print(f"{cat:<12} {counts['OK']:>4} {counts['LIMITE']:>7} "
-          f"{counts['PROBLEME']:>9} {len(non_mono):>12}")

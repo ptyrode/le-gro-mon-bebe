@@ -1,4 +1,4 @@
-const CACHE = 'lgmb-v3';
+const CACHE = 'lgmb-v4';
 const APP_SHELL = ['/'];
 
 self.addEventListener('install', (event) => {
@@ -57,6 +57,50 @@ self.addEventListener('fetch', (event) => {
                 })
                 .catch(() => cached);
             return cached || network;
+        })
+    );
+});
+
+const PUSH_DB = 'lgmb';
+const PUSH_STORE = 'push';
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function readPushState() {
+    return new Promise((resolve) => {
+        const request = indexedDB.open(PUSH_DB, 1);
+        request.onupgradeneeded = () =>
+            request.result.createObjectStore(PUSH_STORE);
+        request.onerror = () => resolve(null);
+        request.onsuccess = () => {
+            const db = request.result;
+            const get = db
+                .transaction(PUSH_STORE)
+                .objectStore(PUSH_STORE)
+                .get('state');
+            get.onsuccess = () => resolve(get.result ?? null);
+            get.onerror = () => resolve(null);
+        };
+    });
+}
+
+function currentWeek(lastPeriodDate) {
+    const start = new Date(`${lastPeriodDate}T00:00:00`).getTime();
+    return Math.floor(Math.floor((Date.now() - start) / DAY_MS) / 7);
+}
+
+self.addEventListener('push', (event) => {
+    event.waitUntil(
+        readPushState().then((state) => {
+            if (!state) return;
+            const week = currentWeek(state.lastPeriodDate);
+            const text = state.weeks[week];
+            if (!text) return;
+            return self.registration.showNotification(text.title, {
+                body: text.body,
+                icon: '/icon-192.png',
+                badge: '/icon-192.png',
+                tag: `week-${week}`,
+            });
         })
     );
 });

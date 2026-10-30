@@ -44,7 +44,6 @@ interface UsePregnancy {
     setCategory: (category: CategoryKey) => void;
     setLastPeriodDate: (lastPeriodDate: string) => void;
     setNotificationsEnabled: (enabled: boolean) => void;
-    setLastSeenWeek: (week: number) => void;
     reset: () => void;
 }
 
@@ -87,14 +86,6 @@ export function usePregnancy(): UsePregnancy {
         });
     }, []);
 
-    const setLastSeenWeek = useCallback((week: number) => {
-        if (!cache) return;
-        commit({
-            ...cache,
-            notifications: { ...cache.notifications, lastSeenWeek: week },
-        });
-    }, []);
-
     const reset = useCallback(() => {
         commit(null);
     }, []);
@@ -106,7 +97,6 @@ export function usePregnancy(): UsePregnancy {
         setCategory,
         setLastPeriodDate,
         setNotificationsEnabled,
-        setLastSeenWeek,
         reset,
     };
 }

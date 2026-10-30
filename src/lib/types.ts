@@ -29,7 +29,8 @@ export interface Category {
     items: CategoryItem[];
 }
 
-export type CategoryKey = 'fruits' | 'fish' | 'cheeses' | 'animals';
+export type CategoryKey =
+    'fruits' | 'fish' | 'cheeses' | 'animals' | 'desserts';
 
 export interface PregnancyData {
     lastPeriodDate: string;
@@ -39,7 +40,6 @@ export interface PregnancyData {
 
 export interface NotificationsState {
     enabled: boolean;
-    lastSeenWeek: number;
 }
 
 export interface AppState {
