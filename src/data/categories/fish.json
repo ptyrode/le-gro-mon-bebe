@@ -42,21 +42,21 @@
         },
         {
             "week": 10,
+            "name": "une civelle",
+            "funText": "Bébé anguille translucide. Et hors de prix, la civelle.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Anguilla_anguilla"
+        },
+        {
+            "week": 11,
             "name": "une crevette grise",
             "funText": "La crevette qu'on décortique par vingt sans compter.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Crevette_grise"
         },
         {
-            "week": 11,
+            "week": 12,
             "name": "une coque",
             "funText": "Bien planquée dans le sable, comme bébé dans son coin.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cerastoderma"
-        },
-        {
-            "week": 12,
-            "name": "une civelle",
-            "funText": "Bébé anguille translucide. Et hors de prix, la civelle.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Anguilla_anguilla"
         },
         {
             "week": 13,
@@ -168,9 +168,9 @@
         },
         {
             "week": 31,
-            "name": "un turbot",
-            "funText": "Large comme une assiette de fête. Bébé prend ses aises.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Scophthalmus_maximus"
+            "name": "une roussette",
+            "funText": "Un petit requin, oui madame. Bébé joue dans la cour des grands.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Scyliorhinidae"
         },
         {
             "week": 32,
@@ -210,9 +210,9 @@
         },
         {
             "week": 38,
-            "name": "une roussette",
-            "funText": "Un petit requin, oui madame. Bébé joue dans la cour des grands.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Scyliorhinidae"
+            "name": "un turbot",
+            "funText": "Large comme une assiette de fête. Bébé prend ses aises.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Scophthalmus_maximus"
         },
         {
             "week": 39,

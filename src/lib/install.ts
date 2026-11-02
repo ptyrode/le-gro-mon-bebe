@@ -64,6 +64,17 @@ export function isIOS() {
     return iOS || iPadOS;
 }
 
+export function isInAppBrowser() {
+    if (typeof window === 'undefined') return false;
+    return /FBAN|FBAV|FB_IAB|FBIOS|Messenger|Instagram/i.test(
+        window.navigator.userAgent
+    );
+}
+
+export function chromeIntentUrl(location: Location) {
+    return `intent://${location.host}${location.pathname}#Intent;scheme=https;package=com.android.chrome;end`;
+}
+
 export function isDismissed(now: number = Date.now()) {
     if (typeof window === 'undefined') return true;
     try {

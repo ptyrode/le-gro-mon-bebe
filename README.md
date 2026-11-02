@@ -35,7 +35,9 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 
 ## Calcul de la semaine
 
-La semaine de grossesse se compte en **semaines d'aménorrhée (SA)**, c'est-à-dire depuis la DDR : c'est l'unité des données médicales, donc aucune conversion. SA = `floor((aujourd'hui - DDR) / 7 jours)`, affichée de **S4** (premières données fiables) à **S41** (grossesse prolongée).
+La semaine de grossesse se compte en **semaines d'aménorrhée (SA)**, c'est-à-dire depuis la DDR : c'est l'unité des données médicales, donc aucune conversion. SA = `floor((aujourd'hui - DDR) / 7 jours)`, affichée de **S4** (premières données fiables) à **S41**.
+
+Le **terme** tombe à **41 SA, soit DDR + 287 jours** (`TERM_WEEK`, dont découlent `TERM_DAYS` et `MAX_WEEK`) : c'est la convention française, là où les pays anglo-saxons comptent 40 SA (280 jours). Une DDR au 1er février donne un terme au 15 novembre. Le compte à rebours « J−… avant le terme » et la barre de progression s'appuient sur cette valeur.
 
 `pregnancyStatus()` (`src/lib/pregnancy.ts`) qualifie chaque cas au lieu de borner en silence, et le Dashboard a un écran par situation :
 
@@ -84,7 +86,11 @@ Une notification arrive **le jour où bébé change de semaine**, appli fermée,
 - Couper les notifications, ou réinitialiser l'appli, désabonne et supprime l'entrée côté serveur. Les abonnements expirés (404/410) sont purgés par le cron.
 - **Pas de repli** : si le push n'est pas disponible sur un appareil, il n'y a pas de notification.
 
-Pour tester sans attendre le bon jour, avec N de 0 (dimanche) à 6 (samedi) :
+Chaque passage du cron écrit son bilan dans les logs Vercel (`push cron { weekday, sent, removed, failed }`) : c'est là qu'on vérifie qu'il a bien tourné, et pour combien d'abonnés.
+
+Pour tester **le vrai cron**, sans attendre : dans Vercel, _Settings → Cron Jobs → Run_. Il envoie aux abonnés du jour courant ; pour en faire partie, régler temporairement dans l'appli une DDR tombant le même jour de la semaine qu'aujourd'hui, puis la remettre.
+
+Pour tester un autre jour, avec N de 0 (dimanche) à 6 (samedi) :
 
 ```bash
 curl -H "Authorization: Bearer $CRON_SECRET" "https://le-gro-mon-bebe.vercel.app/api/push/cron?weekday=N"
@@ -94,6 +100,7 @@ curl -H "Authorization: Bearer $CRON_SECRET" "https://le-gro-mon-bebe.vercel.app
 
 - `app/manifest.ts` : nom, icônes, couleurs, `display: standalone`. Nom court sous l'icône Android : « Lé gro bébé ».
 - `public/sw.js`, enregistré en production seulement : navigations en network-first, assets en stale-while-revalidate, réception des push.
+- **Navigateurs intégrés** (Messenger, Facebook, Instagram) : ni installation ni notifications possibles, et un stockage séparé de celui du vrai navigateur. `InAppBrowserBanner` les détecte à l'user agent et invite à changer de navigateur, dès l'onboarding : bouton qui ouvre l'appli dans Chrome sur Android (lien `intent://`), instructions et copie du lien sur iPhone, où rien ne permet d'ouvrir Safari de force. La DDR est à ressaisir dans le vrai navigateur, choix assumé pour rester simple. Le bandeau d'installation est masqué dans ce cas.
 - **Bandeau d'installation** (`InstallBanner`) : bouton natif sur Android (`beforeinstallprompt`), instructions Partager → Sur l'écran d'accueil sur iOS, où aucune API n'existe. Masquable, choix retenu en `localStorage`.
 
 ## Décisions
@@ -188,7 +195,7 @@ _temp/            # fichiers de travail locaux, ignorés par git, un sous-dossie
 
 ## Données de comparaison
 
-Cinq catégories de 38 items (S4 → S41), un JSON par catégorie dans `src/data/categories/`, plus la courbe de croissance (`fetalGrowth.json`) et les comparaisons de poids (`weightJokes.json`). Chaque item est calé sur la **taille** du fœtus de sa semaine : `node scripts/audit-data.mjs` vérifie qu'aucun n'est hors tolérance et que bébé ne rétrécit jamais d'une semaine à l'autre.
+Cinq catégories de 38 items (S4 → S41), un JSON par catégorie dans `src/data/categories/`, plus la courbe de croissance (`fetalGrowth.json`) et les comparaisons de poids (`weightJokes.json`). Chaque item est calé sur la **taille** du fœtus de sa semaine, et l'ordre suit le **volume** : un objet long et fin passe avant un objet plus court mais massif. `node scripts/audit-data.mjs` vérifie qu'aucun item n'est hors tolérance et que bébé ne paraît jamais rétrécir d'une semaine à l'autre.
 
 Format des fichiers, tolérance, conventions de mesure et format des desserts : [`src/data/README.md`](src/data/README.md).
 
@@ -211,7 +218,7 @@ node scripts/generate-images.mjs desserts --reframe  # recadre sans appel
 - **Recadrage automatique** : le modèle colle presque toujours le sujet en haut du cadre. Le script le détoure depuis les bords et le recentre avec 6 % de marge sur un fond uni `#FFF4EE`. Une image coupée dans l'original reste à régénérer.
 - Les originaux 1024 px sont gardés dans `_temp/images/`, pour que `--reframe` puisse recadrer sans payer. Ceux des 190 images actuelles ont été supprimés : `--reframe` ne s'applique qu'aux images générées depuis. Le script saute les images déjà présentes.
 - **Pour refaire une image** : corriger la description du sujet, supprimer le WebP, relancer sa semaine. ~0,05 $ l'image.
-- ⚠️ **Après avoir remplacé des images, changer la version du cache** du service worker (`const CACHE = 'lgmb-v4'` dans `public/sw.js`, à passer en `v5`, etc.). Les images gardent le même nom alors que leur contenu change : sans nouvelle version, les téléphones affichent encore l'ancienne image à la première ouverture qui suit le déploiement.
+- ⚠️ **Après avoir remplacé des images, changer la version du cache** du service worker (`const CACHE = 'lgmb-v5'` dans `public/sw.js`, à passer en `v6`, etc.). Les images gardent le même nom alors que leur contenu change : sans nouvelle version, les téléphones affichent encore l'ancienne image à la première ouverture qui suit le déploiement.
 - ⚠️ **Relire chaque image** : un sujet mal reconnu, et bébé fait la taille du mauvais objet toute une semaine. `node scripts/check-images.mjs` vérifie qu'il n'en manque aucune.
 
 Règle de dessin : bébé est **assis, vu de face**, et porte le sujet comme un déguisement. La capuche peut avoir les yeux, le museau ou le bec de l'animal, plus petits que les yeux du bébé, mais **jamais de bouche ni de sourire** : deux visages qui sourient l'un au-dessus de l'autre, c'est raté.

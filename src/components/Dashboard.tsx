@@ -1,5 +1,6 @@
 'use client';
 
+import InAppBrowserBanner from '@/components/InAppBrowserBanner';
 import InstallBanner from '@/components/InstallBanner';
 import ItemVisual from '@/components/ItemVisual';
 import { track } from '@/lib/analytics';
@@ -253,6 +254,7 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 onSetCategory={onSetCategory}
             />
 
+            <InAppBrowserBanner className="mt-6" />
             <InstallBanner />
         </div>
     );

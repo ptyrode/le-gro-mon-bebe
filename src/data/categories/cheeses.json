@@ -114,15 +114,15 @@
         },
         {
             "week": 22,
-            "name": "un Ossau-Iraty",
-            "funText": "Brebis des Pyrénées. Bébé prend de la bouteille.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Ossau-Iraty"
-        },
-        {
-            "week": 23,
             "name": "un Brie de Melun",
             "funText": "Le brie qui a du caractère, pas celui du supermarché.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Brie_de_Melun"
+        },
+        {
+            "week": 23,
+            "name": "un Brie de Meaux",
+            "funText": "Le roi des fromages, paraît-il. Bébé se met au niveau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Brie_de_Meaux"
         },
         {
             "week": 24,
@@ -132,9 +132,9 @@
         },
         {
             "week": 25,
-            "name": "un Morbier",
-            "funText": "Avec sa ligne de cendre au milieu. Bébé aussi a une ligne, la linea nigra.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Morbier_%28fromage%29"
+            "name": "un Ossau-Iraty",
+            "funText": "Brebis des Pyrénées. Bébé prend de la bouteille.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Ossau-Iraty"
         },
         {
             "week": 26,
@@ -144,15 +144,15 @@
         },
         {
             "week": 27,
-            "name": "une meule de raclette",
-            "funText": "Il faudrait déjà toute une soirée entre potes pour en venir à bout.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Raclette_%28fromage%29"
+            "name": "un Morbier",
+            "funText": "Avec sa ligne de cendre au milieu. Bébé aussi a une ligne, la linea nigra.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Morbier_%28fromage%29"
         },
         {
             "week": 28,
-            "name": "un Brie de Meaux",
-            "funText": "Le roi des fromages, paraît-il. Bébé se met au niveau.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Brie_de_Meaux"
+            "name": "une meule de raclette",
+            "funText": "Il faudrait déjà toute une soirée entre potes pour en venir à bout.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Raclette_%28fromage%29"
         },
         {
             "week": 29,
@@ -162,51 +162,51 @@
         },
         {
             "week": 30,
-            "name": "un Cantal",
-            "funText": "Une fourme de 40 kilos. On ne cale plus sur le poids, heureusement.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Cantal_%28fromage%29"
-        },
-        {
-            "week": 31,
-            "name": "un Laguiole",
-            "funText": "L'aligot vient de là. Rien que pour ça, respect.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Laguiole_%28fromage%29"
-        },
-        {
-            "week": 32,
             "name": "une Abondance",
             "funText": "De Haute-Savoie, avec sa croûte brossée au sel.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Abondance_%28fromage%29"
         },
         {
-            "week": 33,
+            "week": 31,
             "name": "une Fontina",
             "funText": "La reine de la fondue valdôtaine. Ça file, comme les semaines.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Fontine"
         },
         {
-            "week": 34,
+            "week": 32,
+            "name": "un Cantal",
+            "funText": "Une fourme de 40 kilos. On ne cale plus sur le poids, heureusement.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Cantal_%28fromage%29"
+        },
+        {
+            "week": 33,
             "name": "un Cheddar",
             "funText": "L'orange fluo, c'est du colorant. Le vrai est pâle et redoutable.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cheddar"
         },
         {
-            "week": 35,
-            "name": "un Salers",
-            "funText": "Fabriqué uniquement quand les vaches sont dans les prés.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Salers_%28fromage%29"
-        },
-        {
-            "week": 36,
+            "week": 34,
             "name": "un Grana Padano",
             "funText": "Le rival du parmesan. La guerre est ouverte depuis des siècles.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Grana_Padano"
         },
         {
-            "week": 37,
+            "week": 35,
             "name": "un Beaufort",
             "funText": "Le « prince des gruyères », avec son talon concave.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Beaufort_%28fromage%29"
+        },
+        {
+            "week": 36,
+            "name": "un Gruyère",
+            "funText": "Et non, il n'a pas de trous. C'est l'emmental. Fin du débat.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Gruy%C3%A8re_%28fromage%29"
+        },
+        {
+            "week": 37,
+            "name": "un Laguiole",
+            "funText": "L'aligot vient de là. Rien que pour ça, respect.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Laguiole_%28fromage%29"
         },
         {
             "week": 38,
@@ -216,15 +216,15 @@
         },
         {
             "week": 39,
-            "name": "un Gruyère",
-            "funText": "Et non, il n'a pas de trous. C'est l'emmental. Fin du débat.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Gruy%C3%A8re_%28fromage%29"
-        },
-        {
-            "week": 40,
             "name": "un Comté",
             "funText": "Une meule entière. Il ne reste plus grand-chose à attendre.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Comt%C3%A9_%28fromage%29"
+        },
+        {
+            "week": 40,
+            "name": "un Salers",
+            "funText": "Fabriqué uniquement quand les vaches sont dans les prés.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Salers_%28fromage%29"
         },
         {
             "week": 41,

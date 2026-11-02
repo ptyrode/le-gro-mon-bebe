@@ -1,5 +1,6 @@
 'use client';
 
+import InAppBrowserBanner from '@/components/InAppBrowserBanner';
 import { cn } from '@/lib/cn';
 import { categoryList } from '@/lib/data';
 import { validateLastPeriodDate } from '@/lib/pregnancy';
@@ -50,6 +51,8 @@ export default function Onboarding({ onStart }: Props) {
                 </h1>
                 <p className="text-ink-soft mt-2">{t('onboarding.tagline')}</p>
             </header>
+
+            <InAppBrowserBanner className="mb-8" />
 
             <section className="mb-8">
                 <label

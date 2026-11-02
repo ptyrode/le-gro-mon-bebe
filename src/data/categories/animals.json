@@ -42,15 +42,15 @@
         },
         {
             "week": 10,
-            "name": "un escargot",
-            "funText": "Il prend son temps. Encore trente semaines, autant s'installer.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Escargot"
-        },
-        {
-            "week": 11,
             "name": "une sauterelle",
             "funText": "Elle saute soixante fois sa taille. Bébé se contente de gigoter.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Sauterelle_%28insecte%29"
+        },
+        {
+            "week": 11,
+            "name": "un escargot",
+            "funText": "Il prend son temps. Encore trente semaines, autant s'installer.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Escargot"
         },
         {
             "week": 12,
@@ -66,15 +66,15 @@
         },
         {
             "week": 14,
-            "name": "un hamster",
-            "funText": "Bébé change d'échelle d'un coup : on le mesure maintenant de la tête aux pieds.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Hamster"
+            "name": "un rouge-gorge",
+            "funText": "Petit, rond, et il vous regarde de travers. Bébé change d'échelle : on le mesure maintenant de la tête aux pieds.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Rouge-gorge_familier"
         },
         {
             "week": 15,
-            "name": "un rouge-gorge",
-            "funText": "Petit, rond, et il vous regarde de travers.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Rouge-gorge_familier"
+            "name": "un hamster",
+            "funText": "Il fait ses réserves dans les joues. Bébé, lui, commence à avoir les siennes.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Hamster"
         },
         {
             "week": 16,
@@ -150,9 +150,9 @@
         },
         {
             "week": 28,
-            "name": "un carlin",
-            "funText": "Il ronfle plus fort que le papa. Prépare-toi.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Carlin"
+            "name": "un lapin",
+            "funText": "Fini le lapereau, place au vrai lapin. Ça va vite.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Lapin"
         },
         {
             "week": 29,
@@ -162,45 +162,45 @@
         },
         {
             "week": 30,
-            "name": "un lapin",
-            "funText": "Fini le lapereau, place au vrai lapin. Ça va vite.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Lapin"
-        },
-        {
-            "week": 31,
             "name": "un chat adulte",
             "funText": "Le poids du regard en plus. Bébé s'entraîne déjà à juger.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chat"
         },
         {
-            "week": 32,
+            "week": 31,
             "name": "un renardeau",
             "funText": "Malin, joueur, et déjà un peu vicieux.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Renard_roux"
         },
         {
-            "week": 33,
+            "week": 32,
             "name": "un canard colvert",
             "funText": "Tête verte, démarche ridicule, fierté intacte.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Canard_colvert"
         },
         {
-            "week": 34,
-            "name": "un beagle",
-            "funText": "Un nez sur pattes. Il trouve la nourriture avant toi.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Beagle_%28chien%29"
+            "week": 33,
+            "name": "un carlin",
+            "funText": "Il ronfle plus fort que le papa. Prépare-toi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Carlin"
         },
         {
-            "week": 35,
+            "week": 34,
             "name": "un raton laveur",
             "funText": "Il fouille les poubelles avec des mains de chirurgien.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Raton_laveur"
         },
         {
+            "week": 35,
+            "name": "un agneau nouveau-né",
+            "funText": "Il tient debout quelques minutes après sa naissance. Le tien prendra un an, sans se presser.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Agneau"
+        },
+        {
             "week": 36,
-            "name": "un bouledogue français",
-            "funText": "Compact, têtu, et il fait des bruits inquiétants en dormant.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Bouledogue"
+            "name": "un beagle",
+            "funText": "Un nez sur pattes. Il trouve la nourriture avant toi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Beagle_%28chien%29"
         },
         {
             "week": 37,
@@ -210,21 +210,21 @@
         },
         {
             "week": 38,
+            "name": "un bouledogue français",
+            "funText": "Compact, têtu, et il fait des bruits inquiétants en dormant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bouledogue"
+        },
+        {
+            "week": 39,
             "name": "un blaireau",
             "funText": "Costaud, râleur, il ne lâche rien. On y est presque.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Blaireau_europ%C3%A9en"
         },
         {
-            "week": 39,
+            "week": 40,
             "name": "un cocker",
             "funText": "Des oreilles immenses et un enthousiasme sans limite.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Cocker_spaniel_anglais"
-        },
-        {
-            "week": 40,
-            "name": "un agneau nouveau-né",
-            "funText": "Un bébé animal pour finir. Le tien arrive, et il tient debout moins vite.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Agneau"
         },
         {
             "week": 41,

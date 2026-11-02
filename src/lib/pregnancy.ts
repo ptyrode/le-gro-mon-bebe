@@ -2,8 +2,9 @@ import { categories, growth, weightJokes } from '@/lib/data';
 import type { CategoryItem, CategoryKey, GrowthWeek } from '@/lib/types';
 
 export const MIN_WEEK = 4;
-export const MAX_WEEK = 41;
-export const TERM_DAYS = 280;
+export const TERM_WEEK = 41;
+export const TERM_DAYS = TERM_WEEK * 7;
+export const MAX_WEEK = TERM_WEEK;
 export const IMPLAUSIBLE_DAYS = 730;
 
 const MS_PER_DAY = 24 * 60 * 60 * 1000;

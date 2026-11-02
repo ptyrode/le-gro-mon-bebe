@@ -51,6 +51,7 @@ export async function GET(request: Request) {
             try {
                 await webpush.sendNotification(subscription, null, {
                     TTL: ONE_DAY_SECONDS,
+                    urgency: 'high',
                 });
                 sent++;
             } catch (error) {
@@ -64,5 +65,7 @@ export async function GET(request: Request) {
         })
     );
 
-    return Response.json({ weekday, sent, removed, failed });
+    const result = { weekday, sent, removed, failed };
+    console.warn('push cron', result);
+    return Response.json(result);
 }

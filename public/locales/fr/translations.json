@@ -78,6 +78,15 @@
         "future": "Cette date est dans le futur, ça coince un peu 😅",
         "implausible": "Ça fait plus de deux ans… tu es sûre de la date ? 🤨"
     },
+    "inAppBrowser": {
+        "title": "Ouvre l'appli dans ton navigateur",
+        "body": "Tu es dans le navigateur de Messenger ou de Facebook : impossible d'y installer l'appli ou d'y recevoir les notifications. Il faudra ressaisir ta date une fois dans le vrai navigateur.",
+        "android": "Le bouton ci-dessous l'ouvre dans Chrome. Sinon : menu ⋮ en haut, puis « Ouvrir dans le navigateur ».",
+        "ios": "Appuie sur le menu ⋯ en haut ou en bas de l'écran, puis sur « Ouvrir dans le navigateur ». Ou copie le lien et colle-le dans Safari.",
+        "openChrome": "Ouvrir dans Chrome",
+        "copyLink": "Copier le lien",
+        "copied": "Lien copié !"
+    },
     "install": {
         "title": "Installe l'appli sur ton téléphone",
         "ios": "Appuie sur le bouton Partager en bas de Safari, puis sur « Sur l'écran d'accueil ». C'est la seule façon de recevoir les notifications sur iPhone.",

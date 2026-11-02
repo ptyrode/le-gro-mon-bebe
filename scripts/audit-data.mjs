@@ -4,12 +4,14 @@ import { readFile } from 'node:fs/promises';
 const CATEGORIES = ['cheeses', 'fish', 'animals', 'desserts', 'fruits'];
 const OK = [0.75, 1.35];
 const WARNING = [0.5, 2.0];
+const SHRINK = 2;
 const RULE = '='.repeat(78);
 
 const readJson = async (file) => JSON.parse(await readFile(file, 'utf8'));
 
 const growth = (await readJson('src/data/fetalGrowth.json')).weeks;
 const sizes = await readJson('scripts/data/item-sizes.json');
+const volumes = await readJson('scripts/data/item-volumes.json');
 
 const verdict = (ratio) => {
     if (ratio >= OK[0] && ratio <= OK[1]) return 'OK';
@@ -30,10 +32,11 @@ for (const category of CATEGORIES) {
     for (const { week, name } of items) {
         const fetus = growth[week].size;
         const size = sizes[category]?.[name];
-        if (size === undefined) {
+        const volume = volumes[category]?.[name];
+        if (size === undefined || volume === undefined) {
             missing++;
             console.error(
-                `⚠️  ${category} S${week} : « ${name} » n'a pas de taille dans scripts/data/item-sizes.json`
+                `⚠️  ${category} S${week} : « ${name} » n'a pas de taille dans scripts/data/item-sizes.json ou de volume dans scripts/data/item-volumes.json`
             );
             continue;
         }
@@ -43,10 +46,10 @@ for (const category of CATEGORIES) {
         if (result !== 'OK') {
             flagged.push({ week, name, fetus, size, ratio, result });
         }
-        if (previous !== null && size < previous) {
-            regressions.push({ week, name, size, previous });
+        if (previous !== null && volume * SHRINK < previous) {
+            regressions.push({ week, name, volume, previous });
         }
-        previous = size;
+        previous = volume;
     }
 
     summary.push({ category, counts, regressions });
@@ -62,11 +65,11 @@ for (const category of CATEGORIES) {
     }
     if (regressions.length) {
         console.log(
-            `\n  -- Régressions de taille (${regressions.length}) : l'item est plus petit que celui de la semaine précédente`
+            `\n  -- Régressions (${regressions.length}) : l'item est ${SHRINK}× moins volumineux que celui de la semaine précédente`
         );
-        for (const { week, name, size, previous: before } of regressions) {
+        for (const { week, name, volume, previous: before } of regressions) {
             console.log(
-                `     S${week}: ${name} (~${size} cm) < semaine précédente (~${before} cm)`
+                `     S${week}: ${name} (~${volume} cm³) < semaine précédente (~${before} cm³)`
             );
         }
     }

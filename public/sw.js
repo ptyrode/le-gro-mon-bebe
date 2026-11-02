@@ -1,4 +1,4 @@
-const CACHE = 'lgmb-v4';
+const CACHE = 'lgmb-v5';
 const APP_SHELL = ['/'];
 
 self.addEventListener('install', (event) => {

@@ -90,15 +90,15 @@
         },
         {
             "week": 18,
-            "name": "un panettone",
-            "funText": "La brioche italienne qui monte, qui monte. Comme le ventre de maman.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Panettone"
-        },
-        {
-            "week": 19,
             "name": "une couronne des rois",
             "funText": "La brioche aux fruits confits du Sud. Bébé mérite bien sa couronne.",
             "wikipedia": "https://fr.wikipedia.org/wiki/G%C3%A2teau_des_rois"
+        },
+        {
+            "week": 19,
+            "name": "un panettone",
+            "funText": "La brioche italienne qui monte, qui monte. Comme le ventre de maman.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Panettone"
         },
         {
             "week": 20,
@@ -114,15 +114,15 @@
         },
         {
             "week": 22,
-            "name": "une forêt-noire",
-            "funText": "Chocolat, cerises et chantilly. Bébé a déjà tout d'un grand gâteau.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/For%C3%AAt-noire_%28g%C3%A2teau%29"
-        },
-        {
-            "week": 23,
             "name": "une galette des rois",
             "funText": "Pas de fève cette fois : la surprise, c'est bébé.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Galette_des_rois"
+        },
+        {
+            "week": 23,
+            "name": "une forêt-noire",
+            "funText": "Chocolat, cerises et chantilly. Bébé a déjà tout d'un grand gâteau.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/For%C3%AAt-noire_%28g%C3%A2teau%29"
         },
         {
             "week": 24,
@@ -174,15 +174,15 @@
         },
         {
             "week": 32,
-            "name": "une colombe de Pâques",
-            "funText": "La brioche italienne en forme d'oiseau. Bébé, lui, prépare tranquillement son envol.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Colombe_de_P%C3%A2ques"
+            "name": "une baguette viennoise",
+            "funText": "Longue, dorée, un peu sucrée. Bébé s'étire de tout son long.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pain_viennois"
         },
         {
             "week": 33,
-            "name": "un grand œuf de Pâques",
-            "funText": "Une coque de chocolat avec une surprise à l'intérieur. Ça vous rappelle quelque chose ?",
-            "wikipedia": "https://fr.wikipedia.org/wiki/%C5%92uf_de_P%C3%A2ques"
+            "name": "une colombe de Pâques",
+            "funText": "La brioche italienne en forme d'oiseau. Bébé, lui, prépare tranquillement son envol.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Colombe_de_P%C3%A2ques"
         },
         {
             "week": 34,
@@ -192,9 +192,9 @@
         },
         {
             "week": 35,
-            "name": "une pièce montée",
-            "funText": "Quatre-vingts choux tenus par du caramel. Bébé tient bien en place, lui aussi.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Pi%C3%A8ce_mont%C3%A9e"
+            "name": "un strudel aux pommes",
+            "funText": "Une pâte si fine qu'on lirait le journal à travers. Bébé, lui, s'épaissit.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Strudel"
         },
         {
             "week": 36,
@@ -209,20 +209,20 @@
         },
         {
             "week": 38,
-            "name": "un strudel aux pommes",
-            "funText": "Une pâte si fine qu'on lirait le journal à travers. Bébé, lui, s'épaissit.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Strudel"
+            "name": "un dartois",
+            "funText": "Deux feuilletages et de la frangipane, en bande de soixante centimètres. Le terme approche à grands pas."
         },
         {
             "week": 39,
-            "name": "une baguette viennoise",
-            "funText": "Longue, dorée, un peu sucrée. Bébé s'étire de tout son long.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Pain_viennois"
+            "name": "une pièce montée",
+            "funText": "Quatre-vingts choux tenus par du caramel. Bébé tient bien en place, lui aussi.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Pi%C3%A8ce_mont%C3%A9e"
         },
         {
             "week": 40,
-            "name": "un dartois",
-            "funText": "Deux feuilletages et de la frangipane, en bande de soixante centimètres. Le terme est là !"
+            "name": "un grand œuf de Pâques",
+            "funText": "Une coque de chocolat avec une surprise à l'intérieur. Ça vous rappelle quelque chose ?",
+            "wikipedia": "https://fr.wikipedia.org/wiki/%C5%92uf_de_P%C3%A2ques"
         },
         {
             "week": 41,

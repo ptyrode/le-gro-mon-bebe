@@ -88,7 +88,15 @@ node scripts/audit-data.mjs
 | ⚠️ Limite   | 0,50 – 0,75 ou 1,35 – 2,0 | ça passe, mais c'est approximatif                |
 | ❌ Problème | < 0,50 ou > 2,0           | l'objet est au moins 2× trop petit ou trop grand |
 
-L'audit signale aussi les **régressions** — un item plus petit que celui de la semaine précédente. C'est le défaut le plus visible pour l'utilisateur, puisque bébé est censé grandir. **Objectif : zéro ❌ et zéro régression.**
+### Ordre par volume
+
+La taille fixe la **plage de semaines** où un item est crédible ; à l'intérieur de cette plage, l'ordre suit le **volume**. Une baguette viennoise (52 cm) est plus longue qu'une pièce montée (36 cm), mais à l'œil elle paraît bien plus petite : la placer après donnerait l'impression que bébé rétrécit. Elle passe donc en S32, la pièce montée en S39.
+
+Les volumes sont des **ordres de grandeur en cm³** de l'objet tel qu'on le voit (plumage des oiseaux compris, feuilles du chou-fleur comprises), dans `scripts/data/item-volumes.json`.
+
+L'audit signale une **régression** quand un item est **plus de deux fois moins volumineux** que celui de la semaine précédente. C'est le défaut le plus visible pour l'utilisateur, puisque bébé est censé grandir. Le seuil de 2× tolère les écarts d'estimation entre objets de gabarit voisin. **Objectif : zéro ❌ et zéro régression.**
+
+Quelques items longs et fins sont avancés au prix d'un ratio **⚠️ limite** (poireau, daikon, courge trombone, civelle, sauterelle) et quelques items massifs sont reculés de même (pièce montée, grand œuf de Pâques) : c'est voulu, l'ordre visuel prime sur quelques centimètres d'écart.
 
 **Conventions de mesure** (à ne pas réinventer d'une catégorie à l'autre) :
 

@@ -72,9 +72,9 @@
         },
         {
             "week": 15,
-            "name": "un poivron",
-            "funText": "Rouge, jaune ou vert. Bébé, lui, n'a pas encore choisi son style.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Poivron"
+            "name": "une banane",
+            "funText": "Bébé fait la taille d'une banane et il a probablement déjà le hoquet.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Banane"
         },
         {
             "week": 16,
@@ -84,9 +84,9 @@
         },
         {
             "week": 17,
-            "name": "une banane",
-            "funText": "Bébé fait la taille d'une banane et il a probablement déjà le hoquet.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Banane"
+            "name": "un poivron",
+            "funText": "Rouge, jaune ou vert. Bébé, lui, n'a pas encore choisi son style.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Poivron"
         },
         {
             "week": 18,
@@ -114,21 +114,21 @@
         },
         {
             "week": 22,
+            "name": "un poireau",
+            "funText": "Long, droit, un peu sale à la base. On l'aime quand même.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Poireau"
+        },
+        {
+            "week": 23,
             "name": "une papaye",
             "funText": "On part sous les tropiques. Bébé, lui, est très bien au chaud.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Papaye"
         },
         {
-            "week": 23,
+            "week": 24,
             "name": "une courge butternut",
             "funText": "Douce et fondante. Rien à voir avec les nuits qui arrivent.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Courge_musqu%C3%A9e"
-        },
-        {
-            "week": 24,
-            "name": "une salade romaine",
-            "funText": "Croquante et bien dressée. Bébé aussi commence à se tenir.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Laitue_romaine"
         },
         {
             "week": 25,
@@ -138,27 +138,27 @@
         },
         {
             "week": 26,
-            "name": "un chou frisé",
-            "funText": "Bébé a les yeux qui s'ouvrent cette semaine. Le chou, lui, reste fermé.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_fris%C3%A9"
-        },
-        {
-            "week": 27,
             "name": "une botte de blettes",
             "funText": "Immenses et pleines de côtes. Comme les tiennes, bientôt.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Bette_%28plante%29"
         },
         {
-            "week": 28,
+            "week": 27,
             "name": "un pied de céleri",
             "funText": "Bébé pourrait survivre s'il naissait maintenant. Le céleri, non.",
             "wikipedia": "https://fr.wikipedia.org/wiki/C%C3%A9leri"
         },
         {
+            "week": 28,
+            "name": "une salade romaine",
+            "funText": "Croquante et bien dressée. Bébé aussi commence à se tenir.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Laitue_romaine"
+        },
+        {
             "week": 29,
-            "name": "un poireau",
-            "funText": "Long, droit, un peu sale à la base. On l'aime quand même.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Poireau"
+            "name": "un chou frisé",
+            "funText": "Bébé ouvre les yeux depuis peu. Le chou, lui, reste fermé.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_fris%C3%A9"
         },
         {
             "week": 30,
@@ -168,39 +168,38 @@
         },
         {
             "week": 31,
+            "name": "un daikon",
+            "funText": "Le radis blanc japonais, long comme un avant-bras. Bébé, lui, gagne surtout en épaisseur.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Radis_blanc"
+        },
+        {
+            "week": 32,
             "name": "un chou-fleur et ses feuilles",
             "funText": "Le cerveau de bébé se plisse en ce moment. Le chou-fleur aussi, mais depuis toujours.",
             "wikipedia": "https://fr.wikipedia.org/wiki/Chou-fleur"
         },
         {
-            "week": 32,
-            "name": "une courge spaghetti",
-            "funText": "On la gratte à la fourchette et ça fait des filaments. Magie.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Courge_spaghetti"
+            "week": 33,
+            "name": "une courge trombone",
+            "funText": "Elle s'enroule comme l'instrument dont elle porte le nom. Bébé, lui, joue déjà de la grosse caisse."
         },
         {
-            "week": 33,
+            "week": 34,
             "name": "un chou chinois",
             "funText": "Tout en longueur. Bébé aussi commence à se sentir à l'étroit.",
             "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A9-tsa%C3%AF"
         },
         {
-            "week": 34,
-            "name": "un régime de bananes",
-            "funText": "Plus une seule banane : tout le régime. C'est dire.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Bananier"
-        },
-        {
             "week": 35,
-            "name": "une pastèque",
-            "funText": "La vraie, celle qu'on porte à deux mains en soufflant.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Past%C3%A8que"
+            "name": "une courge spaghetti",
+            "funText": "On la gratte à la fourchette et ça fait des filaments. Magie.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Courge_spaghetti"
         },
         {
             "week": 36,
-            "name": "une citrouille",
-            "funText": "Bébé se met tête en bas. La citrouille, elle, ne bouge pas d'un pouce.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Citrouille"
+            "name": "un pied de chou de Bruxelles",
+            "funText": "Toute la tige, avec ses boules accrochées. Personne n'aime ça, et pourtant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_de_Bruxelles"
         },
         {
             "week": 37,
@@ -210,26 +209,27 @@
         },
         {
             "week": 38,
-            "name": "un pied de chou de Bruxelles",
-            "funText": "Toute la tige, avec ses boules accrochées. Personne n'aime ça, et pourtant.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Chou_de_Bruxelles"
+            "name": "un régime de bananes",
+            "funText": "Plus une seule banane : tout le régime. C'est dire.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Bananier"
         },
         {
             "week": 39,
-            "name": "un daikon",
-            "funText": "Le radis blanc japonais, long comme un avant-bras. Plus que quelques jours.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Radis_blanc"
+            "name": "une pastèque",
+            "funText": "La vraie, celle qu'on porte à deux mains en soufflant.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Past%C3%A8que"
         },
         {
             "week": 40,
-            "name": "un potiron géant",
-            "funText": "Le gros potiron final. Bébé est prêt, et toi aussi. Enfin, on espère.",
-            "wikipedia": "https://fr.wikipedia.org/wiki/Potiron"
+            "name": "une citrouille",
+            "funText": "Bébé se met tête en bas. La citrouille, elle, ne bouge pas d'un pouce.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Citrouille"
         },
         {
             "week": 41,
-            "name": "une courge trombone",
-            "funText": "Grossesse prolongée : bébé s'incruste. La courge, elle, ne demande rien à personne."
+            "name": "un potiron géant",
+            "funText": "Le gros potiron final. Bébé est prêt, et toi aussi. Enfin, on espère.",
+            "wikipedia": "https://fr.wikipedia.org/wiki/Potiron"
         }
     ]
 }

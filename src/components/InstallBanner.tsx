@@ -5,6 +5,7 @@ import {
     dismiss,
     getDeferredPrompt,
     isDismissed,
+    isInAppBrowser,
     isInstalled,
     isIOS,
     promptInstall,
@@ -15,6 +16,7 @@ import { useSyncExternalStore } from 'react';
 
 interface State {
     installed: boolean;
+    inApp: boolean;
     ios: boolean;
     dismissed: boolean;
     canPrompt: boolean;
@@ -22,6 +24,7 @@ interface State {
 
 const SERVER_STATE: State = {
     installed: true,
+    inApp: false,
     ios: false,
     dismissed: true,
     canPrompt: false,
@@ -32,12 +35,14 @@ let cache: State = SERVER_STATE;
 function readState(): State {
     const next: State = {
         installed: isInstalled(),
+        inApp: isInAppBrowser(),
         ios: isIOS(),
         dismissed: isDismissed(),
         canPrompt: getDeferredPrompt() !== null,
     };
     const unchanged =
         cache.installed === next.installed &&
+        cache.inApp === next.inApp &&
         cache.ios === next.ios &&
         cache.dismissed === next.dismissed &&
         cache.canPrompt === next.canPrompt;
@@ -53,7 +58,7 @@ export default function InstallBanner() {
         () => SERVER_STATE
     );
 
-    if (state.installed || state.dismissed) return null;
+    if (state.installed || state.inApp || state.dismissed) return null;
     if (!state.ios && !state.canPrompt) return null;
 
     return (
