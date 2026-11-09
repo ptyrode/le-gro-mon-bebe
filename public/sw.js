@@ -98,7 +98,7 @@ self.addEventListener('push', (event) => {
             return self.registration.showNotification(text.title, {
                 body: text.body,
                 icon: '/icon-192.png',
-                badge: '/icon-192.png',
+                badge: '/badge-96.png',
                 tag: `week-${week}`,
             });
         })

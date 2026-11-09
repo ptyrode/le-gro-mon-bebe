@@ -229,6 +229,7 @@ Règle de dessin : bébé est **assis, vu de face**, et porte le sujet comme un 
 
 - Le biberon occupe **la moitié du cadre** sur toutes les tailles, pour survivre au rognage d'environ 20 % des icônes `maskable` d'Android. Les mêmes fichiers servent donc en `any` et en `maskable`.
 - `apple-icon.png` est le seul carré plein : iOS applique son propre masque et remplirait des coins transparents en noir.
+- `public/badge-96.png` est la petite icône des notifications dans la barre d'état d'Android (option `badge` de `showNotification`, dans `public/sw.js`). Android n'en garde que la transparence et la recolore lui-même : une image opaque y devient un carré blanc. C'est donc le biberon seul, en blanc sur fond transparent, découpé dans `icon-512.png`.
 
 ## Déploiement
 
