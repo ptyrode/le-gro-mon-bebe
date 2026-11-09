@@ -37,7 +37,7 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 
 La semaine de grossesse se compte en **semaines d'aménorrhée (SA)**, c'est-à-dire depuis la DDR : c'est l'unité des données médicales, donc aucune conversion. SA = `floor((aujourd'hui - DDR) / 7 jours)`, affichée de **S4** (premières données fiables) à **S41**.
 
-Le **terme** tombe à **41 SA, soit DDR + 287 jours** (`TERM_WEEK`, dont découlent `TERM_DAYS` et `MAX_WEEK`) : c'est la convention française, là où les pays anglo-saxons comptent 40 SA (280 jours). Une DDR au 1er février donne un terme au 15 novembre. Le compte à rebours « J−… avant le terme » et la barre de progression s'appuient sur cette valeur.
+Le **terme** tombe à **41 SA, soit DDR + 287 jours** (`TERM_WEEK`, dont découlent `TERM_DAYS` et `MAX_WEEK`) : c'est la convention française, là où les pays anglo-saxons comptent 40 SA (280 jours). Une DDR au 1er février donne un terme au 15 novembre. Le compte à rebours « J−… avant le terme », la barre de progression et la date du terme prévu (affichée sous celle-ci et sous le champ de DDR des réglages) s'appuient sur cette valeur.
 
 `pregnancyStatus()` (`src/lib/pregnancy.ts`) qualifie chaque cas au lieu de borner en silence, et le Dashboard a un écran par situation :
 

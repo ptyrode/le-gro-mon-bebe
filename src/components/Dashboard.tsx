@@ -9,6 +9,7 @@ import { categoryList } from '@/lib/data';
 import {
     daysUntilDue,
     equivalenceForWeek,
+    formatDueDate,
     gestationalAge,
     growthForWeek,
     MAX_WEEK,
@@ -156,11 +157,11 @@ export default function Dashboard({ state, onSetCategory }: Props) {
     const joke = weightJokeForWeek(week);
     const pct = Math.round(progress(lastPeriodDate) * 100);
     const daysLeft = daysUntilDue(lastPeriodDate);
+    const dueDateLabel = formatDueDate(lastPeriodDate);
 
     return (
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
             {header}
-
             <section className="shadow-accent/10 rounded-3xl bg-white p-6 text-center shadow-lg">
                 <ItemVisual
                     category={category}
@@ -170,7 +171,6 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                     className="mx-auto mb-4"
                     emojiClassName="mb-4 block leading-none"
                 />
-
                 {g && (
                     <p className="text-ink text-xl font-extrabold">
                         {t('dashboard.size', {
@@ -208,7 +208,6 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                 <p className="text-ink-soft mt-3 text-sm italic">
                     {item.funText}
                 </p>
-
                 {g && (
                     <div className="border-cream-deep mt-6 border-t pt-5">
                         <p className="text-ink text-xl font-extrabold">
@@ -227,7 +226,6 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                     </div>
                 )}
             </section>
-
             <section className="mt-6 rounded-3xl bg-white p-5 shadow-sm">
                 <div className="mb-2 flex items-center justify-between text-sm">
                     <span className="text-ink font-semibold">
@@ -247,13 +245,14 @@ export default function Dashboard({ state, onSetCategory }: Props) {
                         style={{ width: `${pct}%` }}
                     />
                 </div>
+                <p className="text-ink-soft mt-3 text-center text-sm">
+                    {t('dashboard.dueDate', { date: dueDateLabel })}
+                </p>
             </section>
-
             <CategoryPicker
                 category={category}
                 onSetCategory={onSetCategory}
             />
-
             <InAppBrowserBanner className="mt-6" />
             <InstallBanner />
         </div>

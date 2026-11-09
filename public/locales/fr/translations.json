@@ -20,6 +20,7 @@
         "daysLeft": "J−{days} avant le terme",
         "dueToday": "C'est le grand jour ! 🎉",
         "overdue": "Terme dépassé de {days} j 🍼",
+        "dueDate": "Terme prévu le {date}.",
         "compareIn": "Comparer en…",
         "wikipediaHint": "(article Wikipédia, nouvel onglet)",
         "born": {

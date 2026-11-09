@@ -66,7 +66,6 @@ export default function InAppBrowserBanner({
                             ? t('inAppBrowser.ios')
                             : t('inAppBrowser.android')}
                     </p>
-
                     <div className="mt-3 flex flex-wrap items-center gap-2">
                         {context === 'android' && (
                             <a

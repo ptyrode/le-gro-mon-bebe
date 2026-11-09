@@ -77,7 +77,6 @@ export default function InstallBanner() {
                     <p className="text-ink-soft mt-1 text-xs leading-relaxed">
                         {state.ios ? t('install.ios') : t('install.android')}
                     </p>
-
                     <div className="mt-3 flex flex-wrap items-center gap-2">
                         {state.canPrompt && (
                             <button
