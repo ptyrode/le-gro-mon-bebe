@@ -37,13 +37,11 @@ export default function Timeline({ state }: Props) {
                     })}
                 </p>
             </header>
-
             {pastItems.length === 0 && (
                 <p className="text-ink-soft rounded-2xl bg-white/60 p-4 text-center text-sm">
                     {t('timeline.empty')}
                 </p>
             )}
-
             <ol className="space-y-2">
                 {pastItems.map((item) => {
                     const past = item.week < currentWeek;

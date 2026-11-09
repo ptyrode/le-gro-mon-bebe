@@ -7,7 +7,7 @@ import {
     type NotificationSupport,
     readNotificationPermission,
 } from '@/lib/notifications';
-import { validateLastPeriodDate } from '@/lib/pregnancy';
+import { formatDueDate, validateLastPeriodDate } from '@/lib/pregnancy';
 import type { AppState, CategoryKey } from '@/lib/types';
 import { useTranslations } from 'next-intl';
 import { useState, useSyncExternalStore } from 'react';
@@ -104,7 +104,6 @@ export default function Settings({
             <h1 className="text-ink mb-6 text-xl font-extrabold tracking-tight">
                 {t('settings.title')}
             </h1>
-
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <label
                     htmlFor="ddr"
@@ -125,13 +124,20 @@ export default function Settings({
                     }}
                     className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 outline-none"
                 />
-                {dateError && (
+                {dateError ? (
                     <p className="text-berry mt-2 text-sm font-medium">
                         {dateError}
                     </p>
+                ) : (
+                    lastPeriodDate && (
+                        <p className="text-ink-soft mt-2 text-sm">
+                            {t('dashboard.dueDate', {
+                                date: formatDueDate(lastPeriodDate),
+                            })}
+                        </p>
+                    )
                 )}
             </section>
-
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <p className="text-ink mb-3 text-sm font-semibold">
                     {t('settings.categoryLabel')}
@@ -165,7 +171,6 @@ export default function Settings({
                     })}
                 </div>
             </section>
-
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <div className="flex items-center justify-between">
                     <div>
@@ -198,7 +203,6 @@ export default function Settings({
                     <p className="text-berry mt-3 text-xs">{notifMsg}</p>
                 )}
             </section>
-
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <p className="text-ink text-sm font-semibold">
                     {t('settings.feedbackTitle')}
@@ -214,7 +218,6 @@ export default function Settings({
                     {t('settings.feedbackCta')}
                 </a>
             </section>
-
             <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
                 <p className="text-ink text-sm font-semibold">
                     {t('settings.supportTitle')}
@@ -233,7 +236,6 @@ export default function Settings({
                     {t('settings.supportCta')}
                 </a>
             </section>
-
             <section className="border-berry/20 rounded-3xl border-2 bg-white p-5">
                 {!confirmReset ? (
                     <button

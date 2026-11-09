@@ -51,9 +51,7 @@ export default function Onboarding({ onStart }: Props) {
                 </h1>
                 <p className="text-ink-soft mt-2">{t('onboarding.tagline')}</p>
             </header>
-
             <InAppBrowserBanner className="mb-8" />
-
             <section className="mb-8">
                 <label
                     htmlFor="ddr"
@@ -76,7 +74,6 @@ export default function Onboarding({ onStart }: Props) {
                     {t('onboarding.dateHint')}
                 </p>
             </section>
-
             <section className="mb-8">
                 <p className="text-ink mb-3 text-sm font-semibold">
                     {t('onboarding.categoryLabel')}
@@ -116,13 +113,11 @@ export default function Onboarding({ onStart }: Props) {
                     })}
                 </div>
             </section>
-
             {error && (
                 <p className="bg-berry/10 text-berry mb-4 rounded-xl px-4 py-2 text-center text-sm font-medium">
                     {error}
                 </p>
             )}
-
             <button
                 type="button"
                 onClick={submit}

@@ -44,6 +44,21 @@ export function daysUntilDue(
     return TERM_DAYS - daysSince(lastPeriodDate, now);
 }
 
+export function dueDate(lastPeriodDate: string): Date {
+    const date = parseISODate(lastPeriodDate);
+    date.setDate(date.getDate() + TERM_DAYS);
+    return date;
+}
+
+export function formatDueDate(lastPeriodDate: string): string {
+    return dueDate(lastPeriodDate).toLocaleDateString('fr-FR', {
+        weekday: 'long',
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+    });
+}
+
 export function progress(
     lastPeriodDate: string,
     now: Date = new Date()
