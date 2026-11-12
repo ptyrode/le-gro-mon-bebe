@@ -15,5 +15,7 @@
     - Pour chaque nom : un déclencheur « Événement personnalisé » et une balise « Google Analytics : Événement GA4 ». Chaque paramètre demande une « Variable de couche de données » du même nom.
     - `view_change` (`view`), `category_change` (`category`, `source`), `wikipedia_click` (`category`, `week`, `item`), `pwa_install` (`outcome`), `notifications_toggle` (`enabled`, `permission`), `support_click`.
     - ⚠️ `pwa_install` ne remonte que sur Android : iOS n'expose pas `beforeinstallprompt`.
+    - **D'abord, vérifier la liaison GTM → GA4 déjà en place** : mode Aperçu de GTM (Tag Assistant) sur le site, la balise Google (`G-…`) doit se déclencher à l'initialisation ; puis GA4 → Rapports → Temps réel, ou Admin → DebugView, doit voir la visite. Vérifier aussi que la mesure améliorée de GA4 suit les « changements de page basés sur l'historique du navigateur », sans quoi les navigations entre `/`, `/timeline` et `/settings` ne compteront pas comme des pages vues.
+    - Méthode retenue : générer un JSON de conteneur à importer dans GTM (Admin → Importer un conteneur, en fusion), plutôt que de tout créer à la main. Il faudra l'ID de mesure GA4 (`G-…`).
 - [ ] **Formulaire de feedback** : remplacer le `mailto:` par une Serverless Function + Resend.
 - [ ] **Sortir les JSON vers un stockage Vercel** (Edge Config, Blob) : à trancher seulement si le besoin d'éditer le contenu sans redéployer se fait sentir. Aujourd'hui les JSON partent dans le bundle, sans requête réseau, et `public/` est déjà servi par le CDN de Vercel.
