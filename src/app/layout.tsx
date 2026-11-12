@@ -1,30 +1,24 @@
-import './globals.css';
-import ServiceWorkerRegister from '@/components/ServiceWorkerRegister';
+import '@/app/styles/globals.css';
+import ServiceWorkerRegister from '@/components/common/ServiceWorkerRegister';
+import { GTM_ID } from '@/constants/analytics';
+import RootProvider from '@/contexts/RootProvider';
+import { geistSans } from '@/fonts';
 import { locale } from '@/i18n/request';
-import { cn } from '@/lib/cn';
+import { cn } from '@/utils/cn';
 import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata, Viewport } from 'next';
-import { Geist } from 'next/font/google';
-import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-
-const GTM_ID = 'GTM-586X3SW9';
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations();
     return {
-        title: t('app.name'),
-        description: t('app.description'),
-        applicationName: t('app.name'),
+        title: t('base.name'),
+        description: t('base.description'),
+        applicationName: t('base.name'),
         appleWebApp: {
             capable: true,
             statusBarStyle: 'default',
-            title: t('app.name'),
+            title: t('base.name'),
         },
     };
 }
@@ -49,10 +43,10 @@ export default function RootLayout({
         >
             <GoogleTagManager gtmId={GTM_ID} />
             <body className="min-h-full">
-                <NextIntlClientProvider>
+                <RootProvider>
                     {children}
                     <ServiceWorkerRegister />
-                </NextIntlClientProvider>
+                </RootProvider>
             </body>
         </html>
     );

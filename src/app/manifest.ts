@@ -5,9 +5,9 @@ import { getTranslations } from 'next-intl/server';
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
     const t = await getTranslations();
     return {
-        name: t('app.name'),
-        short_name: t('app.shortName'),
-        description: t('app.description'),
+        name: t('base.name'),
+        short_name: t('base.shortName'),
+        description: t('base.description'),
         start_url: '/',
         scope: '/',
         display: 'standalone',

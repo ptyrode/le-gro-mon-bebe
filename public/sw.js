@@ -1,5 +1,5 @@
-const CACHE = 'lgmb-v5';
-const APP_SHELL = ['/'];
+const CACHE = 'lgmb-v6';
+const APP_SHELL = ['/', '/timeline', '/settings', '/new-pregnancy'];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
@@ -27,17 +27,22 @@ self.addEventListener('fetch', (event) => {
 
     const url = new URL(request.url);
     if (url.origin !== self.location.origin) return;
+    if (request.headers.has('RSC') || url.searchParams.has('_rsc')) return;
 
     if (request.mode === 'navigate') {
         event.respondWith(
             fetch(request)
                 .then((res) => {
                     const copy = res.clone();
-                    caches.open(CACHE).then((cache) => cache.put('/', copy));
+                    caches
+                        .open(CACHE)
+                        .then((cache) => cache.put(url.pathname, copy));
                     return res;
                 })
                 .catch(() =>
-                    caches.match('/').then((r) => r || caches.match(request))
+                    caches
+                        .match(url.pathname)
+                        .then((r) => r || caches.match('/'))
                 )
         );
         return;
@@ -88,20 +93,42 @@ function currentWeek(lastPeriodDate) {
     return Math.floor(Math.floor((Date.now() - start) / DAY_MS) / 7);
 }
 
+function weekdayOf(lastPeriodDate) {
+    return new Date(`${lastPeriodDate}T00:00:00`).getDay();
+}
+
+function pregnanciesOf(state) {
+    if (!state) return [];
+    return Array.isArray(state.pregnancies) ? state.pregnancies : [state];
+}
+
+function pregnanciesToNotify(state) {
+    const pregnancies = pregnanciesOf(state);
+    const today = new Date().getDay();
+    const due = pregnancies.filter(
+        (p) => weekdayOf(p.lastPeriodDate) === today
+    );
+    if (due.length > 0) return due;
+    return pregnancies.length === 1 ? pregnancies : [];
+}
+
 self.addEventListener('push', (event) => {
     event.waitUntil(
-        readPushState().then((state) => {
-            if (!state) return;
-            const week = currentWeek(state.lastPeriodDate);
-            const text = state.weeks[week];
-            if (!text) return;
-            return self.registration.showNotification(text.title, {
-                body: text.body,
-                icon: '/icon-192.png',
-                badge: '/badge-96.png',
-                tag: `week-${week}`,
-            });
-        })
+        readPushState().then((state) =>
+            Promise.all(
+                pregnanciesToNotify(state).map((pregnancy) => {
+                    const week = currentWeek(pregnancy.lastPeriodDate);
+                    const text = pregnancy.weeks[week];
+                    if (!text) return null;
+                    return self.registration.showNotification(text.title, {
+                        body: text.body,
+                        icon: '/icon-192.png',
+                        badge: '/badge-96.png',
+                        tag: `${pregnancy.id ?? 'pregnancy'}-week-${week}`,
+                    });
+                })
+            )
+        )
     );
 });
 

@@ -1,17 +1,18 @@
 import {
-    isWeekday,
     parseSubscription,
+    parseWeekdays,
     removeSubscription,
     saveSubscription,
-} from '@/lib/pushStore';
+} from '@/services/subscription';
 
 export async function POST(request: Request) {
     const body = await request.json().catch(() => null);
     const subscription = parseSubscription(body?.subscription);
-    if (!subscription || !isWeekday(body?.weekday)) {
+    const weekdays = parseWeekdays(body?.weekdays ?? body?.weekday);
+    if (!subscription || !weekdays) {
         return Response.json({ error: 'invalid' }, { status: 400 });
     }
-    await saveSubscription(subscription, body.weekday);
+    await saveSubscription(subscription, weekdays);
     return new Response(null, { status: 204 });
 }
 

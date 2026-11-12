@@ -1,19 +1,17 @@
+import { EN_SHORT_WEEKDAYS, ONE_DAY_SECONDS } from '@/constants/date';
 import {
+    getSubscriptionsForWeekday,
     isWeekday,
     removeSubscription,
-    subscriptionsFor,
-} from '@/lib/pushStore';
+} from '@/services/subscription';
 import webpush from 'web-push';
-
-const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-const ONE_DAY_SECONDS = 24 * 60 * 60;
 
 function parisWeekday(date: Date): number {
     const name = new Intl.DateTimeFormat('en-US', {
         timeZone: 'Europe/Paris',
         weekday: 'short',
     }).format(date);
-    return WEEKDAYS.indexOf(name);
+    return EN_SHORT_WEEKDAYS.indexOf(name);
 }
 
 function isExpired(error: unknown): boolean {
@@ -41,7 +39,7 @@ export async function GET(request: Request) {
     const param = new URL(request.url).searchParams.get('weekday');
     const requested = param ? Number(param) : null;
     const weekday = isWeekday(requested) ? requested : parisWeekday(new Date());
-    const subscriptions = await subscriptionsFor(weekday);
+    const subscriptions = await getSubscriptionsForWeekday(weekday);
     let sent = 0;
     let removed = 0;
     let failed = 0;

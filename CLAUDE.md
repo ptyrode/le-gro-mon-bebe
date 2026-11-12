@@ -8,6 +8,7 @@ Deux pièges déjà rencontrés :
 
 - `setState` dans un `useEffect` est une **erreur** de lint (`react-hooks/set-state-in-effect`). Pour lire le `localStorage`, utiliser `useSyncExternalStore` — voir `src/hooks/usePregnancy.ts`.
 - Les apostrophes doivent être échappées en JSX (`&apos;`), sinon `react/no-unescaped-entities` bloque le build.
+- Dans `translations.json`, une apostrophe **collée à une balise ou à une variable** (`d'<item>`, `l'{name}`) ouvre un échappement ICU et casse le message, qui s'affiche brut. La doubler : `d''<item>{name}</item>` s'affiche « d'un camembert ».
 
 ## Qualité de code
 
@@ -39,13 +40,29 @@ Aucune chaîne visible ne doit être écrite en dur dans un composant : tout pas
 
 ```tsx
 const t = useTranslations();
-t('onboarding.dateLabel');
-t('app.name');
+t('forms.fields.lastPeriodDate.label');
+t('base.name');
 ```
+
+Le fichier se range en cinq sections :
+
+- **`base`** : nom et description de l'appli (manifest, métadonnées, titre).
+- **`common`** : ce qui sert à plusieurs écrans. `cta` regroupe **tous les libellés de bouton**, par ordre alphabétique ; `nav`, `unit` (g, kg, SA, S20…), `pregnancy`, et un groupe par composant partagé (`onboarding`, `installBanner`, `inAppBrowserBanner`).
+- **`messages`** : retours à l'utilisateur (permission des notifications, lien copié) et texte des notifications de croissance.
+- **`forms`** : `fields` (libellé, aide, placeholder de chaque champ) et `error` (erreurs de saisie).
+- **`pages`** : un groupe par route, nommé comme elle (`home`, `timeline`, `settings`, `newPregnancy`).
+
+Un libellé déjà présent dans `common.cta` se réutilise au lieu d'être dupliqué dans une page.
 
 next-intl tourne **sans routing i18n** : une seule locale, définie dans `src/i18n/request.ts`. Ne pas introduire de préfixe d'URL (`/fr/…`) — ça casserait le `start_url` du manifest PWA et le cache du service worker.
 
 Les **données** (`src/data/`) ne sont pas concernées : les noms d'items, `funText` et comparaisons de poids sont du contenu, pas de l'interface.
+
+## Structure
+
+`src/app/<route>/page.tsx` ne fait qu'envelopper `src/components/pages/<Route>Page/<Route>Page.tsx` dans `DefaultLayout`. **Le nom du composant de page reprend celui de la route** (`/new-pregnancy` → `NewPregnancyPage`), et **ses sous-composants, rangés dans le même dossier, sont préfixés du nom de la page sans « Page »** : `HomePage/HomeGrowthCard.tsx`, `SettingsPage/SettingsResetSection.tsx`. Les chemins vivent dans `src/constants/routes.ts`, jamais en dur. Une nouvelle route s'ajoute aussi à `APP_SHELL` dans `public/sw.js`.
+
+Dans `utils/` : **un fichier par thème**, en exports nommés (`date.ts` pour tout ce qui manipule une date, `growth.ts` pour le contenu d'une semaine, `pregnancy.ts`, `storage.ts`, `browser.ts`…). Une nouvelle fonction rejoint le fichier de son thème plutôt que d'en créer un. Les fonctions s'y déclarent sans `export`, et **un seul `export { … }` en fin de fichier** les liste toutes. Même règle dans `services/` : `push.ts` (abonnement du téléphone), `subscription.ts` (abonnements stockés dans Redis). Un helper qui ne sert qu'à un seul fichier y reste en fonction locale, non exportée. Pas de sous-dossier tant qu'un dossier reste petit (`hooks/`, `constants/` sont à plat). Les constantes vont dans `constants/<sujet>.ts`, les types dans `src/@types/*.d.ts` (ambiants, sans import ni export).
 
 ## Cohérence de l'interface
 
@@ -54,7 +71,7 @@ Dans tout élément interactif — bouton, onglet, pastille de catégorie, badge
 ```tsx
 <a className="inline-flex items-center gap-2 …">
     <span aria-hidden="true">☕</span>
-    {t('settings.supportCta')}
+    {t('common.cta.support')}
 </a>
 ```
 

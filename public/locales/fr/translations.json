@@ -1,98 +1,166 @@
 {
-    "app": {
+    "base": {
         "name": "Lé gro mon bébé",
-        "description": "Suis la croissance de bébé semaine après semaine, en fromages, poissons, animaux, desserts… ou fruits, pour les puristes.",
-        "shortName": "Lé gro bébé"
+        "shortName": "Lé gro bébé",
+        "description": "Suis la croissance de bébé semaine après semaine, en fromages, poissons, animaux, desserts… ou fruits, pour les puristes."
     },
-    "onboarding": {
-        "tagline": "Suis la croissance de bébé semaine après semaine, en trucs rigolos.",
-        "dateLabel": "Date de tes dernières règles",
-        "dateHint": "On calcule la semaine de grossesse (SA) à partir de cette date.",
-        "categoryLabel": "Bébé, tu le compares en quoi ?",
-        "submit": "C'est parti !",
-        "errorCategory": "Choisis une catégorie de comparaison !"
-    },
-    "dashboard": {
-        "size": "Bébé mesure {size} cm",
-        "sizeEquivalent": "Soit la taille d'",
-        "weight": "Bébé pèse {weight}",
-        "week": "Semaine {week} / {max}",
-        "daysLeft": "J−{days} avant le terme",
-        "dueToday": "C'est le grand jour ! 🎉",
-        "overdue": "Terme dépassé de {days} j 🍼",
-        "dueDate": "Terme prévu le {date}.",
-        "compareIn": "Comparer en…",
-        "wikipediaHint": "(article Wikipédia, nouvel onglet)",
-        "born": {
-            "title": "Bébé devrait être né !",
-            "body": "Le terme est dépassé de {days} jours. Soit il est déjà là et personne ne me tient au courant, soit il est très bien où il est.",
-            "hint": "Tu peux corriger la date dans les réglages si elle n'est pas la bonne."
+    "common": {
+        "onboarding": {
+            "tagline": "Suis la croissance de bébé semaine après semaine, en trucs rigolos."
         },
-        "oddDate": {
-            "title": "Cette date est bizarre",
-            "future": "Elle est dans le futur, et ça, même moi je ne sais pas faire.",
-            "implausible": "Elle remonte à plus de deux ans. Un petit tour dans les réglages ?"
+        "cta": {
+            "addPregnancy": "Ajouter une grossesse",
+            "babyBorn": "Bébé est né",
+            "cancel": "Annuler",
+            "close": "Terminer",
+            "confirmReset": "Oui, effacer",
+            "copyLink": "Copier le lien",
+            "delete": "Supprimer",
+            "edit": "Modifier",
+            "install": "Installer",
+            "later": "Plus tard",
+            "newPregnancy": "Nouvelle grossesse",
+            "openChrome": "Ouvrir dans Chrome",
+            "reopen": "Rouvrir",
+            "reset": "Tout effacer et recommencer",
+            "start": "C'est parti !",
+            "suggestIdea": "Proposer une idée",
+            "support": "Buy me a coffee"
         },
-        "tooEarly": {
-            "title": "C'est encore tout frais",
-            "body": "À ce stade, bébé est trop petit pour qu'on lui trouve un équivalent. Rendez-vous à la semaine {week} !"
+        "pregnancy": {
+            "dueDate": "Terme prévu le {date}.",
+            "unnamed": "Bébé du {date}"
+        },
+        "unit": {
+            "age": "{weeks} SA",
+            "ageWithDays": "{weeks} SA + {days} j",
+            "week": "S{week}",
+            "g": "{value} g",
+            "kg": "{value} kg"
+        },
+        "nav": {
+            "dashboard": "Accueil",
+            "timeline": "Timeline",
+            "settings": "Réglages"
+        },
+        "inAppBrowserBanner": {
+            "title": "Ouvre l'appli dans ton navigateur",
+            "body": "Tu es dans le navigateur de Messenger ou de Facebook : impossible d'y installer l'appli ou d'y recevoir les notifications. Il faudra ressaisir ta date une fois dans le vrai navigateur.",
+            "android": "Le bouton ci-dessous l'ouvre dans Chrome. Sinon : menu ⋮ en haut, puis « Ouvrir dans le navigateur ».",
+            "ios": "Appuie sur le menu ⋯ en haut ou en bas de l'écran, puis sur « Ouvrir dans le navigateur ». Ou copie le lien et colle-le dans Safari."
+        },
+        "installBanner": {
+            "title": "Installe l'appli sur ton téléphone",
+            "ios": "Appuie sur le bouton Partager en bas de Safari, puis sur « Sur l'écran d'accueil ». C'est la seule façon de recevoir les notifications sur iPhone.",
+            "android": "Ajoute Lé gro mon bébé à ton écran d'accueil pour l'ouvrir comme une vraie appli."
         }
     },
-    "timeline": {
-        "title": "Toute la grossesse",
-        "subtitle": "{emoji} {label} : Le chemin parcouru",
-        "empty": "Rien à montrer pour l'instant. Reviens quand bébé aura quelques semaines !"
+    "messages": {
+        "notificationPermission": {
+            "unsupported": "Ton navigateur ne gère pas les notifications 🤷",
+            "denied": "Autorisation refusée. Tu pourras la donner plus tard dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé.",
+            "blocked": "Les notifications sont bloquées. Réautorise-les dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé, puis réactive-les ici."
+        },
+        "growthNotification": {
+            "title": "Semaine {week} : Bébé a grandi ! 🎉",
+            "titleNamed": "Semaine {week} : {name} a grandi ! 🎉"
+        },
+        "linkCopied": "Lien copié !"
     },
-    "settings": {
-        "title": "Réglages",
-        "dateLabel": "Date des dernières règles",
-        "categoryLabel": "Catégorie de comparaison",
-        "notificationsLabel": "Notifications",
-        "notificationsHint": "Un petit rappel quand bébé a grandi.",
-        "notificationsUnsupported": "Ton navigateur ne gère pas les notifications 🤷",
-        "notificationsDenied": "Autorisation refusée. Tu pourras la donner plus tard dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé.",
-        "feedbackTitle": "Une idée de comparaison ?",
-        "feedbackBody": "Poissons rares, fromages qui puent, animaux improbables… propose !",
-        "feedbackCta": "Proposer une idée",
-        "feedbackSubject": "Idée pour Lé gro mon bébé",
-        "feedbackMailBody": "Mon idée de comparaison :",
-        "resetCta": "Tout effacer et recommencer",
-        "resetConfirm": "Sûr ? Toutes les données locales seront effacées.",
-        "resetConfirmCta": "Oui, effacer",
-        "resetCancel": "Annuler",
-        "notificationsBlocked": "Les notifications sont bloquées. Réautorise-les dans les réglages de ton téléphone, rubrique Notifications de Lé gro bébé, puis réactive-les ici.",
-        "supportTitle": "Ce projet t'a fait sourire ?",
-        "supportBody": "Il est gratuit et sans pub. Tu peux m'offrir un café si le cœur t'en dit.",
-        "supportCta": "Buy me a coffee"
+    "forms": {
+        "fields": {
+            "lastPeriodDate": {
+                "label": "Date de tes dernières règles",
+                "hint": "On calcule la semaine de grossesse (SA) à partir de cette date.",
+                "settingsLabel": "Date des dernières règles"
+            },
+            "category": {
+                "label": "Bébé, tu le compares en quoi ?",
+                "settingsLabel": "Catégorie de comparaison"
+            },
+            "name": {
+                "labelOptional": "Petit nom de bébé (facultatif)",
+                "placeholder": "Haricot, Crevette, Bébé de Julie…",
+                "label": "Petit nom de bébé"
+            }
+        },
+        "error": {
+            "category": "Choisis une catégorie de comparaison !",
+            "lastPeriodDate": {
+                "missing": "Il me faut la date de tes dernières règles 🗓️",
+                "invalid": "Cette date n'est pas valide 🤔",
+                "future": "Cette date est dans le futur, ça coince un peu 😅",
+                "implausible": "Ça fait plus de deux ans… tu es sûre de la date ? 🤨"
+            }
+        }
     },
-    "nav": {
-        "dashboard": "Accueil",
-        "timeline": "Timeline",
-        "settings": "Réglages"
-    },
-    "notification": {
-        "title": "Semaine {week} : Bébé a grandi ! 🎉"
-    },
-    "dateErrors": {
-        "missing": "Il me faut la date de tes dernières règles 🗓️",
-        "invalid": "Cette date n'est pas valide 🤔",
-        "future": "Cette date est dans le futur, ça coince un peu 😅",
-        "implausible": "Ça fait plus de deux ans… tu es sûre de la date ? 🤨"
-    },
-    "inAppBrowser": {
-        "title": "Ouvre l'appli dans ton navigateur",
-        "body": "Tu es dans le navigateur de Messenger ou de Facebook : impossible d'y installer l'appli ou d'y recevoir les notifications. Il faudra ressaisir ta date une fois dans le vrai navigateur.",
-        "android": "Le bouton ci-dessous l'ouvre dans Chrome. Sinon : menu ⋮ en haut, puis « Ouvrir dans le navigateur ».",
-        "ios": "Appuie sur le menu ⋯ en haut ou en bas de l'écran, puis sur « Ouvrir dans le navigateur ». Ou copie le lien et colle-le dans Safari.",
-        "openChrome": "Ouvrir dans Chrome",
-        "copyLink": "Copier le lien",
-        "copied": "Lien copié !"
-    },
-    "install": {
-        "title": "Installe l'appli sur ton téléphone",
-        "ios": "Appuie sur le bouton Partager en bas de Safari, puis sur « Sur l'écran d'accueil ». C'est la seule façon de recevoir les notifications sur iPhone.",
-        "android": "Ajoute Lé gro mon bébé à ton écran d'accueil pour l'ouvrir comme une vraie appli.",
-        "cta": "Installer",
-        "dismiss": "Plus tard"
+    "pages": {
+        "home": {
+            "size": "Bébé mesure {size} cm",
+            "sizeEquivalent": "Soit la taille d''<item>{name}</item>.",
+            "weight": "Bébé pèse {weight}",
+            "week": "Semaine {week} / {max}",
+            "daysLeft": "J−{days} avant le terme",
+            "dueToday": "C'est le grand jour ! 🎉",
+            "overdue": "Terme dépassé de {days} j 🍼",
+            "compareIn": "Comparer en…",
+            "wikipediaHint": "(article Wikipédia, nouvel onglet)",
+            "born": {
+                "title": "Bébé devrait être né !",
+                "body": "Le terme est dépassé de {days} jours. Soit il est déjà là et personne ne me tient au courant, soit il est très bien où il est.",
+                "hint": "Tu peux corriger la date dans les réglages si elle n'est pas la bonne."
+            },
+            "oddDate": {
+                "title": "Cette date est bizarre",
+                "future": "Elle est dans le futur, et ça, même moi je ne sais pas faire.",
+                "implausible": "Elle remonte à plus de deux ans. Un petit tour dans les réglages ?"
+            },
+            "tooEarly": {
+                "title": "C'est encore tout frais",
+                "body": "À ce stade, bébé est trop petit pour qu'on lui trouve un équivalent. Rendez-vous à la semaine {week} !"
+            },
+            "switchLabel": "Choisir la grossesse affichée",
+            "closed": {
+                "title": "Grossesse terminée",
+                "body": "Tout le chemin parcouru reste dans la timeline."
+            }
+        },
+        "timeline": {
+            "title": "Toute la grossesse",
+            "subtitle": "{emoji} {label} : Le chemin parcouru",
+            "empty": "Rien à montrer pour l'instant. Reviens quand bébé aura quelques semaines !",
+            "measures": "{size} cm · {weight}",
+            "current": "ici"
+        },
+        "settings": {
+            "title": "Réglages",
+            "notifications": {
+                "title": "Notifications",
+                "hint": "Un petit rappel quand bébé a grandi."
+            },
+            "feedback": {
+                "title": "Une idée de comparaison ?",
+                "body": "Poissons rares, fromages qui puent, animaux improbables… propose !",
+                "mailSubject": "Idée pour Lé gro mon bébé",
+                "mailBody": "Mon idée de comparaison :"
+            },
+            "reset": {
+                "confirm": "Sûr ? Toutes les données locales seront effacées."
+            },
+            "support": {
+                "title": "Ce projet t'a fait sourire ?",
+                "body": "Il est gratuit et sans pub. Tu peux m'offrir un café si le cœur t'en dit."
+            },
+            "pregnancies": {
+                "title": "Grossesses",
+                "shown": "En cours",
+                "closed": "Terminée",
+                "deleteConfirm": "Supprimer cette grossesse ? Ses données seront effacées de ce téléphone."
+            }
+        },
+        "newPregnancy": {
+            "title": "Une nouvelle grossesse",
+            "tagline": "Chaque grossesse garde sa date, sa catégorie et sa timeline."
+        }
     }
 }

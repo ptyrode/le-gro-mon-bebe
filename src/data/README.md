@@ -64,7 +64,7 @@ Les items n'ont **pas** d'emoji : chacun a son image dans `public/images/`. Seul
 **catégorie** garde un `emoji`, qui sert au sélecteur de catégorie et de repli si une image
 manque.
 
-La clé `key` doit correspondre à une valeur de `CategoryKey` (`src/lib/types.ts`) **et** au nom du fichier, sans quoi `src/lib/data.ts` ne s'y retrouvera pas.
+La clé `key` doit correspondre à une valeur de `CategoryKey` (`src/@types/data.d.ts`) **et** au nom du fichier, sans quoi `src/constants/data.ts` ne s'y retrouvera pas.
 
 Pour ajouter une catégorie : copier la structure de `fruits.json`, garder les mêmes numéros de `week`, changer `key`, `label`, `emoji` et les `items`, puis déclarer la clé dans `CategoryKey` et l'import dans `data.ts`.
 
