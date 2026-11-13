@@ -1,7 +1,16 @@
 'use client';
 
 import InAppBrowserBanner from '@/components/common/InAppBrowserBanner';
+import Button from '@/components/ui/Button';
+import Field from '@/components/ui/Field';
+import SelectableCard from '@/components/ui/SelectableCard';
+import Text from '@/components/ui/Text';
 import { categoryList } from '@/constants/data';
+import { ICONS } from '@/constants/icons';
+import {
+    readNotificationPermission,
+    requestNotificationPermission,
+} from '@/utils/browser';
 import { cn } from '@/utils/cn';
 import { getTodayISO, validateLastPeriodDate } from '@/utils/date';
 import { useTranslations } from 'next-intl';
@@ -22,142 +31,129 @@ export default function Onboarding({ onStart, onCancel }: OnboardingProps) {
     const [name, setName] = useState('');
     const [lastPeriodDate, setLastPeriodDate] = useState('');
     const [category, setCategory] = useState<CategoryKey | null>(null);
-    const [error, setError] = useState<string | null>(null);
+    const [dateError, setDateError] = useState<string | null>(null);
+    const [categoryError, setCategoryError] = useState<string | null>(null);
 
-    const submit = async () => {
-        const dateError = validateLastPeriodDate(lastPeriodDate);
-        if (dateError) {
-            setError(t(`forms.error.lastPeriodDate.${dateError}`));
-            return;
-        }
-        if (!category) {
-            setError(t('forms.error.category'));
-            return;
-        }
-        if (
-            typeof window !== 'undefined' &&
-            'Notification' in window &&
-            Notification.permission === 'default'
-        ) {
-            await Notification.requestPermission();
-        }
+    const submit = () => {
+        const dateErrorKey = validateLastPeriodDate(lastPeriodDate);
+        setDateError(
+            dateErrorKey
+                ? t(`forms.error.lastPeriodDate.${dateErrorKey}`)
+                : null
+        );
+        setCategoryError(category ? null : t('forms.error.category'));
+        if (dateErrorKey || !category) return;
         onStart(lastPeriodDate, category, name.trim());
+        if (readNotificationPermission() === 'default') {
+            void requestNotificationPermission();
+        }
     };
 
     return (
         <main className="mx-auto flex min-h-dvh w-full max-w-md flex-col px-5 py-10">
             <header className="mb-8 text-center">
-                <div className="mb-3 text-6xl">🤰</div>
-                <h1 className="text-ink text-3xl font-extrabold tracking-tight">
+                <div className="mb-3 text-6xl">{ICONS.pregnancy}</div>
+                <Text
+                    as="h1"
+                    variant="display"
+                >
                     {adding ? t('pages.newPregnancy.title') : t('base.name')}
-                </h1>
-                <p className="text-ink-soft mt-2">
+                </Text>
+                <Text className="mt-2">
                     {adding
                         ? t('pages.newPregnancy.tagline')
                         : t('common.onboarding.tagline')}
-                </p>
+                </Text>
             </header>
             <InAppBrowserBanner className="mb-8" />
+            <Field
+                id="name"
+                type="text"
+                maxLength={40}
+                className="mb-8"
+                label={t('forms.fields.name.labelOptional')}
+                value={name}
+                placeholder={t('forms.fields.name.placeholder')}
+                onChange={(e) => setName(e.target.value)}
+            />
+            <Field
+                id="ddr"
+                type="date"
+                max={getTodayISO()}
+                className="mb-8"
+                label={t('forms.fields.lastPeriodDate.label')}
+                hint={t('forms.fields.lastPeriodDate.hint')}
+                error={dateError}
+                value={lastPeriodDate}
+                onChange={(e) => {
+                    setLastPeriodDate(e.target.value);
+                    setDateError(null);
+                }}
+            />
             <section className="mb-8">
-                <label
-                    htmlFor="name"
-                    className="text-ink mb-2 block text-sm font-semibold"
+                <Text
+                    variant="label"
+                    className="mb-3"
                 >
-                    {t('forms.fields.name.labelOptional')}
-                </label>
-                <input
-                    id="name"
-                    type="text"
-                    maxLength={40}
-                    value={name}
-                    placeholder={t('forms.fields.name.placeholder')}
-                    onChange={(e) => setName(e.target.value)}
-                    className="border-cream-deep text-ink focus:border-accent placeholder:text-ink-soft/60 w-full rounded-2xl border-2 bg-white px-4 py-3 shadow-sm outline-none"
-                />
-            </section>
-            <section className="mb-8">
-                <label
-                    htmlFor="ddr"
-                    className="text-ink mb-2 block text-sm font-semibold"
-                >
-                    {t('forms.fields.lastPeriodDate.label')}
-                </label>
-                <input
-                    id="ddr"
-                    type="date"
-                    max={getTodayISO()}
-                    value={lastPeriodDate}
-                    onChange={(e) => {
-                        setLastPeriodDate(e.target.value);
-                        setError(null);
-                    }}
-                    className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 shadow-sm outline-none"
-                />
-                <p className="text-ink-soft mt-2 text-xs">
-                    {t('forms.fields.lastPeriodDate.hint')}
-                </p>
-            </section>
-            <section className="mb-8">
-                <p className="text-ink mb-3 text-sm font-semibold">
                     {t('forms.fields.category.label')}
-                </p>
+                </Text>
                 <div className="grid grid-cols-2 gap-3">
-                    {categoryList.map((cat) => {
-                        const selected = category === cat.key;
-                        return (
-                            <button
-                                key={cat.key}
-                                type="button"
-                                onClick={() => {
-                                    setCategory(cat.key);
-                                    setError(null);
-                                }}
-                                className={cn(
-                                    'flex flex-col items-start gap-1 rounded-2xl border-2 p-4 text-left transition',
-                                    selected
-                                        ? 'border-accent bg-accent/10 shadow-sm'
-                                        : 'border-cream-deep hover:border-accent/50 bg-white'
-                                )}
-                            >
+                    {categoryList.map((cat) => (
+                        <SelectableCard
+                            key={cat.key}
+                            selected={category === cat.key}
+                            className="p-4"
+                            onSelect={() => {
+                                setCategory(cat.key);
+                                setCategoryError(null);
+                            }}
+                        >
+                            <span className="flex flex-col items-start gap-1">
                                 <span
                                     aria-hidden="true"
                                     className="text-3xl"
                                 >
                                     {cat.emoji}
                                 </span>
-                                <span className="text-ink font-semibold">
+                                <span className="text-chocolate font-semibold">
                                     {cat.label}
                                 </span>
-                                <span className="text-ink-soft text-xs leading-snug">
+                                <Text
+                                    as="span"
+                                    variant="hint"
+                                >
                                     {cat.description}
-                                </span>
-                            </button>
-                        );
-                    })}
+                                </Text>
+                            </span>
+                        </SelectableCard>
+                    ))}
                 </div>
+                {categoryError && (
+                    <Text
+                        variant="error"
+                        className="mt-2"
+                    >
+                        {categoryError}
+                    </Text>
+                )}
             </section>
-            {error && (
-                <p className="bg-berry/10 text-berry mb-4 rounded-xl px-4 py-2 text-center text-sm font-medium">
-                    {error}
-                </p>
-            )}
-            <button
-                type="button"
-                onClick={submit}
-                className="bg-accent shadow-accent/30 hover:bg-accent-deep mt-auto inline-flex w-full items-center justify-center gap-2 rounded-2xl px-6 py-4 text-base font-bold text-white shadow-lg transition active:scale-[0.98]"
-            >
-                <span aria-hidden="true">🚀</span>
-                {t('common.cta.start')}
-            </button>
-            {onCancel && (
-                <button
-                    type="button"
-                    onClick={onCancel}
-                    className="text-ink-soft mt-3 w-full py-2 text-base font-semibold"
+            <div className="mt-auto flex gap-2">
+                {onCancel && (
+                    <Button
+                        variant="secondary"
+                        onClick={onCancel}
+                    >
+                        {t('common.cta.cancel')}
+                    </Button>
+                )}
+                <Button
+                    icon={ICONS.start}
+                    className={cn(!onCancel && 'w-full')}
+                    onClick={submit}
                 >
-                    {t('common.cta.cancel')}
-                </button>
-            )}
+                    {t('common.cta.start')}
+                </Button>
+            </div>
         </main>
     );
 }

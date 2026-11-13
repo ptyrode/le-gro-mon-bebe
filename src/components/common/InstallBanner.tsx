@@ -1,5 +1,9 @@
 'use client';
 
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
+import { ICONS } from '@/constants/icons';
 import { isInAppBrowser, isIOS } from '@/utils/browser';
 import {
     dismiss,
@@ -71,27 +75,38 @@ export default function InstallBanner() {
     if (!state.ios && !state.canPrompt) return null;
 
     return (
-        <section className="border-accent/30 bg-accent/10 mt-6 rounded-3xl border-2 p-4">
+        <Card
+            variant="info"
+            className="mt-6"
+        >
             <div className="flex items-start gap-3">
                 <span
                     aria-hidden="true"
                     className="text-2xl"
                 >
-                    📲
+                    {ICONS.install}
                 </span>
                 <div className="min-w-0 flex-1">
-                    <p className="text-ink text-sm font-bold">
+                    <Text variant="label">
                         {t('common.installBanner.title')}
-                    </p>
-                    <p className="text-ink-soft mt-1 text-xs leading-relaxed">
+                    </Text>
+                    <Text
+                        variant="hint"
+                        className="mt-1"
+                    >
                         {state.ios
                             ? t('common.installBanner.ios')
                             : t('common.installBanner.android')}
-                    </p>
+                    </Text>
                     <div className="mt-3 flex flex-wrap items-center gap-2">
+                        <Button
+                            variant="secondary"
+                            onClick={dismiss}
+                        >
+                            {t('common.cta.later')}
+                        </Button>
                         {state.canPrompt && (
-                            <button
-                                type="button"
+                            <Button
                                 onClick={async () => {
                                     const accepted = await promptInstall();
                                     track({
@@ -101,21 +116,13 @@ export default function InstallBanner() {
                                             : 'dismissed',
                                     });
                                 }}
-                                className="bg-accent hover:bg-accent-deep rounded-xl px-4 py-2 text-base font-bold text-white transition"
                             >
                                 {t('common.cta.install')}
-                            </button>
+                            </Button>
                         )}
-                        <button
-                            type="button"
-                            onClick={dismiss}
-                            className="text-ink-soft px-2 py-2 text-base font-semibold underline"
-                        >
-                            {t('common.cta.later')}
-                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </Card>
     );
 }

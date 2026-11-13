@@ -1,10 +1,6 @@
 'use client';
 
-import {
-    createPregnancy,
-    createState,
-    getOpenPregnancies,
-} from '@/utils/pregnancy';
+import { createPregnancy, createState } from '@/utils/pregnancy';
 import { clearState, loadState, saveState } from '@/utils/storage';
 import { useCallback, useSyncExternalStore } from 'react';
 
@@ -36,17 +32,6 @@ function patchPregnancy(
             p.id === id ? { ...p, ...patch } : p
         ),
     };
-}
-
-function closePregnancy(
-    state: AppState,
-    id: string,
-    closedAtISO: string
-): AppState {
-    const next = patchPregnancy(state, id, { closedAt: closedAtISO });
-    if (state.activeId !== id) return next;
-    const stillOpen = getOpenPregnancies(next)[0];
-    return stillOpen ? { ...next, activeId: stillOpen.id } : next;
 }
 
 let cache: AppState | null = null;
@@ -159,7 +144,9 @@ export default function usePregnancy(): UsePregnancy {
     }, []);
 
     const close = useCallback((id: string) => {
-        update((s) => closePregnancy(s, id, new Date().toISOString()));
+        update((s) =>
+            patchPregnancy(s, id, { closedAt: new Date().toISOString() })
+        );
     }, []);
 
     const reopen = useCallback((id: string) => {

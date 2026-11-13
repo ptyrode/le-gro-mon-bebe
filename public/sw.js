@@ -1,5 +1,11 @@
-const CACHE = 'lgmb-v6';
-const APP_SHELL = ['/', '/timeline', '/settings', '/new-pregnancy'];
+const CACHE = 'lgmb-v7';
+const APP_SHELL = [
+    '/',
+    '/timeline',
+    '/settings',
+    '/new-pregnancy',
+    '/styleguide',
+];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(

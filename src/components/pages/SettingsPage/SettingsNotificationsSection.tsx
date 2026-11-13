@@ -1,7 +1,12 @@
 'use client';
 
-import { readNotificationPermission } from '@/utils/browser';
-import { cn } from '@/utils/cn';
+import Card from '@/components/ui/Card';
+import Switch from '@/components/ui/Switch';
+import {
+    readNotificationPermission,
+    requestNotificationPermission,
+    subscribeNotificationPermission,
+} from '@/utils/browser';
 import { track } from '@/utils/track';
 import { useTranslations } from 'next-intl';
 import { useState, useSyncExternalStore } from 'react';
@@ -11,8 +16,6 @@ interface SettingsNotificationsSectionProps {
     onSetEnabled: (enabled: boolean) => void;
 }
 
-const noSubscribe = () => () => {};
-
 export default function SettingsNotificationsSection({
     enabled,
     onSetEnabled,
@@ -20,7 +23,7 @@ export default function SettingsNotificationsSection({
     const t = useTranslations();
     const [message, setMessage] = useState<string | null>(null);
     const initialPermission = useSyncExternalStore<NotificationSupport>(
-        noSubscribe,
+        subscribeNotificationPermission,
         readNotificationPermission,
         () => 'unsupported'
     );
@@ -58,7 +61,7 @@ export default function SettingsNotificationsSection({
             });
             return;
         }
-        const next = await Notification.requestPermission();
+        const next = await requestNotificationPermission();
         setRequestedPermission(next);
         onSetEnabled(next === 'granted');
         setMessage(
@@ -74,35 +77,15 @@ export default function SettingsNotificationsSection({
     };
 
     return (
-        <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
-            <div className="flex items-center justify-between">
-                <div>
-                    <p className="text-ink text-sm font-semibold">
-                        {t('pages.settings.notifications.title')}
-                    </p>
-                    <p className="text-ink-soft text-xs">
-                        {t('pages.settings.notifications.hint')}
-                    </p>
-                </div>
-                <button
-                    type="button"
-                    onClick={handleToggle}
-                    role="switch"
-                    aria-checked={active}
-                    className={cn(
-                        'relative h-7 w-12 rounded-full transition',
-                        active ? 'bg-accent' : 'bg-cream-deep'
-                    )}
-                >
-                    <span
-                        className={cn(
-                            'absolute top-1 h-5 w-5 rounded-full bg-white shadow transition-all',
-                            active ? 'left-6' : 'left-1'
-                        )}
-                    />
-                </button>
-            </div>
-            {message && <p className="text-berry mt-3 text-xs">{message}</p>}
-        </section>
+        <Card className="mb-5">
+            <Switch
+                id="notifications"
+                label={t('pages.settings.notifications.title')}
+                hint={t('pages.settings.notifications.hint')}
+                error={message}
+                checked={active}
+                onClick={handleToggle}
+            />
+        </Card>
     );
 }

@@ -1,7 +1,10 @@
 'use client';
 
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
+import { ICONS } from '@/constants/icons';
 import { isInAppBrowser, isIOS } from '@/utils/browser';
-import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 import { useState, useSyncExternalStore } from 'react';
 
@@ -47,52 +50,52 @@ export default function InAppBrowserBanner({
     };
 
     return (
-        <section
-            className={cn(
-                'border-accent/30 bg-accent/10 rounded-3xl border-2 p-4',
-                className
-            )}
+        <Card
+            variant="info"
+            className={className}
         >
             <div className="flex items-start gap-3">
                 <span
                     aria-hidden="true"
                     className="text-2xl"
                 >
-                    🧭
+                    {ICONS.browser}
                 </span>
                 <div className="min-w-0 flex-1">
-                    <p className="text-ink text-sm font-bold">
+                    <Text variant="label">
                         {t('common.inAppBrowserBanner.title')}
-                    </p>
-                    <p className="text-ink-soft mt-1 text-xs leading-relaxed">
+                    </Text>
+                    <Text
+                        variant="hint"
+                        className="mt-1"
+                    >
                         {t('common.inAppBrowserBanner.body')}
-                    </p>
-                    <p className="text-ink-soft mt-1 text-xs leading-relaxed">
+                    </Text>
+                    <Text
+                        variant="hint"
+                        className="mt-1"
+                    >
                         {context === 'ios'
                             ? t('common.inAppBrowserBanner.ios')
                             : t('common.inAppBrowserBanner.android')}
-                    </p>
+                    </Text>
                     <div className="mt-3 flex flex-wrap items-center gap-2">
                         {context === 'android' && (
-                            <a
-                                href={getChromeIntentUrl(window.location)}
-                                className="bg-accent hover:bg-accent-deep rounded-xl px-4 py-2 text-xs font-bold text-white transition"
-                            >
+                            <Button href={getChromeIntentUrl(window.location)}>
                                 {t('common.cta.openChrome')}
-                            </a>
+                            </Button>
                         )}
-                        <button
-                            type="button"
+                        <Button
+                            variant="secondary"
                             onClick={copyLink}
-                            className="text-ink-soft px-2 py-2 text-base font-semibold underline"
                         >
                             {copied
                                 ? t('messages.linkCopied')
                                 : t('common.cta.copyLink')}
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </div>
-        </section>
+        </Card>
     );
 }

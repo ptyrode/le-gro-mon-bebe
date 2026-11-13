@@ -1,3 +1,4 @@
+import { INSTALL_DISMISS_KEY } from '@/constants/install';
 import { LEGACY_STORAGE_KEY, STORAGE_KEY } from '@/constants/storage';
 import { createPregnancy, createState } from '@/utils/pregnancy';
 
@@ -64,6 +65,7 @@ function clearState(): void {
     if (typeof window === 'undefined') return;
     window.localStorage.removeItem(STORAGE_KEY);
     window.localStorage.removeItem(LEGACY_STORAGE_KEY);
+    window.localStorage.removeItem(INSTALL_DISMISS_KEY);
 }
 
 export { clearState, loadState, saveState };

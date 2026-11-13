@@ -4,12 +4,15 @@ import { MAX_WEEK, MIN_WEEK } from '@/constants/weeks';
 import usePregnancy from '@/hooks/usePregnancy';
 import usePregnancyLabel from '@/hooks/usePregnancyLabel';
 import { disablePush, enablePush } from '@/services/push';
-import { readNotificationPermission } from '@/utils/browser';
+import {
+    readNotificationPermission,
+    subscribeNotificationPermission,
+} from '@/utils/browser';
 import { getEquivalenceForWeek } from '@/utils/growth';
 import { getOpenPregnancies } from '@/utils/pregnancy';
 import { useTranslations } from 'next-intl';
 import type { PropsWithChildren } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useSyncExternalStore } from 'react';
 
 type PushSource = Pick<
     Pregnancy,
@@ -19,6 +22,11 @@ type PushSource = Pick<
 function usePushSync(loading: boolean, state: AppState | null): void {
     const t = useTranslations();
     const label = usePregnancyLabel();
+    const permission = useSyncExternalStore<NotificationSupport>(
+        subscribeNotificationPermission,
+        readNotificationPermission,
+        () => 'unsupported'
+    );
 
     const pushKey =
         state?.notifications.enabled === true
@@ -37,10 +45,7 @@ function usePushSync(loading: boolean, state: AppState | null): void {
     useEffect(() => {
         if (loading) return;
         const sources: PushSource[] = pushKey ? JSON.parse(pushKey) : [];
-        if (
-            sources.length === 0 ||
-            readNotificationPermission() !== 'granted'
-        ) {
+        if (sources.length === 0 || permission !== 'granted') {
             void disablePush();
             return;
         }
@@ -66,7 +71,7 @@ function usePushSync(loading: boolean, state: AppState | null): void {
             };
         });
         void enablePush({ pregnancies });
-    }, [loading, pushKey, label, t]);
+    }, [loading, pushKey, permission, label, t]);
 }
 
 export default function PushSyncProvider({ children }: PropsWithChildren) {

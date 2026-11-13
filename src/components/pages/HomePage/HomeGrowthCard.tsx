@@ -1,6 +1,8 @@
 'use client';
 
 import ItemVisual from '@/components/common/ItemVisual';
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
 import {
     formatWeight,
     getEquivalenceForWeek,
@@ -26,23 +28,23 @@ export default function HomeGrowthCard({
     const weight = growth ? formatWeight(growth.weight) : null;
 
     return (
-        <section className="shadow-accent/10 rounded-3xl bg-white p-6 text-center shadow-lg">
+        <Card className="text-center">
             <ItemVisual
                 category={category}
                 item={item}
-                size={160}
+                size="lg"
                 priority
                 className="mx-auto mb-4"
                 emojiClassName="mb-4 block leading-none"
             />
             {growth && (
-                <p className="text-ink text-xl font-extrabold">
+                <Text variant="title">
                     {t('pages.home.size', {
                         size: growth.size.toLocaleString('fr-FR'),
                     })}
-                </p>
+                </Text>
             )}
-            <p className="text-ink-soft mt-1">
+            <Text className="mt-1">
                 {t.rich('pages.home.sizeEquivalent', {
                     name: item.name,
                     item: (chunks) =>
@@ -59,7 +61,7 @@ export default function HomeGrowthCard({
                                         item: item.name,
                                     })
                                 }
-                                className="text-ink decoration-accent hover:text-accent-deep font-bold underline decoration-2 underline-offset-4 transition"
+                                className="text-chocolate decoration-coral hover:text-terracotta font-bold underline decoration-2 underline-offset-4 transition"
                             >
                                 {chunks}
                                 <span className="sr-only">
@@ -67,25 +69,35 @@ export default function HomeGrowthCard({
                                 </span>
                             </a>
                         ) : (
-                            <span className="text-ink font-bold">{chunks}</span>
+                            <span className="text-chocolate font-bold">
+                                {chunks}
+                            </span>
                         ),
                 })}
-            </p>
-            <p className="text-ink-soft mt-3 text-sm italic">{item.funText}</p>
+            </Text>
+            <Text
+                variant="fun"
+                className="mt-3"
+            >
+                {item.funText}
+            </Text>
             {weight && (
-                <div className="border-cream-deep mt-6 border-t pt-5">
-                    <p className="text-ink text-xl font-extrabold">
+                <div className="border-peach mt-6 border-t pt-5">
+                    <Text variant="title">
                         {t('pages.home.weight', {
                             weight: t(`common.unit.${weight.unit}`, weight),
                         })}
-                    </p>
+                    </Text>
                     {joke && (
-                        <p className="text-ink-soft mt-3 text-sm italic">
+                        <Text
+                            variant="fun"
+                            className="mt-3"
+                        >
                             {joke}
-                        </p>
+                        </Text>
                     )}
                 </div>
             )}
-        </section>
+        </Card>
     );
 }

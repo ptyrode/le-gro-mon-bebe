@@ -5,10 +5,20 @@ import { cn } from '@/utils/cn';
 import Image from 'next/image';
 import { useState } from 'react';
 
+type ItemVisualSize = 'sm' | 'lg';
+
+const SIZES: Record<
+    ItemVisualSize,
+    { pixels: number; image: string; emoji: string }
+> = {
+    sm: { pixels: 48, image: 'h-12 w-12', emoji: 'text-4xl' },
+    lg: { pixels: 160, image: 'h-40 w-40', emoji: 'text-9xl' },
+};
+
 interface ItemVisualProps {
     category: CategoryKey;
     item: CategoryItem;
-    size: number;
+    size: ItemVisualSize;
     priority?: boolean;
     emojiClassName?: string;
     className?: string;
@@ -23,13 +33,11 @@ export default function ItemVisual({
     className = '',
 }: ItemVisualProps) {
     const [hasImage, setHasImage] = useState(true);
+    const { pixels, image, emoji } = SIZES[size];
 
     if (!hasImage) {
         return (
-            <span
-                className={emojiClassName}
-                style={{ fontSize: size * 0.75 }}
-            >
+            <span className={cn(emoji, emojiClassName)}>
                 {categories[category].emoji}
             </span>
         );
@@ -39,12 +47,11 @@ export default function ItemVisual({
         <Image
             src={`/images/${category}/${category}-${item.week}.webp`}
             alt={item.name}
-            width={size}
-            height={size}
+            width={pixels}
+            height={pixels}
             priority={priority}
             onError={() => setHasImage(false)}
-            style={{ width: size, height: size }}
-            className={cn('rounded-xl object-cover', className)}
+            className={cn('rounded-xl object-cover', image, className)}
         />
     );
 }

@@ -1,7 +1,7 @@
 'use client';
 
+import Pill from '@/components/ui/Pill';
 import usePregnancyLabel from '@/hooks/usePregnancyLabel';
-import { cn } from '@/utils/cn';
 import { useTranslations } from 'next-intl';
 
 interface HomePregnancySwitcherProps {
@@ -28,25 +28,15 @@ export default function HomePregnancySwitcher({
             aria-label={t('pages.home.switchLabel')}
             className="-mx-5 mb-6 flex gap-2 overflow-x-auto px-5 pb-1"
         >
-            {choices.map((p) => {
-                const active = p.id === pregnancy.id;
-                return (
-                    <button
-                        key={p.id}
-                        type="button"
-                        aria-pressed={active}
-                        onClick={() => onSelect(p.id)}
-                        className={cn(
-                            'shrink-0 rounded-full border-2 px-4 py-1.5 text-base font-semibold whitespace-nowrap transition',
-                            active
-                                ? 'border-accent bg-accent text-white'
-                                : 'border-cream-deep text-ink hover:border-accent/50 bg-white'
-                        )}
-                    >
-                        {label(p)}
-                    </button>
-                );
-            })}
+            {choices.map((p) => (
+                <Pill
+                    key={p.id}
+                    active={p.id === pregnancy.id}
+                    onClick={() => onSelect(p.id)}
+                >
+                    {label(p)}
+                </Pill>
+            ))}
         </nav>
     );
 }

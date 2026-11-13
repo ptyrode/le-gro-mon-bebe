@@ -7,6 +7,8 @@ import SettingsPregnancyForm from '@/components/pages/SettingsPage/SettingsPregn
 import SettingsPregnancyList from '@/components/pages/SettingsPage/SettingsPregnancyList';
 import SettingsResetSection from '@/components/pages/SettingsPage/SettingsResetSection';
 import SettingsSupportSection from '@/components/pages/SettingsPage/SettingsSupportSection';
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
 import { ROUTE_NEW_PREGNANCY } from '@/constants/routes';
 import usePregnancy from '@/hooks/usePregnancy';
 import { useRouter } from 'next/navigation';
@@ -33,9 +35,13 @@ export default function SettingsPage() {
 
     return (
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
-            <h1 className="text-ink mb-6 text-xl font-extrabold tracking-tight">
+            <Text
+                as="h1"
+                variant="title"
+                className="mb-6"
+            >
                 {t('pages.settings.title')}
-            </h1>
+            </Text>
             <SettingsPregnancyList
                 state={state}
                 onSelect={select}
@@ -50,14 +56,14 @@ export default function SettingsPage() {
                 onRename={rename}
                 onSetLastPeriodDate={setLastPeriodDate}
             />
-            <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
+            <Card className="mb-5">
                 <CategoryPicker
                     label={t('forms.fields.category.settingsLabel')}
                     source="settings"
                     category={active.category}
                     onSetCategory={setCategory}
                 />
-            </section>
+            </Card>
             <SettingsNotificationsSection
                 enabled={state.notifications.enabled}
                 onSetEnabled={setNotificationsEnabled}

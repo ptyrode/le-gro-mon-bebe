@@ -20,4 +20,26 @@ function readNotificationPermission(): NotificationSupport {
     return Notification.permission;
 }
 
-export { isInAppBrowser, isIOS, readNotificationPermission };
+const permissionListeners = new Set<() => void>();
+
+function subscribeNotificationPermission(listener: () => void) {
+    permissionListeners.add(listener);
+    return () => {
+        permissionListeners.delete(listener);
+    };
+}
+
+async function requestNotificationPermission(): Promise<NotificationSupport> {
+    if (readNotificationPermission() === 'unsupported') return 'unsupported';
+    const permission = await Notification.requestPermission();
+    permissionListeners.forEach((listener) => listener());
+    return permission;
+}
+
+export {
+    isInAppBrowser,
+    isIOS,
+    readNotificationPermission,
+    requestNotificationPermission,
+    subscribeNotificationPermission,
+};

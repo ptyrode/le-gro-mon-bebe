@@ -7,6 +7,9 @@ import HomeGrowthCard from '@/components/pages/HomePage/HomeGrowthCard';
 import HomeHeader from '@/components/pages/HomePage/HomeHeader';
 import HomeProgressCard from '@/components/pages/HomePage/HomeProgressCard';
 import HomeStatusCard from '@/components/pages/HomePage/HomeStatusCard';
+import Button from '@/components/ui/Button';
+import Text from '@/components/ui/Text';
+import { ICONS } from '@/constants/icons';
 import { ROUTE_NEW_PREGNANCY } from '@/constants/routes';
 import { MIN_WEEK } from '@/constants/weeks';
 import usePregnancy from '@/hooks/usePregnancy';
@@ -14,9 +17,6 @@ import { getReferenceDate } from '@/utils/date';
 import { getPregnancyStatus } from '@/utils/pregnancy';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-
-const ctaClassName =
-    'bg-accent hover:bg-accent-deep mt-5 inline-flex items-center gap-2 rounded-2xl px-5 py-2.5 text-base font-bold text-white transition';
 
 export default function HomePage() {
     const t = useTranslations();
@@ -46,49 +46,50 @@ export default function HomePage() {
             />
             {active.closedAt ? (
                 <HomeStatusCard
-                    emoji="🎀"
+                    emoji={ICONS.closed}
                     title={t('pages.home.closed.title')}
                     body={t('pages.home.closed.body')}
                 >
-                    <button
-                        type="button"
+                    <Button
+                        icon={ICONS.pregnancy}
+                        className="mt-5"
                         onClick={() => router.push(ROUTE_NEW_PREGNANCY)}
-                        className={ctaClassName}
                     >
-                        <span aria-hidden="true">🤰</span>
                         {t('common.cta.newPregnancy')}
-                    </button>
+                    </Button>
                 </HomeStatusCard>
             ) : status.kind === 'born' ? (
                 <HomeStatusCard
-                    emoji="👶"
+                    emoji={ICONS.bornStatus}
                     title={t('pages.home.born.title')}
                     body={t('pages.home.born.body', {
                         days: status.daysSinceDue,
                     })}
                 >
-                    <button
-                        type="button"
+                    <Button
+                        icon={ICONS.born}
+                        className="mt-5"
                         onClick={() => close(active.id)}
-                        className={ctaClassName}
                     >
-                        <span aria-hidden="true">🎉</span>
                         {t('common.cta.babyBorn')}
-                    </button>
-                    <p className="text-ink-soft mt-4 text-sm">
+                    </Button>
+                    <Text
+                        variant="caption"
+                        className="mt-4"
+                    >
                         {t('pages.home.born.hint')}
-                    </p>
+                    </Text>
                 </HomeStatusCard>
             ) : status.kind === 'future' || status.kind === 'implausible' ? (
                 <HomeStatusCard
-                    emoji="🤨"
+                    emoji={ICONS.oddDate}
                     title={t('pages.home.oddDate.title')}
                     body={t(`pages.home.oddDate.${status.kind}`)}
                 />
             ) : status.kind === 'tooEarly' ? (
                 <>
                     <HomeStatusCard
-                        emoji="🌱"
+                        emoji={ICONS.tooEarly}
                         title={t('pages.home.tooEarly.title')}
                         body={t('pages.home.tooEarly.body', {
                             week: MIN_WEEK,

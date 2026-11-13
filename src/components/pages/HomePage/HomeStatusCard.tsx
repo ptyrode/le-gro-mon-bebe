@@ -1,3 +1,5 @@
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
 import type { PropsWithChildren } from 'react';
 
 interface HomeStatusCardProps extends PropsWithChildren {
@@ -13,16 +15,16 @@ export default function HomeStatusCard({
     children,
 }: HomeStatusCardProps) {
     return (
-        <section className="rounded-3xl bg-white p-6 text-center shadow-lg">
+        <Card className="text-center">
             <div
                 aria-hidden="true"
                 className="my-3 text-7xl leading-none"
             >
                 {emoji}
             </div>
-            <p className="text-ink text-2xl font-extrabold">{title}</p>
-            <p className="text-ink-soft mt-3">{body}</p>
+            <Text variant="headline">{title}</Text>
+            <Text className="mt-3">{body}</Text>
             {children}
-        </section>
+        </Card>
     );
 }

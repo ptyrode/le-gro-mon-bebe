@@ -1,6 +1,8 @@
 'use client';
 
 import HomePregnancySwitcher from '@/components/pages/HomePage/HomePregnancySwitcher';
+import Badge from '@/components/ui/Badge';
+import Text from '@/components/ui/Text';
 import { getGestationalAge, getReferenceDate } from '@/utils/date';
 import { useTranslations } from 'next-intl';
 
@@ -24,17 +26,21 @@ export default function HomeHeader({
     return (
         <>
             <header className="mb-6 flex items-baseline justify-between">
-                <h1 className="text-ink truncate text-xl font-extrabold tracking-tight">
+                <Text
+                    as="h1"
+                    variant="title"
+                    className="truncate"
+                >
                     {pregnancy.name.trim() || t('base.name')}
-                </h1>
-                <span className="text-accent-deep rounded-full bg-white px-3 py-1 text-sm font-bold shadow-sm">
+                </Text>
+                <Badge variant="secondary">
                     {age.days > 0
                         ? t('common.unit.ageWithDays', {
                               weeks: age.weeks,
                               days: age.days,
                           })
                         : t('common.unit.age', { weeks: age.weeks })}
-                </span>
+                </Badge>
             </header>
             <HomePregnancySwitcher
                 state={state}

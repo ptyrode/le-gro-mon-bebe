@@ -1,5 +1,7 @@
 'use client';
 
+import Card from '@/components/ui/Card';
+import Field from '@/components/ui/Field';
 import {
     formatDueDate,
     getTodayISO,
@@ -24,33 +26,30 @@ export default function SettingsPregnancyForm({
     const { id, name, lastPeriodDate } = pregnancy;
 
     return (
-        <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
-            <label
-                htmlFor="name"
-                className="text-ink mb-2 block text-sm font-semibold"
-            >
-                {t('forms.fields.name.label')}
-            </label>
-            <input
+        <Card className="mb-5">
+            <Field
                 id="name"
                 type="text"
                 maxLength={40}
+                className="mb-5"
+                label={t('forms.fields.name.label')}
                 value={name}
                 placeholder={t('forms.fields.name.placeholder')}
                 onChange={(e) => onRename(id, e.target.value)}
-                className="border-cream-deep text-ink focus:border-accent placeholder:text-ink-soft/60 mb-5 w-full rounded-2xl border-2 bg-white px-4 py-3 outline-none"
             />
-            <label
-                htmlFor="ddr"
-                className="text-ink mb-2 block text-sm font-semibold"
-            >
-                {t('forms.fields.lastPeriodDate.settingsLabel')}
-            </label>
-            <input
+            <Field
                 id="ddr"
                 type="date"
                 max={getTodayISO()}
+                label={t('forms.fields.lastPeriodDate.settingsLabel')}
                 value={lastPeriodDate}
+                error={dateError}
+                hint={
+                    lastPeriodDate &&
+                    t('common.pregnancy.dueDate', {
+                        date: formatDueDate(lastPeriodDate),
+                    })
+                }
                 onChange={(e) => {
                     const next = e.target.value;
                     const error = validateLastPeriodDate(next);
@@ -59,21 +58,7 @@ export default function SettingsPregnancyForm({
                     );
                     if (!error) onSetLastPeriodDate(next);
                 }}
-                className="border-cream-deep text-ink focus:border-accent w-full rounded-2xl border-2 bg-white px-4 py-3 outline-none"
             />
-            {dateError ? (
-                <p className="text-berry mt-2 text-sm font-medium">
-                    {dateError}
-                </p>
-            ) : (
-                lastPeriodDate && (
-                    <p className="text-ink-soft mt-2 text-sm">
-                        {t('common.pregnancy.dueDate', {
-                            date: formatDueDate(lastPeriodDate),
-                        })}
-                    </p>
-                )
-            )}
-        </section>
+        </Card>
     );
 }

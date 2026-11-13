@@ -1,5 +1,8 @@
 'use client';
 
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import Text from '@/components/ui/Text';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
@@ -14,38 +17,40 @@ export default function SettingsResetSection({
     const [confirming, setConfirming] = useState(false);
 
     return (
-        <section className="border-berry/20 rounded-3xl border-2 bg-white p-5">
+        <Card variant="error">
             {!confirming ? (
-                <button
-                    type="button"
+                <Button
+                    variant="error"
                     onClick={() => setConfirming(true)}
-                    className="text-berry text-base font-semibold"
                 >
                     {t('common.cta.reset')}
-                </button>
+                </Button>
             ) : (
                 <div>
-                    <p className="text-ink mb-3 text-sm">
+                    <Text
+                        variant="caption"
+                        className="mb-3"
+                    >
                         {t('pages.settings.reset.confirm')}
-                    </p>
+                    </Text>
                     <div className="flex gap-2">
-                        <button
-                            type="button"
-                            onClick={onReset}
-                            className="bg-berry rounded-xl px-4 py-2 text-base font-bold text-white"
-                        >
-                            {t('common.cta.confirmReset')}
-                        </button>
-                        <button
-                            type="button"
+                        <Button
+                            variant="secondary"
+                            size="sm"
                             onClick={() => setConfirming(false)}
-                            className="bg-cream-deep text-ink rounded-xl px-4 py-2 text-base font-semibold"
                         >
                             {t('common.cta.cancel')}
-                        </button>
+                        </Button>
+                        <Button
+                            variant="error"
+                            size="sm"
+                            onClick={onReset}
+                        >
+                            {t('common.cta.confirmReset')}
+                        </Button>
                     </div>
                 </div>
             )}
-        </section>
+        </Card>
     );
 }

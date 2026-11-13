@@ -16,7 +16,6 @@
             "confirmReset": "Oui, effacer",
             "copyLink": "Copier le lien",
             "delete": "Supprimer",
-            "edit": "Modifier",
             "install": "Installer",
             "later": "Plus tard",
             "newPregnancy": "Nouvelle grossesse",
@@ -161,6 +160,89 @@
         "newPregnancy": {
             "title": "Une nouvelle grossesse",
             "tagline": "Chaque grossesse garde sa date, sa catégorie et sa timeline."
+        },
+        "styleguide": {
+            "title": "Styleguide",
+            "intro": "Les briques de base de l'appli, réunies sur une seule page.",
+            "colors": {
+                "title": "Couleurs",
+                "cream": "Fond de page.",
+                "peach": "Bordures et fonds secondaires.",
+                "chocolate": "Texte principal.",
+                "taupe": "Texte secondaire.",
+                "coral": "Actions et état actif.",
+                "terracotta": "Texte mis en valeur et survol des liens.",
+                "raspberry": "Erreurs et actions qui effacent.",
+                "lemon": "Boutons tertiaires."
+            },
+            "typography": {
+                "title": "Typographie",
+                "variants": {
+                    "display": "Titre d'accueil",
+                    "headline": "Titre d'écran d'état",
+                    "title": "Titre de page",
+                    "subtitle": "Titre de section",
+                    "body": "Texte courant",
+                    "label": "Libellé",
+                    "caption": "Texte secondaire",
+                    "hint": "Aide",
+                    "fun": "Texte rigolo de la semaine",
+                    "error": "Message d'erreur"
+                }
+            },
+            "icons": {
+                "title": "Icônes",
+                "categories": "Icônes des catégories, définies dans les données.",
+                "items": {
+                    "home": "Onglet Accueil et écran de chargement.",
+                    "timeline": "Onglet Timeline.",
+                    "settings": "Onglet Réglages.",
+                    "pregnancy": "En-tête de l'onboarding et bouton Nouvelle grossesse.",
+                    "start": "Bouton C'est parti !",
+                    "add": "Bouton Ajouter une grossesse.",
+                    "born": "Bouton Bébé est né.",
+                    "idea": "Bouton Proposer une idée.",
+                    "support": "Bouton de soutien.",
+                    "install": "Bandeau d'installation.",
+                    "browser": "Bandeau du navigateur intégré.",
+                    "bornStatus": "Écran du terme dépassé.",
+                    "closed": "Écran de grossesse terminée.",
+                    "oddDate": "Écran de date bizarre.",
+                    "tooEarly": "Écran de début de grossesse."
+                }
+            },
+            "cards": {
+                "title": "Cartes",
+                "default": {
+                    "title": "Carte",
+                    "body": "La carte de base, pour les réglages et la progression."
+                },
+                "info": {
+                    "title": "Encart",
+                    "body": "Pour les bandeaux d'installation et de navigateur intégré."
+                },
+                "error": {
+                    "title": "Zone sensible",
+                    "body": "Pour les actions qui effacent des données."
+                }
+            },
+            "buttons": {
+                "title": "Boutons"
+            },
+            "badges": {
+                "title": "Badges"
+            },
+            "pills": {
+                "title": "Pastilles",
+                "first": "Haricot",
+                "second": "Crevette"
+            },
+            "fields": {
+                "title": "Champs"
+            },
+            "switch": {
+                "title": "Interrupteur"
+            }
         }
     }
 }

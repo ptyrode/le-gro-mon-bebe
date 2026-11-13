@@ -12,11 +12,13 @@ Deux pièges déjà rencontrés :
 
 ## Qualité de code
 
-Avant de conclure une session : `npm run lint:fix`, `npm run typecheck`, `npm run build`.
+Avant de conclure une session : `npm run lint:fix` et `npm run typecheck`. **Ne jamais lancer `npm run build` sans qu'on le demande** : il écrit dans `.next/`, le même dossier que `npm run dev`, et fige le CSS du serveur de dev qui tourne en parallèle.
 
 ⚠️ `npm run lint` seul réordonne les imports et peut recasser la mise en forme Prettier. Toujours passer par `lint:fix`, qui enchaîne `format` → `lint` → `style` dans le bon ordre.
 
 **Pas de commentaires dans le code**, nulle part dans le repo : `src/`, mais aussi `public/sw.js`, `scripts/`, les fichiers de config et le CSS. Les explications vont dans la documentation.
+
+**Pas de style inline** (`style={…}`) : tout passe par des classes Tailwind écrites en entier (jamais construites par concaténation, Tailwind ne les détecterait pas). Une valeur continue comme une progression passe par l'élément natif adapté (`<progress>`), une taille par un jeu de variantes (`ItemVisual` : `sm`, `lg`).
 
 ## Données
 
@@ -75,9 +77,13 @@ Dans tout élément interactif — bouton, onglet, pastille de catégorie, badge
 </a>
 ```
 
+Les icônes de l'interface vivent dans **`src/constants/icons.ts`** (`ICONS.start`, `ICONS.add`…), jamais en dur dans un composant : le styleguide les liste toutes depuis ce fichier. Les emojis de catégorie, eux, restent dans les données.
+
 L'emoji ne doit donc **jamais être écrit dans la clé de traduction** d'un libellé de bouton : le texte reste seul, l'icône vit dans le JSX.
 
 Les emoji en **fin de phrase** dans les messages (erreurs de saisie, notifications, encarts d'état) ne sont pas des icônes mais de la ponctuation expressive : ils restent dans le texte traduit.
+
+Les composants de `src/components/ui/` (`Text`, `Card`, `SelectableCard`, `Button`, `Pill`, `Badge`, `Field`, `Switch`) portent ces conventions : `Button` et `Pill` prennent l'emoji par la prop `icon`. Un nouvel écran les utilise plutôt que de recopier leurs classes, et toute nouvelle variante s'ajoute aussi à `/styleguide`. Un texte passe par `Text` et sa variante plutôt que par des classes de taille et de couleur. `Pill` sert **uniquement aux choix à bascule** (catégorie, grossesse affichée) : une action (modifier, terminer, supprimer) est un `Button`. Dans un groupe de boutons (aligné à gauche), **« Annuler » ou « Plus tard » se place toujours avant l'action** qu'il annule.
 
 ## Documentation
 

@@ -1,0 +1,17 @@
+export const ICONS = {
+    home: '🍼',
+    timeline: '📅',
+    settings: '⚙️',
+    pregnancy: '🤰',
+    start: '🚀',
+    add: '➕',
+    born: '🎉',
+    idea: '✉️',
+    support: '☕',
+    install: '📲',
+    browser: '🧭',
+    bornStatus: '👶',
+    closed: '🎀',
+    oddDate: '🤨',
+    tooEarly: '🌱',
+} as const;

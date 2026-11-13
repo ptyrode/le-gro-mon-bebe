@@ -2,12 +2,13 @@
 
 @theme {
     --color-cream: #fff7f0;
-    --color-cream-deep: #ffe9db;
-    --color-ink: #3a2b28;
-    --color-ink-soft: #7c6a63;
-    --color-accent: #ff7a59;
-    --color-accent-deep: #e85d3a;
-    --color-berry: #d6336c;
+    --color-peach: #ffe9db;
+    --color-chocolate: #3a2b28;
+    --color-taupe: #7c6a63;
+    --color-coral: #ff7a59;
+    --color-terracotta: #e85d3a;
+    --color-raspberry: #d6336c;
+    --color-lemon: #fd0;
     --font-sans: var(--font-geist-sans), system-ui, sans-serif;
 }
 
@@ -19,7 +20,7 @@ html {
     background-color: var(--color-cream);
     background-image: radial-gradient(
         120% 80% at 50% -10%,
-        var(--color-cream-deep),
+        var(--color-peach),
         transparent 60%
     );
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@ html {
 
 body {
     background: transparent;
-    color: var(--color-ink);
+    color: var(--color-chocolate);
     -webkit-font-smoothing: antialiased;
 }
 
@@ -37,4 +38,11 @@ input,
 select,
 textarea {
     font-size: 16px;
+}
+
+@layer base {
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
 }

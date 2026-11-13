@@ -18,7 +18,7 @@ Appli web **PWA mobile-first** qui suit la croissance du fœtus semaine après s
 
 Quatre routes, avec des chemins en anglais comme les clés du code : on ne les traduit pas, l'appli installée n'affichant pas son URL. `/` (accueil), `/timeline`, `/settings`, et `/new-pregnancy` pour ajouter une grossesse. Chaque page enveloppe son contenu dans `DefaultLayout` : écran de chargement, onboarding tant qu'aucune grossesse n'existe (l'URL est alors ramenée à `/`, par exemple après la suppression de la dernière grossesse), barre de navigation (masquée sur `/new-pregnancy`). La synchronisation des notifications, elle, vit dans `RootProvider`, monté une seule fois dans le layout racine pour ne pas se relancer à chaque page.
 
-**Onboarding** (première visite, puis `/new-pregnancy` pour chaque nouvelle grossesse) : le pitch en une phrase, un **petit nom** facultatif pour bébé, la saisie de la **date des dernières règles (DDR)**, le choix de la **catégorie** de comparaison, la demande d'autorisation des **notifications** (peut être différée). Tout est enregistré dans le `localStorage`.
+**Onboarding** (première visite, puis `/new-pregnancy` pour chaque nouvelle grossesse) : le pitch en une phrase, un **petit nom** facultatif pour bébé, la saisie de la **date des dernières règles (DDR)**, le choix de la **catégorie** de comparaison, la demande d'autorisation des **notifications** (peut être différée), faite juste après l'enregistrement pour que l'accueil s'affiche sans attendre la réponse : la synchronisation push se relance d'elle-même dès que l'autorisation est accordée. Tout est enregistré dans le `localStorage`.
 
 **Écran principal** (semaine en cours), titré du petit nom de bébé s'il en a un, du nom de l'appli sinon :
 
@@ -82,7 +82,7 @@ Une liste de grossesses, dans le `localStorage` (clé `lgmb:v2`) :
 
 - `activeId` désigne la grossesse affichée : accueil, timeline et réglages de date ou de catégorie portent sur elle seule.
 - Le petit nom est facultatif. Sans nom, la grossesse s'affiche « Bébé du » suivi de la date du terme, dans les listes ; rien n'est enregistré.
-- **Terminer** une grossesse pose `closedAt` : elle sort des notifications, et ses écrans se figent à cette date. L'accueil propose de la terminer une fois le terme dépassé (« Bébé est né »), les réglages à tout moment. L'écran d'une grossesse terminée reste neutre (« Grossesse terminée »), car une grossesse peut s'arrêter pour d'autres raisons qu'une naissance.
+- **Terminer** une grossesse pose `closedAt` : elle sort des notifications, et ses écrans se figent à cette date. Elle reste la grossesse affichée : terminer ne bascule pas sur une autre. L'accueil propose de la terminer une fois le terme dépassé (« Bébé est né »), les réglages à tout moment. L'écran d'une grossesse terminée reste neutre (« Grossesse terminée »), car une grossesse peut s'arrêter pour d'autres raisons qu'une naissance.
 - Supprimer la dernière grossesse revient à réinitialiser l'appli.
 - **Migration** : au premier chargement, l'ancien format (`lgmb:v1`, une seule grossesse) est converti en v2, puis l'ancienne clé est supprimée.
 
@@ -197,9 +197,10 @@ src/
 ├── components/
 │   ├── common/   # composants partagés : Onboarding, ItemVisual, bandeaux
 │   ├── layouts/  # DefaultLayout et sa BottomNav
-│   └── pages/    # un dossier par route, nommé comme elle : HomePage, TimelinePage, SettingsPage, NewPregnancyPage
+│   ├── pages/    # un dossier par route, nommé comme elle : HomePage, TimelinePage, SettingsPage, NewPregnancyPage, StyleguidePage
+│   └── ui/       # composants de base : Text, Card, SelectableCard, Button, Pill, Badge, Field, Switch
 ├── @types/       # types ambiants (*.d.ts), utilisés sans import
-├── constants/    # valeurs fixes, un fichier par sujet : routes, weeks, data, date, storage, push, install, links, analytics
+├── constants/    # valeurs fixes, un fichier par sujet : routes, weeks, data, date, storage, push, install, links, analytics, icons
 ├── contexts/     # RootProvider (next-intl, synchronisation des notifications)
 ├── data/         # fetalGrowth.json, weightJokes.json, categories/*.json
 ├── hooks/        # usePregnancy (useSyncExternalStore sur le localStorage), usePregnancyLabel
@@ -217,6 +218,8 @@ _temp/            # fichiers de travail locaux, ignorés par git, un sous-dossie
 Le fichier de route (`src/app/settings/page.tsx`) ne fait qu'envelopper le composant de page (`src/components/pages/SettingsPage/SettingsPage.tsx`) dans son layout, et ce composant compose ses sous-composants de section, rangés dans le même dossier. **Le nom d'un composant de page reprend celui de sa route** : `/new-pregnancy` → `NewPregnancyPage`. Ses sous-composants sont préfixés du nom de la page : `HomeGrowthCard`, `SettingsResetSection`.
 
 Côté logique, `utils/` range **un fichier par thème**, en exports nommés : tout ce qui manipule une date dans `date.ts`, le contenu d'une semaine (taille, poids, équivalence) dans `growth.ts`, l'état et le statut d'une grossesse dans `pregnancy.ts`, etc. `services/` suit la même règle : `push.ts` pour l'abonnement du téléphone, `subscription.ts` pour les abonnements stockés dans Redis. Les types sont **ambiants** dans `src/@types/` : pas d'import, pas d'export.
+
+Les écrans s'appuient sur les **composants de base** de `components/ui/` plutôt que de répéter leurs classes Tailwind : `Text` (toute la typographie : `display`, `headline`, `title`, `subtitle`, `body`, `label`, `caption`, `hint`, `fun`, `error`), `Card` (variantes `default`, `info`, `error`, avec `title` et `hint` optionnels), `SelectableCard` (carte cliquable entière, état `selected`, avec un pied optionnel pour des boutons d'action), `Button` (`primary`, `secondary`, `tertiary`, `error`, en tailles `md` par défaut et `sm` pour les actions d'une carte, rendu en `<a>` quand il reçoit un `href`), `Pill` (bouton à bascule, état `active` obligatoire, jamais pour une action), `Badge` (`primary`, `secondary`), `Field` (libellé, aide et erreur autour d'un `input`) et `Switch` (même principe autour d'un interrupteur). `Button` et `Pill` prennent leur emoji par la prop `icon`, ce qui garantit l'icône avant le texte. Deux arrondis seulement : `rounded-3xl` pour les pastilles et les badges, `rounded-xl` pour tout le reste (cartes, boutons, champs, images). L'interrupteur et la barre de progression gardent leur forme de gélule (`rounded-full`). Une erreur s'affiche toujours sous l'élément qu'elle concerne. Tous ces composants sont présentés sur **`/styleguide`**, avec les couleurs, et chaque extrait de code y est généré à partir des props de l'exemple : une page hors navigation, accessible sans grossesse enregistrée (`requiresPregnancy={false}` sur `DefaultLayout`) et exclue des moteurs de recherche.
 
 `scripts/` reste **hors de `src/`** : ce n'est ni du code applicatif ni des fichiers compilés.
 
@@ -245,7 +248,7 @@ node scripts/generate-images.mjs desserts --reframe  # recadre sans appel
 - **Recadrage automatique** : le modèle colle presque toujours le sujet en haut du cadre. Le script le détoure depuis les bords et le recentre avec 6 % de marge sur un fond uni `#FFF4EE`. Une image coupée dans l'original reste à régénérer.
 - Les originaux 1024 px sont gardés dans `_temp/images/`, pour que `--reframe` puisse recadrer sans payer. Ceux des 190 images actuelles ont été supprimés : `--reframe` ne s'applique qu'aux images générées depuis. Le script saute les images déjà présentes.
 - **Pour refaire une image** : corriger la description du sujet, supprimer le WebP, relancer sa semaine. ~0,05 $ l'image.
-- ⚠️ **Après avoir remplacé des images, changer la version du cache** du service worker (`const CACHE = 'lgmb-v6'` dans `public/sw.js`, à passer en `v7`, etc.). Les images gardent le même nom alors que leur contenu change : sans nouvelle version, les téléphones affichent encore l'ancienne image à la première ouverture qui suit le déploiement.
+- ⚠️ **Après avoir remplacé des images, changer la version du cache** du service worker (`const CACHE = 'lgmb-v7'` dans `public/sw.js`, à passer en `v8`, etc.). Les images gardent le même nom alors que leur contenu change : sans nouvelle version, les téléphones affichent encore l'ancienne image à la première ouverture qui suit le déploiement.
 - ⚠️ **Relire chaque image** : un sujet mal reconnu, et bébé fait la taille du mauvais objet toute une semaine. `node scripts/check-images.mjs` vérifie qu'il n'en manque aucune.
 
 Règle de dessin : bébé est **assis, vu de face**, et porte le sujet comme un déguisement. La capuche peut avoir les yeux, le museau ou le bec de l'animal, plus petits que les yeux du bébé, mais **jamais de bouche ni de sourire** : deux visages qui sourient l'un au-dessus de l'autre, c'est raté.

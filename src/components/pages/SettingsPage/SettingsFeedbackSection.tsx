@@ -1,5 +1,8 @@
 'use client';
 
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import { ICONS } from '@/constants/icons';
 import { FEEDBACK_EMAIL } from '@/constants/links';
 import { useTranslations } from 'next-intl';
 
@@ -13,20 +16,17 @@ export default function SettingsFeedbackSection() {
     );
 
     return (
-        <section className="mb-5 rounded-3xl bg-white p-5 shadow-sm">
-            <p className="text-ink text-sm font-semibold">
-                {t('pages.settings.feedback.title')}
-            </p>
-            <p className="text-ink-soft mb-3 text-xs">
-                {t('pages.settings.feedback.body')}
-            </p>
-            <a
+        <Card
+            className="mb-5"
+            title={t('pages.settings.feedback.title')}
+            hint={t('pages.settings.feedback.body')}
+        >
+            <Button
                 href={`mailto:${FEEDBACK_EMAIL}?subject=${subject}&body=${body}`}
-                className="bg-accent hover:bg-accent-deep inline-flex items-center gap-2 rounded-2xl px-5 py-2.5 text-sm font-bold text-white transition"
+                icon={ICONS.idea}
             >
-                <span aria-hidden="true">✉️</span>
                 {t('common.cta.suggestIdea')}
-            </a>
-        </section>
+            </Button>
+        </Card>
     );
 }

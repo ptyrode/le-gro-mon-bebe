@@ -1,6 +1,8 @@
 'use client';
 
 import ItemVisual from '@/components/common/ItemVisual';
+import Badge from '@/components/ui/Badge';
+import Text from '@/components/ui/Text';
 import { categories } from '@/constants/data';
 import usePregnancy from '@/hooks/usePregnancy';
 import { cn } from '@/utils/cn';
@@ -32,20 +34,26 @@ export default function TimelinePage() {
     return (
         <div className="mx-auto w-full max-w-md px-5 pt-8 pb-28">
             <header className="mb-6">
-                <h1 className="text-ink text-xl font-extrabold tracking-tight">
+                <Text
+                    as="h1"
+                    variant="title"
+                >
                     {t('pages.timeline.title')}
-                </h1>
-                <p className="text-ink-soft text-sm">
+                </Text>
+                <Text variant="caption">
                     {t('pages.timeline.subtitle', {
                         emoji: cat.emoji,
                         label: cat.label,
                     })}
-                </p>
+                </Text>
             </header>
             {pastItems.length === 0 && (
-                <p className="text-ink-soft rounded-2xl bg-white/60 p-4 text-center text-sm">
+                <Text
+                    variant="caption"
+                    className="rounded-xl bg-white/60 p-4 text-center"
+                >
                     {t('pages.timeline.empty')}
-                </p>
+                </Text>
             )}
             <ol className="space-y-2">
                 {pastItems.map((item) => {
@@ -56,9 +64,8 @@ export default function TimelinePage() {
                         <li
                             key={item.week}
                             className={cn(
-                                'flex items-center gap-3 rounded-2xl border-2 p-3 transition',
-                                current &&
-                                    'border-accent bg-accent/10 shadow-sm',
+                                'flex items-center gap-3 rounded-xl border-2 p-3 transition',
+                                current && 'border-coral bg-coral/10 shadow-sm',
                                 !current &&
                                     past &&
                                     'border-transparent bg-white/60 opacity-70',
@@ -70,23 +77,23 @@ export default function TimelinePage() {
                             <ItemVisual
                                 category={category}
                                 item={item}
-                                size={48}
+                                size="sm"
                                 className="shrink-0"
                                 emojiClassName="shrink-0 leading-none"
                             />
                             <div className="min-w-0 flex-1">
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-accent-deep text-xs font-bold">
+                                    <span className="text-terracotta text-xs font-bold">
                                         {t('common.unit.week', {
                                             week: item.week,
                                         })}
                                     </span>
-                                    <span className="text-ink truncate font-semibold">
+                                    <span className="text-chocolate truncate font-semibold">
                                         {item.name}
                                     </span>
                                 </div>
                                 {g && (
-                                    <p className="text-ink-soft text-xs">
+                                    <Text variant="hint">
                                         {t('pages.timeline.measures', {
                                             size: g.size.toLocaleString(
                                                 'fr-FR'
@@ -96,13 +103,11 @@ export default function TimelinePage() {
                                                 formatWeight(g.weight)
                                             ),
                                         })}
-                                    </p>
+                                    </Text>
                                 )}
                             </div>
                             {current && (
-                                <span className="bg-accent rounded-full px-2 py-0.5 text-xs font-bold text-white">
-                                    {t('pages.timeline.current')}
-                                </span>
+                                <Badge>{t('pages.timeline.current')}</Badge>
                             )}
                         </li>
                     );
